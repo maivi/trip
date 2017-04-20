@@ -1,10 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Lógica</title>
-</head>
-<body>
 	<?php 
 
 	include "conexion.php";
@@ -66,6 +59,4 @@
 
 
 	?>
-</body>
-</html>
 
