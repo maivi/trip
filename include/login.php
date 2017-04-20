@@ -24,6 +24,14 @@
 						INGRESAR
 					</div>
 				</a>
+			</br>
+				<a href="#">
+					<div class="send">
+						REGISTRATE
+					</div>
+				</a>
+
+
 			</div>
 		</div>
 	</div>
