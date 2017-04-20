@@ -46,6 +46,20 @@
 	}
 	// Fin de la encapsulación
 
+	// Encapsulación de los Sexos
+	$consulta = "SELECT * FROM estado_respuesta;";
+	$result = $conexion->query($consulta);
+	$i=0;
+	while($actor = $result->fetch_assoc()){
+		echo $actor['id_estado'] . " - ";
+		echo $actor['estado_respuesta'] . "<br>";
+
+		$json[$i]["id_estado"] = $actor['id_estado'];
+		$json[$i]["estado_respuesta"] = $actor['estado_respuesta'];
+		$i++;
+	}
+	// Fin de la encapsulación
+
 	echo json_encode($json); // Acá tenemos encapsuladas todas las localidades, para que solo se busquen una vez.
 
 	$conexion->close();
