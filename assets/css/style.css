@@ -1,0 +1,88 @@
+body {
+  background-image: url("../images/fondonihuil.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden; }
+  body .login {
+    position: relative;
+    top: calc(100vh - 70vh); }
+    body .login .usuario, body .login .password {
+      width: 100%;
+      margin-bottom: 20px;
+      height: 80px; }
+    body .login .password .icono-login {
+      padding-top: 15px; }
+    body .login .usuario .icono-login {
+      padding-top: 10px; }
+    body .login a {
+      text-decoration: none; }
+    body .login .send {
+      text-align: center;
+      height: 80px;
+      width: 100%;
+      background-color: #34495e;
+      color: white;
+      font-weight: 400;
+      font-family: Open Sans;
+      font-size: 23px;
+      line-height: 80px; }
+      body .login .send:hover {
+        background-color: #2c3e50; }
+    body .login .icono-login {
+      height: 80px;
+      width: 80px;
+      border: 1px solid white;
+      float: left;
+      padding-left: 17px; }
+      body .login .icono-login img {
+        width: 45px; }
+    body .login .texto-login {
+      float: left;
+      width: calc(100% - 80px); }
+      body .login .texto-login input {
+        width: 100%;
+        height: 80px;
+        background-color: transparent;
+        border: 1px solid white;
+        padding-left: 15px;
+        color: white;
+        font-weight: 300;
+        font-family: Open Sans;
+        font-size: 25px; }
+        body .login .texto-login input:focus {
+          outline: none; }
+      body .login .texto-login *::-webkit-input-placeholder {
+        /* Google Chrome y Safari */
+        color: white; }
+      body .login .texto-login *:-moz-placeholder {
+        /* Firefox anterior a 19 */
+        color: white; }
+      body .login .texto-login *::-moz-placeholder {
+        /* Firefox 19 y superior */
+        color: white; }
+      body .login .texto-login *:-ms-input-placeholder {
+        /* Internet Explorer 10 y superior */
+        color: white; }
+
+.contenedor-header {
+  height: 80px;
+  width: 100%;
+  right: -250%;
+  background-color: #34495e;
+  position: absolute;
+  top: 0px; }
+  .contenedor-header .icono-header {
+    height: 49px;
+    width: 256px;
+    background-color: white;
+    position: relative;
+    top: 40px;
+    padding-top: 5px;
+    padding-left: 5px;
+    left: -320%; }
+    .contenedor-header .icono-header img {
+      width: 246px; }
+
+/*# sourceMappingURL=style.css.map */
