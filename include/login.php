@@ -25,11 +25,9 @@
 					</div>
 				</a>
 			</br>
-				<a href="#">
-					<div class="send">
-						REGISTRATE
-					</div>
-				</a>
+				<a href="#">REGISTRATE   </a>
+
+				<a href="#">OLVIDASTE LA CONTRASEÑA?</a>
 
 
 			</div>

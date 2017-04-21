@@ -18,7 +18,7 @@ body {
     height: 100vh;
   }
   body .login {
-    display: none;
+    
     position: relative;
     top: calc(100vh - 70vh); }
     body .login .usuario, body .login .password {
@@ -27,6 +27,7 @@ body {
       height: 80px; }
 
     body .reg {
+       display: none;
     position: relative;
     top: calc(100vh - 70vh); }
 
