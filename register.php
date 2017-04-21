@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+	<script src="assets/js/new.js"></script>
 	<link rel="shortcut icon" href="assets/images/favicon-01.png">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
