@@ -12,15 +12,13 @@
 </head>
 <body>
 	<?php 
-	include "include/login.php";
-	include "include/header.php";
-	include "include/scripts.php";
-	include "include/form.php";
+		session_start();
+		if ($_SESSION['newsession']=='yes'){
+			include "include/perfil.php";
+		}else{
+			echo "NO ENTRO";
+			header("Location: register.php");
+		}
 	?>
-
-
-
-
-
 </body>
 </html>
