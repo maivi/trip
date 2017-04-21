@@ -15,6 +15,8 @@
 				while($usuario = $result->fetch_assoc()){
 					$_SESSION['usuario'] = $usuario['nombre'] . " " . $usuario['apellido'];
 					// Creamos la variable SESSION usuario, que utilizaremos en el perfil
+					$_SESSION['email'] = $usuario['email'];
+					// Creo la variable SESSION EMAIL para poder realizar consultas desde el perfil con esta variable.
 				}
 				$existe=1; // El usuario existe
 			}else{
@@ -49,6 +51,7 @@
 			session_start();
 			$_SESSION['newsession']='yes';
 			$_SESSION['usuario'] = $nombre . " " . $apellido;
+			$_SESSION['email'] = $usuario['email'];
 		}
 	}
 ?>
