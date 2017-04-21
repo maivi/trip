@@ -7,7 +7,7 @@
 			$user = $_POST["user"];
 			$pw = $_POST["pw"];
 			$consulta = "SELECT * FROM usuarios WHERE user = '$user' AND pw = '$pw';";
-			$conexion->query($consulta);
+			$result = $conexion->query($consulta);
 			$cantidad = $result->num_rows;
 			if($cantidad==1){ // Si existe el usuario en la DB	
 				session_start(); // Iniciamos la sesión
