@@ -1,6 +1,6 @@
 <?php  
-	$host = "66.128.53.196"; 
-	$user = "mendozav_maivi";
-	$pw = "123qweasd.";
-	$db = "mendozav_nihuilcaribe"; 
+	$host = "10.0.84.32"; 
+	$user = "echiapa";
+	$pw = "Super2017.";
+	$db = "decinihuil"; 
 ?>
