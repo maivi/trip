@@ -3,7 +3,7 @@
 <?php include "include/head.php"; ?>
 <body>
 	<?php 
-		include "header.php";
+		include "include/header.php";
 		session_start();
 		$_SESSION['newsession']='yes';
 		if ($_SESSION['newsession']=='yes'){
