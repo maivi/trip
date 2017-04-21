@@ -18,12 +18,35 @@ body {
     height: 100vh;
   }
   body .login {
+    display: none;
     position: relative;
     top: calc(100vh - 70vh); }
     body .login .usuario, body .login .password {
       width: 100%;
       margin-bottom: 20px;
       height: 80px; }
+
+    body .reg {
+    position: relative;
+    top: calc(100vh - 70vh); }
+
+        body .reg a {
+      text-decoration: none; }
+    body .reg .send {
+      text-align: center;
+      height: 80px;
+      width: 100%;
+      background-color: white;
+      color: #1c4f8e;
+      font-weight: 600;
+      font-family: Open Sans;
+      font-size: 23px;
+      line-height: 80px; }
+      body .reg .send:hover {
+        background-color: #1c4f8e;
+        color: white;
+        transition: 0.3s; }
+
     body .login .password .icono-login {
       padding-top: 15px; }
     body .login .usuario .icono-login {
