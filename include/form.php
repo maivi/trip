@@ -3,47 +3,103 @@
 		<div class="col-lg-4 col-lg-offset-4">
 			<div class="reg">
 
-				<FORM action="#" method="post">
-					<P>
-						<LABEL for="nombre">Nombre: </LABEL>
-						<INPUT type="text" id="nombre"><BR>
+<form class="form-horizontal" role="form">
 
-						<LABEL for="apellido">Apellido: </LABEL>
-						<INPUT type="text" id="apellido"><BR>
+  <div class="form-group">
 
-						<LABEL for="email">E-mail: </LABEL>
-						<INPUT type="email" id="email"><BR>
+    <div class="col-lg-10">
+      <input type="text" class="form-control" id="nombre"
+             placeholder="Nombre">
+    </div>
+  </div>
 
-						<LABEL for="password">Usuario: </LABEL>
-						<INPUT type="password" id="pw"><BR>			
+    <div class="form-group">
 
-						<LABEL for="password">Contraseña: </LABEL>
-						<INPUT type="password" id="pw"><BR>		
+    <div class="col-lg-10">
+      <input type="text" class="form-control" id="apellido"
+             placeholder="Apellido">
+    </div>
+  </div>
 
-						<LABEL for="dni">D.N.I: </LABEL>
-						<INPUT type="number" id="dni"><BR>
+  <div class="form-group">
 
-						<LABEL for="telefono">Teléfono: </LABEL>
-						<INPUT type="number" id="telefono"><BR>	
+    <div class="col-lg-10">
+      <input type="email" class="form-control" id="email"
+             placeholder="Email">
+    </div>
+  </div>
 
-						<LABEL for="localidad">Localidad: </LABEL>	
-						<select name="localidad" onchange="salta(this.form)">
-                            <option selected> ---
-                            <option value="xxxx.htm">Gral Alvear
-                            <option value="yyyy.htm">Ciudad
-                            <option value="zzzz.htm">Godoy Cruz
-                        </select>
 
-                        <LABEL for="sexo">Sexo: </LABEL>	
-						<select name="sexo" onchange="salta(this.form)">
-                            <option selected> ---
-                            <option value="xxxx.htm">Hombre
-                            <option value="yyyy.htm">Mujer
-                        </select>
+    <div class="form-group">
 
-						<INPUT type="submit" value="Enviar">
-					</P>
-				</FORM>
+    <div class="col-lg-10">
+      <input type="text" class="form-control" id="user"
+             placeholder="Usuario">
+    </div>
+  </div>
+
+
+  <div class="form-group">
+
+    <div class="col-lg-10">
+      <input type="password" class="form-control" id="ejemplo_password_3" 
+             placeholder="Contraseña">
+    </div>
+  </div>
+ 
+
+  <div class="form-group">
+
+    <div class="col-lg-10">
+      <input type="number" class="form-control" id="dni" 
+             placeholder="DNI">
+    </div>
+  </div>
+
+  <div class="form-group">
+
+    <div class="col-lg-10">
+      <input type="number" class="form-control" id="telefono" 
+             placeholder="Teléfono">
+    </div>
+  </div>
+
+
+    <div class="form-group">
+
+    <div class="col-lg-10">
+    <select class="form-control" name="localidad" onchange="salta(this.form)" id="localidad">
+    <option selected> Gral Alvear
+         <option value="yyyy.htm">Ciudad
+         <option value="zzzz.htm">Godoy Cruz
+    </select>
+
+    </div>
+  </div>
+
+
+    <div class="form-group">
+
+    <div class="col-lg-10">
+    <select class="form-control" name="localidad" onchange="salta(this.form)" id="sexo">
+    <option selected> Hombre
+         <option value="yyyy.htm">Mujer
+    </select>
+
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-lg-offset-2 col-lg-10">
+
+      <button type="submit" class="btn btn-default">ENVIAR</button>
+    </div>
+  </div>
+
+
+</form>
+
+<a  href=""><div class="btn btn-default">VOLVER</div></a>
 
 
 			</div>

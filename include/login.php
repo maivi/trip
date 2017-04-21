@@ -19,13 +19,13 @@
 					</div>	
 				</div>
 
-				<a class="submit1" href="#">
+				<a  href="#">
 					<div class="send">
 						INGRESAR
 					</div>
 				</a>
 			</br>
-				<a href="#">REGISTRATE   </a>
+				<a class="submit1" href="#">REGISTRATE   </a>
 
 				<a href="#">OLVIDASTE LA CONTRASEÑA?</a>
 
