@@ -6,6 +6,8 @@
 		include "include/header.php";
 		session_start();
 		$_SESSION['newsession']='yes';
+		$_SESSION['usuario'] = "Maximiliano Kadyszyn";
+		$_SESSION['id'] = "1";
 		if ($_SESSION['newsession']=='yes'){
 			include "include/perfil.php";
 		}else{
