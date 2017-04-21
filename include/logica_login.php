@@ -1,6 +1,6 @@
 <?php  
-	$comprobar = $_POST["flag"];
-	$existe = 0;
+	$comprobar = $_POST["flag"]; // Esto me va a decir si es Login o Registro
+	$existe = 0; //La variable que me dice si el usuario existe en la DB
 
 	switch ($comprobar){
 		case 0:{
@@ -9,17 +9,18 @@
 			$consulta = "SELECT * FROM usuarios WHERE user = '$user' AND pw = '$pw';";
 			$conexion->query($consulta);
 			$cantidad = $result->num_rows;
-			if($cantidad==1){
-				session_start();
-				$_SESSION['newsession']='yes';
+			if($cantidad==1){ // Si existe el usuario en la DB	
+				session_start(); // Iniciamos la sesión
+				$_SESSION['newsession']='yes'; // Inicializamos las variables SESSION
 				while($usuario = $result->fetch_assoc()){
 					$_SESSION['usuario'] = $usuario['nombre'] . " " . $usuario['apellido'];
+					// Creamos la variable SESSION usuario, que utilizaremos en el perfil
 				}
-				$existe=1;
+				$existe=1; // El usuario existe
 			}else{
-				$existe=0;
+				$existe=0; // El usuario no existe
 			}
-			$json["existe"] = $existe;
+			$json["existe"] = $existe; // Creamos el JSON que le va a indicar a JS el estado del usuario loggeado
 			echo json_encode($json);
 			$conexion->close();
 
