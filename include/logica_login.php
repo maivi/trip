@@ -51,7 +51,7 @@
 			session_start();
 			$_SESSION['newsession']='yes';
 			$_SESSION['usuario'] = $nombre . " " . $apellido;
-			$_SESSION['email'] = $usuario['email'];
+			$_SESSION['id'] = ($cantidad+1);
 		}
 	}
 ?>
