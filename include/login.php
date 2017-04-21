@@ -19,7 +19,7 @@
 					</div>	
 				</div>
 
-				<a href="#">
+				<a class="submit1" href="#">
 					<div class="send">
 						INGRESAR
 					</div>
