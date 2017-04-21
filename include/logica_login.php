@@ -1,4 +1,15 @@
 <?php  
+	include "conexion.php";
+
+	$conexion = new mysqli($host,$user,$pw,$db);
+
+	if ($conexion->connect_errno) {
+		echo "Falló la conexión con MySQL: (" . $conexion->connect_errno . ") " . $conexion->connect_error;
+	}
+
+	$conexion->set_charset('utf8');
+	$conexion->query("SET NAMES 'UTF8'");
+
 	$comprobar = $_POST["flag"]; // Esto me va a decir si es Login o Registro
 	$existe = 0; //La variable que me dice si el usuario existe en la DB
 
