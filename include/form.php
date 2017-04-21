@@ -14,6 +14,9 @@
 						<LABEL for="email">E-mail: </LABEL>
 						<INPUT type="email" id="email"><BR>
 
+						<LABEL for="password">Usuario: </LABEL>
+						<INPUT type="password" id="pw"><BR>			
+
 						<LABEL for="password">Contraseña: </LABEL>
 						<INPUT type="password" id="pw"><BR>		
 
