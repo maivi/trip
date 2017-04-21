@@ -25,7 +25,29 @@
 
 		}
 		case 1:{
+			$nombre = $_POST["nombre"];
+			$apellido = $_POST["apellido"];
+			$email = $_POST["email"];
+			$dni = $_POST["dni"];
+			$telefono = $_POST["telefono"];
+			$localidad = $_POST["localidad"];
+			$pw = $_POST["pw"];
+			$user = $_POST["user"];
+			$sexo = $_POST["sexo"];
 
+			$consulta = "SELECT * FROM usuarios;";
+			$conexion->query($consulta);
+			$cantidad = $result->num_rows;
+
+
+			// Realizar una comprobacion de si existe el usuario
+
+			$consulta = "INSERT INTO usuarios(nombre, apellido, email, dni, telefono, localidad, pw, user, sexo) VALUES ('$nombre','$apellido','$email','$dni','$telefono',$localidad,'$pw','$user',$sexo);";
+			$conexion->query($consulta);
+
+			session_start();
+			$_SESSION['newsession']='yes';
+			$_SESSION['usuario'] = $nombre . " " . $apellido;
 		}
 	}
 ?>
