@@ -18,7 +18,7 @@ $(document).ready(function(){
 		$(".login").animate({left: "-250%"},5000);
 	});
 
-	$(".send").click(function(){
+	$(".send").click(function(e){
 		e.preventDefault();
 		user = $("#user-login").val();
 		pw = $("#pw-login").val();
@@ -38,7 +38,15 @@ $(document).ready(function(){
 
 		}).done(function(json) {
 			console.log(json);
-			console.log("TERMINO");
+			var obj = $.parseJSON(json);
+			if(obj["existe"]==0){
+				$(".usuario").addClass("danger-login");
+				$(".password").addClass("danger-login");
+				$(".icono-login").addClass("remover-borde");	
+			}else{
+				window.location="index.php";
+			}
+			console.log(obj["existe"]);
 		})
 		.fail(function(xhr, status, error){
 			console.log(xhr);

@@ -24,7 +24,7 @@ body {
     body .login .usuario, body .login .password {
       width: 100%;
       margin-bottom: 20px;
-      height: 80px; }
+      height: 84px; }
 
     body .reg {
        display: none;
@@ -122,5 +122,12 @@ body {
     left: -320%; }
     .contenedor-header .icono-header img {
     width: 400px; }
+
+.danger-login{
+  border: 2px solid red;
+}
+.remover-borde{
+  border: 0px !important;
+}
 
 /*# sourceMappingURL=style.css.map */
