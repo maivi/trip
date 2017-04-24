@@ -16,9 +16,6 @@
 	$result = $conexion->query($consulta);
 	$i=0;
 	while($actor = $result->fetch_assoc()){
-		echo $actor['id_localidades'] . " - ";
-		echo $actor['localidades'] . "<br>";
-
 		$json[$i]["id_localidades"] = $actor['id_localidades'];
 		$json[$i]["localidades"] = $actor['localidades'];
 		$i++;
@@ -30,9 +27,6 @@
 	$result = $conexion->query($consulta);
 	$i=0;
 	while($actor = $result->fetch_assoc()){
-		echo $actor['id_sexo'] . " - ";
-		echo $actor['sexo'] . "<br>";
-
 		$json[$i]["id_sexo"] = $actor['id_sexo'];
 		$json[$i]["sexo"] = $actor['sexo'];
 		$i++;
@@ -44,9 +38,6 @@
 	$result = $conexion->query($consulta);
 	$i=0;
 	while($actor = $result->fetch_assoc()){
-		echo $actor['id_estado'] . " - ";
-		echo $actor['estado_respuesta'] . "<br>";
-
 		$json[$i]["id_estado"] = $actor['id_estado'];
 		$json[$i]["estado_respuesta"] = $actor['estado_respuesta'];
 		$i++;
