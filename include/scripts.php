@@ -12,13 +12,5 @@
 		$(".texto-login input").blur(function(){
 			$(this).parent().parent().find(".icono-login").css("background-color","transparent");
 		})
-
-		$(".send").click(function(){
-			var login = $(this).parent().parent();
-			login.animate({
-				left: "-250%"
-			});
-
-		})
 	})(jQuery)
 </script>
