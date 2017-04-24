@@ -10,6 +10,25 @@ var sexo;
 var flag=0;
 
 $(document).ready(function(){
+
+	$(".salir-sesion").click(function(e){
+		e.preventDefault();
+		console.log("Salir");
+		$.ajax({
+			url: "include/salir.php",
+			method: "POST"
+
+		}).done(function(){
+			window.location="index.php";
+			
+		}).fail(function(xhr, status, error){
+			console.log(xhr);
+			console.log(status);
+			console.log(error);
+			console.log("FAIL");
+		});
+	});
+
 	$(".submit1").click(function(e){
 		e.preventDefault();
 		console.log("CLICK");
