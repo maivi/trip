@@ -12,6 +12,7 @@
 
 	$comprobar = $_POST["flag"]; // Esto me va a decir si es Login o Registro
 	$existe = 0; //La variable que me dice si el usuario existe en la DB
+	$json["flag"] = $comprobar;
 
 	switch ($comprobar){
 		case 0:{
@@ -36,7 +37,7 @@
 			$json["existe"] = $existe; // Creamos el JSON que le va a indicar a JS el estado del usuario loggeado
 			echo json_encode($json);
 			$conexion->close();
-
+			break;
 		}
 		case 1:{
 			$nombre = $_POST["nombre"];
@@ -77,6 +78,7 @@
 			}
 
 			echo json_encode($json);
+			break;
 		}
 	}
 ?>
