@@ -55,6 +55,13 @@ $(document).ready(function(){
 
 		}).done(function(json) {
 			console.log(json);
+			console.log("TERMINO");
+		})
+		.fail(function(xhr, status, error){
+			console.log(xhr);
+			console.log(status);
+			console.log(error);
+			console.log("FAIL");
 		});
 	});
 });
