@@ -7,7 +7,7 @@
 						<img src="assets/images/user.png" alt="">
 					</div>
 					<div class="texto-login">
-						<input type="text" placeholder="USUARIO">
+						<input id="user-login" type="text" placeholder="USUARIO">
 					</div>	
 				</div>
 				<div class="password">
@@ -15,7 +15,7 @@
 						<img src="assets/images/key.png" alt="">
 					</div>
 					<div class="texto-login">
-						<input type="password" placeholder="CONTRASEÑA">
+						<input id="pw-login" type="password" placeholder="CONTRASEÑA">
 					</div>	
 				</div>
 

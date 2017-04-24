@@ -11,13 +11,42 @@ var flag=0;
 
 $(document).ready(function(){
 	$(".submit1").click(function(e){
-
 		e.preventDefault();
 		console.log("CLICK");
 		$(".login").css("display","none");
 		$(".reg").css("display","block");
 		$(".login").animate({left: "-250%"},5000);
 	});
+
+	$(".send").click(function(){
+		e.preventDefault();
+		user = $("#user-login").val();
+		pw = $("#pw-login").val();
+		$.ajax({
+			url: "include/logica_login.php",
+			data: {
+				pw:pw,
+				user:user,
+				flag:0
+			},
+			method: "POST",
+			error: function(xhr, status, error) {
+				console.log(xhr);
+				console.log(status);
+				console.log(error);
+			}
+
+		}).done(function(json) {
+			console.log(json);
+			console.log("TERMINO");
+		})
+		.fail(function(xhr, status, error){
+			console.log(xhr);
+			console.log(status);
+			console.log(error);
+			console.log("FAIL");
+		});
+	})
 
 
 	$("#register").click(function(e){
