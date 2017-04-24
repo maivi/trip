@@ -50,19 +50,22 @@
 			$sexo = $_POST["sexo"];
 
 			$consulta = "SELECT * FROM usuarios;";
-			$conexion->query($consulta);
+			$result = $conexion->query($consulta);
 			$cantidad = $result->num_rows;
-
 
 			// Realizar una comprobacion de si existe el usuario
 
-			$consulta = "INSERT INTO usuarios(nombre, apellido, email, dni, telefono, localidad, pw, user, sexo) VALUES ('$nombre','$apellido','$email','$dni','$telefono',$localidad,'$pw','$user',$sexo);";
-			$conexion->query($consulta);
+			$consulta2 = "INSERT INTO usuarios(nombre, apellido, email, dni, telefono, localidad, pw, user, sexo) VALUES ('$nombre','$apellido','$email','$dni','$telefono',$localidad,'$pw','$user',$sexo);";
+			$json["consulta"]=$consulta2;
+			$conexion->query($consulta2);
 
 			session_start();
 			$_SESSION['newsession']='yes';
 			$_SESSION['usuario'] = $nombre . " " . $apellido;
 			$_SESSION['id'] = ($cantidad+1);
+			$json["usuario"] = $_SESSION['usuario'];
+			$json["id"]=$_SESSION['id'];
+			echo json_encode($json);
 		}
 	}
 ?>
