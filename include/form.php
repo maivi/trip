@@ -59,10 +59,8 @@
 
           <div class="form-group">
             <div class="col-lg-10">
-              <select class="form-control" name="localidad" id="localidad">
-                <option value="1" selected> Gral Alvear
-                 <option value="2">Ciudad</option>
-                 <option value="3">Godoy Cruz</option>
+              <select class="form-control" name="localidad" id="localidad" placeholder="Ciudad">
+                
                </select>
              </div>
            </div>
@@ -71,8 +69,7 @@
            <div class="form-group">
             <div class="col-lg-10">
               <select class="form-control" name="localidad" id="sexo">
-                <option value="1" selected> Hombre</option>
-                <option value="2">Mujer</option>
+                
               </select>
             </div>
           </div>

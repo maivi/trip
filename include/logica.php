@@ -33,7 +33,7 @@
 	}
 	// Fin de la encapsulación
 
-	// Encapsulación de los Sexos
+	// Encapsulación de los Estados
 	$consulta = "SELECT * FROM estado_respuesta;";
 	$result = $conexion->query($consulta);
 	$i=0;
@@ -49,7 +49,7 @@
 	$result = $conexion->query($consulta);
 
 	if($actor = $result->fetch_assoc()){
-		$json["id_ultima_pregunta"] = $actor['ultima_pregunta'];
+		$json[0]["id_ultima_pregunta"] = $actor['ultima_pregunta'];
 	}
 	// Fin de la encapsulación del ID
 

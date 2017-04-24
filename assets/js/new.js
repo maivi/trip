@@ -10,6 +10,61 @@ var sexo;
 var flag=0;
 
 $(document).ready(function(){
+	console.log(typeof localStorage["ultimo_id"]);
+	if((typeof localStorage["ultimo_id"])==="undefined"){
+		$.ajax({
+			url: "include/logica.php",
+			method: "POST"
+		})
+		.done(function(json) {
+			var objeto = $.parseJSON(json);
+			console.log(objeto);
+			var i=0;
+			var localidades = $("#localidad");
+			var sexos = $("#sexo");
+			var constructor;
+			var cant_localidades = 0;
+			var cant_sexos = 0;
+			console.log(objeto.length);
+			while(i<objeto.length){
+				console.log("ENTRO")
+				if("undefined" != typeof objeto[i]["localidades"]){
+					cant_localidades++;
+				}
+
+				if("undefined" != typeof objeto[i]["sexo"]){
+					cant_sexos++;
+				}
+				i++;
+			}
+
+			i=0;
+			while(i<cant_localidades){
+				constructor = "<option value='"+(i+1)+"'>"+objeto[i]["localidades"]+"</option>";
+				localidades.append(constructor);
+				i++;
+			}
+
+			i=0;
+			while(i<cant_sexos){
+				constructor = "<option value='"+(i+1)+"'>"+objeto[i]["sexo"]+"</option>";
+				sexos.append(constructor);
+				i++;
+			}
+			i=0;
+			console.log(objeto[0]["id_ultima_pregunta"]);
+			localStorage["ultimo_id"] = objeto[0]["id_ultima_pregunta"];
+
+		})
+		.fail(function(xhr, status, error){
+			console.log(xhr);
+			console.log(status);
+			console.log(error);
+			console.log("FAIL");
+		});
+	}
+
+	localStorage.removeItem("ultimo_id");
 
 	$(".salir-sesion").click(function(e){
 		e.preventDefault();
@@ -35,6 +90,7 @@ $(document).ready(function(){
 		$(".login").css("display","none");
 		$(".reg").css("display","block");
 		$(".login").animate({left: "-250%"},5000);
+
 	});
 
 	$(".send").click(function(e){
@@ -110,8 +166,7 @@ $(document).ready(function(){
 			}
 
 		}).done(function(json) {
-			console.log(json);
-			console.log("TERMINO");
+			window.location="index.php";
 		})
 		.fail(function(xhr, status, error){
 			console.log(xhr);

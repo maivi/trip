@@ -6,10 +6,10 @@
 
 <body>
 	<?php 
-	include "include/login.php";
 	include "include/header.php";
-	include "include/scripts.php";
+	include "include/login.php";
 	include "include/form.php";
+	include "include/scripts.php";
 	?>
 </body>
 </html>
