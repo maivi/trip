@@ -2,7 +2,7 @@
 	<div class="row">
 		<div class="col-lg-4 col-lg-offset-4">
 			<div class="reg">
-      
+
         <form class="form-horizontal" role="form">
           <div class="form-group">
             <div class="col-lg-10">
@@ -59,10 +59,10 @@
 
           <div class="form-group">
             <div class="col-lg-10">
-              <select class="form-control" name="localidad" onchange="salta(this.form)" id="localidad">
-                <option selected> Gral Alvear
-                 <option value="yyyy.htm">Ciudad</option>
-                 <option value="zzzz.htm">Godoy Cruz</option>
+              <select class="form-control" name="localidad" id="localidad">
+                <option value="1" selected> Gral Alvear
+                 <option value="2">Ciudad</option>
+                 <option value="3">Godoy Cruz</option>
                </select>
              </div>
            </div>
@@ -70,9 +70,9 @@
 
            <div class="form-group">
             <div class="col-lg-10">
-              <select class="form-control" name="localidad" onchange="salta(this.form)" id="sexo">
-                <option selected> Hombre</option>
-                <option value="yyyy.htm">Mujer</option>
+              <select class="form-control" name="localidad" id="sexo">
+                <option value="1" selected> Hombre</option>
+                <option value="2">Mujer</option>
               </select>
             </div>
           </div>
