@@ -11,10 +11,5 @@
 	include "include/scripts.php";
 	include "include/form.php";
 	?>
-
-
-
-
-
 </body>
 </html>
