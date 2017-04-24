@@ -53,18 +53,29 @@
 			$result = $conexion->query($consulta);
 			$cantidad = $result->num_rows;
 
-			// Realizar una comprobacion de si existe el usuario
+			$encontro = 0;
 
-			$consulta2 = "INSERT INTO usuarios(nombre, apellido, email, dni, telefono, localidad, pw, user, sexo) VALUES ('$nombre','$apellido','$email','$dni','$telefono',$localidad,'$pw','$user',$sexo);";
-			$json["consulta"]=$consulta2;
-			$conexion->query($consulta2);
+			while ( ($usuario = $result->fetch_assoc()) && ($encontro==0) ) {
+				if($usuario["user"]==$user){
+					$encontro=1;
+				}
+			}
 
-			session_start();
-			$_SESSION['newsession']='yes';
-			$_SESSION['usuario'] = $nombre . " " . $apellido;
-			$_SESSION['id'] = ($cantidad+1);
-			$json["usuario"] = $_SESSION['usuario'];
-			$json["id"]=$_SESSION['id'];
+			$json["encontro"]=$encontro;
+
+			if($encontro==0){
+				$consulta2 = "INSERT INTO usuarios(nombre, apellido, email, dni, telefono, localidad, pw, user, sexo) VALUES ('$nombre','$apellido','$email','$dni','$telefono',$localidad,'$pw','$user',$sexo);";
+				$json["consulta"]=$consulta2;
+				$conexion->query($consulta2);
+
+				session_start();
+				$_SESSION['newsession']='yes';
+				$_SESSION['usuario'] = $nombre . " " . $apellido;
+				$_SESSION['id'] = ($cantidad+1);
+				$json["usuario"] = $_SESSION['usuario'];
+				$json["id"]=$_SESSION['id'];		
+			}
+
 			echo json_encode($json);
 		}
 	}
