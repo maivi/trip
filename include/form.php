@@ -1,11 +1,13 @@
+
 <div class="reg">
+  <div class="box">
 <div class="container">
 	<div class="row">
 
 
 <div class="col-lg-12">
 
-<h1>REGISTRO</h1>
+<h1 class="titulo1">REGISTRO</h1>   <a class="cerrar" href="#">X</a>
 
 </div>
   <form class="form-horizontal" role="form">
@@ -118,4 +120,5 @@
       </form>
     </div>
   </div>
+</div>
 </div>

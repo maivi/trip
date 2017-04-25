@@ -27,9 +27,11 @@ body {
       height: 84px; }
 
     body .reg {
-       display: none;
+    top:-600px;
     position: relative;
-    top: calc(100vh - 70vh); }
+    transition:1.5s;
+    
+  }
 
         body .reg a {
       text-decoration: none; }
@@ -131,3 +133,28 @@ body {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+
+/*formulario de registro*/
+.box {
+    background-color: white;
+    z-index: 999;
+    position: relative;
+    height: 60vh;
+}
+
+.titulo1{
+
+text-align: center;
+font-size: 30px;
+font-weight: 800;
+}
+
+.cerrar{
+
+float:right;
+}
+
+
+
+/*fin formulario de registro*/

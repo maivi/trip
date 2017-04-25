@@ -84,14 +84,27 @@ $(document).ready(function(){
 		});
 	});
 
+
+
 	$(".submit1").click(function(e){
 		e.preventDefault();
 		console.log("CLICK");
-		$(".login").css("display","none");
-		$(".reg").css("display","block");
-		$(".login").animate({left: "-250%"},5000);
+		$(".reg").css("top","-20px");
+
 
 	});
+
+		$(".cerrar").click(function(e){
+		e.preventDefault();
+		console.log("CLICK");
+		$(".reg").css("top","-600px");
+
+
+	});
+
+
+
+
 
 	$(".send").click(function(e){
 		e.preventDefault();
