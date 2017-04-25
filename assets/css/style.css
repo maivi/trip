@@ -27,9 +27,9 @@ body {
       height: 84px; }
 
     body .reg {
-       display: none;
+    top:-800px;
     position: relative;
-    top: calc(100vh - 70vh); }
+    transition:1.5s;}
 
         body .reg a {
       text-decoration: none; }
