@@ -5,18 +5,7 @@ body {
   height: 100vh;
   width: 100%;
   overflow: hidden; }
-  body:before{
-    background:url(../images/overlay-dots.png) left top repeat;
-    opacity: 0.5;
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-  }
+
   body .login {
     
     position: relative;
@@ -141,6 +130,7 @@ body {
     z-index: 999;
     position: relative;
     height: 60vh;
+    border-bottom: 2px solid #cccccc
 }
 
 .titulo1{
@@ -148,6 +138,9 @@ body {
 text-align: center;
 font-size: 30px;
 font-weight: 800;
+padding-bottom: 20px;
+padding-top: 20px;
+margin-bottom: 50px;
 }
 
 .cerrar{
@@ -155,6 +148,11 @@ font-weight: 800;
 float:right;
 }
 
+.full-reg{
+padding-left: 0px!important;
+padding-right: 0px!important;
+
+}
 
 
 /*fin formulario de registro*/
