@@ -56,6 +56,8 @@
 
 .navbar{
   min-height: 60px;
+  position: relative;
+  z-index: 1000;
 }
 
 .navbar-default{
@@ -81,7 +83,52 @@
   padding-bottom: 20px; 
 }
 
-input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill, .form-control{
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill, .form-control {
   background-color: #3378B0 !important;
-  color: #99BCD8 !important;;
+  color: #99BCD8 !important;
+  font-family: Open Sans;
+  font-size: 15px;
 }
+
+.navbar-form .form-group{
+  margin-right: 5px;
+}
+
+.form-control{
+  border: 0px;
+}
+
+.btn{
+  padding: 7px 40px;
+}
+
+.btn-default{
+  color: white;
+  background-color: #00569C;
+  border-color: white;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: Open Sans
+}
+
+.btn-default:hover{
+  color: #00569C !important;
+  background-color: white !important;
+  border-color: #00569C !important;
+}
+
+.submit1, .submit2{
+  color: white !important;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: Open Sans
+}
+
+.submit1:hover, .submit2:hover{
+  color: #99BCD8 !important;
+}
+
+.submit2{
+  font-weight: 400;
+}
+

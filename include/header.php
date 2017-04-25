@@ -26,7 +26,7 @@
 
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="#" class="submit1">REGISTRARSE</a></li>
-				<li><a href="#">Perdí mi acceso</a></li>
+				<li><a href="#" class="submit2">Perdí mi acceso</a></li>
 			</ul>
 		</div><!-- /.navbar-collapse -->
 	</div><!-- /.container-fluid -->
