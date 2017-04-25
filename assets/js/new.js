@@ -175,4 +175,18 @@ $(document).ready(function(){
 			console.log("FAIL");
 		});
 	});
+
+
+	$(".click-historial").click(function(e){
+		e.preventDefault();
+		var preguntas = localStorage["ultimo_id"];
+		if (preguntas>1){
+			/*$.ajax({
+				url: "include/logica.php",
+				method: "POST"
+			})*/
+		}else{
+			console.log("No hay preguntas");
+		}
+	});
 });

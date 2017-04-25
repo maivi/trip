@@ -8,5 +8,7 @@
 	Destruir
 </a>
 <div class="historial-usuario">
-	
+	<a class="click-historial" href="#" style="position: relative;z-index: 100000000">
+		historial
+	</a>
 </div>
