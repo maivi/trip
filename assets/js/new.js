@@ -89,15 +89,15 @@ $(document).ready(function(){
 	$(".submit1").click(function(e){
 		e.preventDefault();
 		console.log("CLICK");
-		$(".reg").css("top","0px");
+		$(".reg").css("top","-20px");
 
 
 	});
 
-		$(".equis").click(function(e){
+		$(".cerrar").click(function(e){
 		e.preventDefault();
 		console.log("CLICK");
-		$(".reg").css("display","block");
+		$(".reg").css("top","-600px");
 
 
 	});
