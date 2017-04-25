@@ -58,6 +58,7 @@
   min-height: 60px;
   position: relative;
   z-index: 1000;
+  margin-bottom: 0px;
 }
 
 .navbar-default{
