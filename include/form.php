@@ -3,14 +3,9 @@
  <div class="box">
       <div class="container-fluid full-reg">
            <div class="row">
-
-                       <div class="col-lg-12">
-                         <a class="cerrar" href="#">X</a>
-                       </div>
-
                        <div class="col-lg-12">
 
-                        <h1 class="titulo1">REGISTRO</h1>
+                        <h1 class="titulo1">REGISTRO</h1><a class="cerrar" href="#"><img src="assets/images/cerrar.png"/></a>
 
                       </div>
             </div>
@@ -20,7 +15,7 @@
   <div class="row">
 
 
-    <form class="form-horizontal" role="form">
+    <form class="form-horizontal form1" role="form">
 
      <div class="col-lg-6">
       <div class="form-group">

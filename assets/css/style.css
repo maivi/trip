@@ -16,7 +16,7 @@ body {
       height: 84px; }
 
     body .reg {
-    top:-600px;
+    top:-800px;
     position: relative;
     transition:1.5s;
     
@@ -129,28 +129,38 @@ body {
     background-color: white;
     z-index: 999;
     position: relative;
-    height: 60vh;
-    border-bottom: 2px solid #cccccc
+    height: 70vh;
+    border-bottom: 1px solid #cccccc
 }
 
 .titulo1{
 
-text-align: center;
-font-size: 30px;
-font-weight: 800;
-padding-bottom: 20px;
-padding-top: 20px;
-margin-bottom: 50px;
+     text-align: center;
+    font-size: 30px;
+    font-weight: 800;
+    padding-bottom: 50px;
+    padding-top: 20px;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #cdcdcd;
 }
 
 .cerrar{
 
 float:right;
+    position: relative;
+    top: -130px;
+    left: -60px;
 }
 
 .full-reg{
 padding-left: 0px!important;
 padding-right: 0px!important;
+
+}
+
+.form1 input,.form1 select{
+
+border: 1px solid #cdcdcd!important;
 
 }
 

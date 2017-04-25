@@ -89,7 +89,7 @@ $(document).ready(function(){
 	$(".submit1").click(function(e){
 		e.preventDefault();
 		console.log("CLICK");
-		$(".reg").css("top","-20px");
+		$(".reg").css("top","-214px");
 
 
 	});
@@ -97,7 +97,7 @@ $(document).ready(function(){
 		$(".cerrar").click(function(e){
 		e.preventDefault();
 		console.log("CLICK");
-		$(".reg").css("top","-600px");
+		$(".reg").css("top","-800px");
 
 
 	});
