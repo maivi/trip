@@ -1,7 +1,14 @@
+<div class="reg">
 <div class="container">
 	<div class="row">
-    <div class="reg">
-         <form class="form-horizontal" role="form">
+
+
+<div class="col-lg-12">
+
+<h1>REGISTRO</h1>
+
+</div>
+  <form class="form-horizontal" role="form">
 
 	<div class="col-lg-6">
           <div class="form-group">
