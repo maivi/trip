@@ -7,7 +7,6 @@
 <body>
 	<?php 
 	include "include/header.php";
-	include "include/login.php";
 	include "include/form.php";
 	include "include/scripts.php";
 	?>

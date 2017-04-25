@@ -16,16 +16,16 @@
 			
 			<form class="navbar-form navbar-left">
 				<div class="form-group">
-					<input type="text" class="form-control" placeholder="Email">
+					<input type="text" class="form-control" placeholder="Usuario">
 				</div>
 				<div class="form-group">
 					<input type="password" class="form-control" placeholder="Contraseña">
 				</div>
-				<button type="submit" class="btn btn-default">ENTRAR</button>
+				<button type="submit" class="btn btn-default send">ENTRAR</button>
 			</form>
 
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#">REGISTRARSE</a></li>
+				<li><a href="#" class="submit1">REGISTRARSE</a></li>
 				<li><a href="#">Perdí mi acceso</a></li>
 			</ul>
 		</div><!-- /.navbar-collapse -->
