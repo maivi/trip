@@ -83,7 +83,7 @@
   padding-bottom: 20px; 
 }
 
-input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill, .form-control {
+.navbar input:-webkit-autofill, .navbar textarea:-webkit-autofill, .navbar select:-webkit-autofill, .navbar .form-control {
   background-color: #3378B0 !important;
   color: #99BCD8 !important;
   font-family: Open Sans;
