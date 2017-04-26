@@ -10,7 +10,9 @@
 
 				<div class="redes-contenedor">
 					<div class="redes">
-						
+						<div class="red fb">
+							<i class="fa fa-facebook" aria-hidden="true"></i>
+						</div>
 					</div>
 				</div>
 
