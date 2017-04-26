@@ -139,7 +139,7 @@
 
 .contenedor-cuerpo{
   width: 100%;
-  overflow: hiiden;
+  padding-bottom: 50px;
 }
 
 .front{
@@ -159,7 +159,26 @@
 
 .banner img{
   width: 100%;
+}
 
+.ac-custom.ac-radio.ac-circle h2{
+  font-family: CPCompany Black;
+  font-size: 60px;
+}
+
+.ac-custom li{
+  padding: 1em 0;
+}
+
+#contenedor-boton{
+  margin-top: 0px;
+  text-align: left;
+}
+
+.ac-custom.ac-radio.ac-circle ul li label{
+  font-family: Open Sans;
+  font-size: 25px;
+  font-weight: 400;
 }
 
 /* FOOTER */
@@ -169,8 +188,6 @@
   background-color: #022C3C;
   padding-top: 50px;
   padding-bottom: 30px;
-  position: absolute;
-  bottom: 0px;
 }
 
 .logo-contenedor{
@@ -180,4 +197,51 @@
 .logo{
   width: 280px;
   margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.redes-contenedor{
+  width: 100%;
+  margin-bottom: 55px;
+  height: 45px;
+}
+
+.red{
+  float: left;
+  margin-right: 40px;
+}
+
+.red i{
+  font-size: 40px;
+  color: white;
+}
+
+.red i:hover{
+  opacity: .75;
+}
+
+.insta{
+  margin-right: 0px;
+}
+
+.redes{
+  width: 255px;
+  margin: 0 auto;
+}
+
+.derechos-contenedor{
+  width: 100%;
+}
+
+.derechos-reservados{
+  text-align: center;
+}
+
+.derechos-reservados p {
+  font-family: Open Sans;
+  font-size: 15px;
+}
+
+.derechos-reservados p img{
+  margin-top: -2px;
 }
