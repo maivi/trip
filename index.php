@@ -4,7 +4,6 @@
 <body>
 	<?php 
 		session_start();
-		$_SESSION['newsession']='no';
 		include "include/header.php";
 		include "include/cuerpo.php";
 		if (isset($_SESSION['newsession'])) {

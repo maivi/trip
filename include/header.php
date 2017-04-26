@@ -13,7 +13,7 @@
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<?php 
-			if ( (isset($_SESSION['newsession']))  && (if ($_SESSION['newsession']=='yes') ) ) {
+			if ( ( isset( $_SESSION['newsession'] ) )  && ( $_SESSION['newsession']=='yes') ) { 
 				
 		?>
 		<?php
