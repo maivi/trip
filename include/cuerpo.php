@@ -9,7 +9,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bases-y-condiciones">
-				<a href="http://localhost/caribe2/assets/file/BBCC_Sorteo_Viajes_Nihuil.pdf"  target="_blank" class="base-click"><span>Bases y Condiciones</span></a>
+				<a href="assets/file/BBCC_Sorteo_Viajes_Nihuil.pdf"  target="_blank" class="base-click"><span>Bases y Condiciones</span></a>
 			</div>
 		</div>	
 
