@@ -153,14 +153,14 @@ body .login .texto-login *:-ms-input-placeholder {
 }
 
 
-.box input::-webkit-input-placeholder,.box select::-webkit-select-placeholder {
+.box input::-webkit-input-placeholder{
   color: black!important;
 
 }
-.box input:-moz-placeholder,.box select:-moz-placeholder {
+.box input:-moz-placeholder {
   color: black!important; 
 }
-.box input:-ms-input-placeholder,.box select:-ms-select-placeholder { 
+.box input:-ms-input-placeholder{ 
   color: black!important; 
 }
 
@@ -168,6 +168,26 @@ body .login .texto-login *:-ms-input-placeholder {
 
     color: black!important;
 }
+
+
+.navbar-form input::-webkit-input-placeholder{
+
+color: white!important;
+
+}
+
+.navbar-form input:-moz-placeholder {
+  color: black!important; 
+}
+
+.navbar-form input:-ms-input-placeholder{ 
+  color: black!important; 
+}
+
+
+
+
+
 
 .titulo1{
   font-family: CPCompany Black;
