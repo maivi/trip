@@ -148,7 +148,7 @@ body .login .texto-login *:-ms-input-placeholder {
   background-color: white;
   z-index: 999;
   position: relative;
-  height: 77vh;
+  height: 550px;
   border-bottom: 1px solid #cccccc
 }
 
@@ -187,14 +187,24 @@ body .login .texto-login *:-ms-input-placeholder {
 
 /*index*/
 .bases-y-condiciones{
-text-align: center;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+.bases-y-condiciones a{
+color:black;
+text-decoration: underline;
+font-size: 13px;
 }
 
 .consigna{
 
 
 }
-
-
+.question{
+    border-top: 1px solid #DBDBDB;
+    margin-top: 20px;
+    padding-top: 20px;
+}
 
 /*fin index*/
