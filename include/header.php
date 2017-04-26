@@ -16,10 +16,10 @@
 			
 			<form class="navbar-form navbar-left">
 				<div class="form-group">
-					<input type="text" class="form-control" placeholder="Usuario">
+					<input id="user-login" type="text" class="form-control" placeholder="Usuario">
 				</div>
 				<div class="form-group">
-					<input type="password" class="form-control" placeholder="Contraseña">
+					<input id="pw-login" type="password" class="form-control" placeholder="Contraseña">
 				</div>
 				<button type="submit" class="btn btn-default send">ENTRAR</button>
 			</form>

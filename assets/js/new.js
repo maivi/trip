@@ -94,7 +94,7 @@ $(document).ready(function(){
 
 	});
 
-		$(".cerrar").click(function(e){
+	$(".cerrar").click(function(e){
 		e.preventDefault();
 		console.log("CLICK");
 		$(".reg").css("top","-800px");
