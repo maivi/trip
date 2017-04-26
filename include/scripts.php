@@ -4,7 +4,9 @@
 <script type="text/javascript" src="assets/js/selectFx.js"></script>
 <script type="text/javascript" src="assets/js/fullscreenForm.js"></script>
 <script type="text/javascript" src="assets/js/svgcheckbx.js"></script>
-<script type="text/javascript" type="text/javascript" src="assets/js/new.js"></script>
+<script type="text/javascript" src="assets/js/new.js"></script>
+<script type="text/javascript" src="assets/js/jqBootstrapValidation.js"></script>
+<script type="text/javascript" src="assets/js/contacto.js"></script>
 
 
 <script type="text/javascript">
