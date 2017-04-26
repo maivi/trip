@@ -36,15 +36,15 @@
 								<form id="form" class="ac-custom ac-radio ac-circle" autocomplete="off">
 									<h2><span id="num">1°</span> PREGUNTA</h2>
 									<ul>
-										<li><input id="r1" name="r1" type="radio"><label for="r1">1 febrero 1994</label></li>
-										<li><input id="r2" name="r1" type="radio"><label for="r2">1 marzo 1994</label></li>
-										<li><input id="r3" name="r1" type="radio"><label for="r3">1 febrero 1993</label></li><br>
+										<li><input id="r1" name="r1" type="radio"><label for="r1">Respuesta 1</label></li>
+										<li><input id="r2" name="r1" type="radio"><label for="r2">Respuesta 2</label></li>
+										<li><input id="r3" name="r1" type="radio"><label for="r3">Respuesta 3</label></li><br>
 									</ul>
 									<div id="contenedor-boton">
 										<?php  
 											if ( ( isset( $_SESSION['newsession'] ) )  && ( $_SESSION['newsession']=='yes') ) { 
 										?>
-											<button class="btn btn-default" type="submit">Enviar</button>
+											<button class="btn btn-default enviar-respuesta" type="submit">Enviar</button>
 										<?php
 											}else{
 										?>
