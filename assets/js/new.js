@@ -8,6 +8,7 @@ var pw;
 var user;
 var sexo;
 var flag=0;
+var json2;
 
 $(document).ready(function(){
 	console.log(typeof localStorage["ultimo_id"]);
@@ -102,10 +103,6 @@ $(document).ready(function(){
 
 	});
 
-
-
-
-
 	$(".send").click(function(e){
 		e.preventDefault();
 		user = $("#user-login").val();
@@ -179,7 +176,8 @@ $(document).ready(function(){
 			}
 
 		}).done(function(json) {
-			window.location="index.php";
+			var obj2 = $.parseJSON(json);
+			console.log(obj2);
 		})
 		.fail(function(xhr, status, error){
 			console.log(xhr);
