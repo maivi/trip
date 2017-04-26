@@ -103,42 +103,42 @@ $(document).ready(function(){
 
 	});
 
+
+	//LOGIN
 	$(".send").click(function(e){
 		e.preventDefault();
 		user = $("#user-login").val();
 		pw = $("#pw-login").val();
-		$.ajax({
-			url: "include/logica_login.php",
-			data: {
-				pw:pw,
-				user:user,
-				flag:0
-			},
-			method: "POST",
-			error: function(xhr, status, error) {
+		if ( (user != "") && (pw != "") ){
+			$.ajax({
+				url: "include/logica_login.php",
+				data: {
+					pw:pw,
+					user:user,
+					flag:0
+				},
+				method: "POST"
+
+			}).done(function(json) {
+				console.log(json);
+				var obj = $.parseJSON(json);
+				if(obj["existe"]==0){
+					var eliminar = $(".mensaje-alerta").find("p");
+					eliminar.empty();
+					eliminar.append("Usuario o Password incorrecto");	
+				}else{
+					window.location="index.php";
+				}
+				console.log(obj["existe"]);
+			})
+			.fail(function(xhr, status, error){
 				console.log(xhr);
 				console.log(status);
 				console.log(error);
-			}
-
-		}).done(function(json) {
-			console.log(json);
-			var obj = $.parseJSON(json);
-			if(obj["existe"]==0){
-				$(".usuario").addClass("danger-login");
-				$(".password").addClass("danger-login");
-				$(".icono-login").addClass("remover-borde");	
-			}else{
-				window.location="index.php";
-			}
-			console.log(obj["existe"]);
-		})
-		.fail(function(xhr, status, error){
-			console.log(xhr);
-			console.log(status);
-			console.log(error);
-			console.log("FAIL");
-		});
+				console.log("FAIL");
+			});
+		}
+		
 	})
 
 

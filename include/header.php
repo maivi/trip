@@ -41,7 +41,7 @@
 				</form>
 				<div class="mensaje-alerta">
 					<p>
-						Usuario o Password incorrecto	
+							
 					</p>
 				</div>
 				<ul class="nav navbar-nav navbar-right">
