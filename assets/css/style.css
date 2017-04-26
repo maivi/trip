@@ -2,96 +2,114 @@ body {
   background-color:white;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;}
+  width: 100%;
+}
 
-  body .login {
-    
-    position: relative;
-    top: calc(100vh - 70vh); }
-    body .login .usuario, body .login .password {
-      width: 100%;
-      margin-bottom: 20px;
-      height: 84px; }
+body .login {
+  position: relative;
+  top: calc(100vh - 70vh); 
+}
+body .login .usuario, body .login .password {
+  width: 100%;
+  margin-bottom: 20px;
+  height: 84px; 
+}
+body .reg {
+  top:-800px;
+  position: absolute;
+  transition:1.5s;
+  width: 100%;
+}
 
-    body .reg {
-    top:-800px;
-    position: relative;
-    transition:1.5s;
-    
-  }
+body .reg a {
+  text-decoration: none; 
+}
+body .reg .send {
+  text-align: center;
+  height: 80px;
+  width: 100%;
+  background-color: white;
+  color: #1c4f8e;
+  font-weight: 600;
+  font-family: Open Sans;
+  font-size: 23px;
+  line-height: 80px; 
+}
+body .reg .send:hover {
+  background-color: #1c4f8e;
+  color: white;
+  transition: 0.3s; 
+}
 
-        body .reg a {
-      text-decoration: none; }
-    body .reg .send {
-      text-align: center;
-      height: 80px;
-      width: 100%;
-      background-color: white;
-      color: #1c4f8e;
-      font-weight: 600;
-      font-family: Open Sans;
-      font-size: 23px;
-      line-height: 80px; }
-      body .reg .send:hover {
-        background-color: #1c4f8e;
-        color: white;
-        transition: 0.3s; }
-
-    body .login .password .icono-login {
-      padding-top: 15px; }
-    body .login .usuario .icono-login {
-      padding-top: 10px; }
-    body .login a {
-      text-decoration: none; }
-    body .login .send {
-      text-align: center;
-      height: 80px;
-      width: 100%;
-      background-color: white;
-      color: #1c4f8e;
-      font-weight: 600;
-      font-family: Open Sans;
-      font-size: 23px;
-      line-height: 80px; }
-      body .login .send:hover {
-        background-color: #1c4f8e;
-        color: white;
-        transition: 0.3s; }
-    body .login .icono-login {
-      height: 80px;
-      width: 80px;
-      border: 1px solid white;
-      float: left;
-      padding-left: 17px; }
-      body .login .icono-login img {
-        width: 45px; }
-    body .login .texto-login {
-      float: left;
-      width: calc(100% - 80px); }
-      body .login .texto-login input {
-        width: 100%;
-        height: 80px;
-        background-color: transparent;
-        border: 1px solid white;
-        padding-left: 15px;
-        color: white;
-        font-weight: 300;
-        font-family: Open Sans;
-        font-size: 25px; }
-        body .login .texto-login input:focus {
-          outline: none; }
-      body .login .texto-login *::-webkit-input-placeholder {
-        /* Google Chrome y Safari */
-        color: white; }
-      body .login .texto-login *:-moz-placeholder {
-        /* Firefox anterior a 19 */
-        color: white; }
-      body .login .texto-login *::-moz-placeholder {
-        /* Firefox 19 y superior */
-        color: white; }
-      body .login .texto-login *:-ms-input-placeholder {
-        /* Internet Explorer 10 y superior */
-        color: white; }
+body .login .password .icono-login {
+  padding-top: 15px; 
+}
+body .login .usuario .icono-login {
+  padding-top: 10px; 
+}
+body .login a {
+  text-decoration: none; 
+}
+body .login .send {
+  text-align: center;
+  height: 80px;
+  width: 100%;
+  background-color: white;
+  color: #1c4f8e;
+  font-weight: 600;
+  font-family: Open Sans;
+  font-size: 23px;
+  line-height: 80px; 
+}
+body .login .send:hover {
+  background-color: #1c4f8e;
+  color: white;
+  transition: 0.3s; 
+}
+body .login .icono-login {
+  height: 80px;
+  width: 80px;
+  border: 1px solid white;
+  float: left;
+  padding-left: 17px; 
+}
+body .login .icono-login img {
+  width: 45px; 
+}
+body .login .texto-login {
+  float: left;
+  width: calc(100% - 80px); 
+}
+body .login .texto-login input {
+  width: 100%;
+  height: 80px;
+  background-color: transparent;
+  border: 1px solid white;
+  padding-left: 15px;
+  color: white;
+  font-weight: 300;
+  font-family: Open Sans;
+  font-size: 25px; 
+}
+body .login .texto-login input:focus {
+  outline: none; 
+}
+body .login .texto-login *::-webkit-input-placeholder {
+  /* Google Chrome y Safari */
+  color: white; 
+}
+body .login .texto-login *:-moz-placeholder {
+  /* Firefox anterior a 19 */
+  color: white; 
+}
+body .login .texto-login *::-moz-placeholder {
+  /* Firefox 19 y superior */
+  color: white; 
+}
+body .login .texto-login *:-ms-input-placeholder {
+  /* Internet Explorer 10 y superior */
+  color: white; 
+}
 
 .contenedor-header {
   height: 80px;
@@ -99,18 +117,21 @@ body {
   right: -250%;
   background-color: #34495e;
   position: absolute;
-  top: 0px; }
-  .contenedor-header .icono-header {
-    height: 49px;
-    width: 256px;
-    background-color: transparent;
-    position: relative;
-    top: 40px;
-    padding-top: 5px;
-    padding-left: 5px;
-    left: -320%; }
-    .contenedor-header .icono-header img {
-    width: 400px; }
+  top: 0px; 
+}
+.contenedor-header .icono-header {
+  height: 49px;
+  width: 256px;
+  background-color: transparent;
+  position: relative;
+  top: 40px;
+  padding-top: 5px;
+  padding-left: 5px;
+  left: -320%; 
+}
+.contenedor-header .icono-header img {
+  width: 400px; 
+}
 
 .danger-login{
   border: 2px solid red;
@@ -124,41 +145,41 @@ body {
 
 /*formulario de registro*/
 .box {
-    background-color: white;
-    z-index: 999;
-    position: relative;
-    height: 70vh;
-    border-bottom: 1px solid #cccccc
+  background-color: white;
+  z-index: 999;
+  position: relative;
+  height: 77vh;
+  border-bottom: 1px solid #cccccc
 }
 
 .titulo1{
 
-     text-align: center;
-    font-size: 30px;
-    font-weight: 800;
-    padding-bottom: 50px;
-    padding-top: 20px;
-    margin-bottom: 50px;
-    border-bottom: 1px solid #cdcdcd;
+ text-align: center;
+ font-size: 30px;
+ font-weight: 800;
+ padding-bottom: 50px;
+ padding-top: 20px;
+ margin-bottom: 50px;
+ border-bottom: 1px solid #cdcdcd;
 }
 
 .cerrar{
 
-float:right;
-    position: relative;
-    top: -130px;
-    left: -60px;
+  float:right;
+  position: relative;
+  top: -130px;
+  left: -60px;
 }
 
 .full-reg{
-padding-left: 0px!important;
-padding-right: 0px!important;
+  padding-left: 0px!important;
+  padding-right: 0px!important;
 
 }
 
 .form1 input,.form1 select{
 
-border: 1px solid #cdcdcd!important;
+  border: 1px solid #cdcdcd!important;
 
 }
 

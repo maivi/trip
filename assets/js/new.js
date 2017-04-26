@@ -90,7 +90,7 @@ $(document).ready(function(){
 	$(".submit1").click(function(e){
 		e.preventDefault();
 		console.log("CLICK");
-		$(".reg").css("top","-214px");
+		$(".reg").css("top","60px");
 
 
 	});
