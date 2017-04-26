@@ -169,6 +169,8 @@
   background-color: #022C3C;
   padding-top: 50px;
   padding-bottom: 30px;
+  position: absolute;
+  bottom: 0px;
 }
 
 .logo-contenedor{
