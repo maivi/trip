@@ -1,14 +1,15 @@
 <?php  
-	include "conexion.php";
 
-	$conexion = new mysqli($host,$user,$pw,$db);
+include "conexion.php";
 
-	if ($conexion->connect_errno) {
-		echo "Falló la conexión con MySQL: (" . $conexion->connect_errno . ") " . $conexion->connect_error;
-	}
+$conexion = new mysqli($host,$user,$pw,$db);
 
-	$conexion->set_charset('utf8');
-	$conexion->query("SET NAMES 'UTF8'");
+if ($conexion->connect_errno) {
+	echo "Falló la conexión con MySQL: (" . $conexion->connect_errno . ") " . $conexion->connect_error;
+}
+
+$conexion->set_charset('utf8');
+$conexion->query("SET NAMES 'UTF8'");
 
 	$comprobar = $_POST["flag"]; // Esto me va a decir si es Login o Registro
 	$existe = 0; //La variable que me dice si el usuario existe en la DB
@@ -65,20 +66,27 @@
 			$json["encontro"]=$encontro;
 
 			if($encontro==0){
+
 				$consulta2 = "INSERT INTO usuarios(nombre, apellido, email, dni, telefono, localidad, pw, user, sexo) VALUES ('$nombre','$apellido','$email','$dni','$telefono',$localidad,'$pw','$user',$sexo);";
 				$json["consulta"]=$consulta2;
+
+
 				$conexion->query($consulta2);
 
-				session_start();
-				$_SESSION['newsession']='yes';
-				$_SESSION['usuario'] = $nombre . " " . $apellido;
-				$_SESSION['id'] = ($cantidad+1);
-				$json["usuario"] = $_SESSION['usuario'];
-				$json["id"]=$_SESSION['id'];		
-			}
 
-			echo json_encode($json);
-			break;
-		}
-	}
+
+
+
+session_start();
+$_SESSION['newsession']='yes';
+$_SESSION['usuario'] = $nombre . " " . $apellido;
+$_SESSION['id'] = ($cantidad+1);
+$json["usuario"] = $_SESSION['usuario'];
+$json["id"]=$_SESSION['id'];		
+}
+
+echo json_encode($json);
+break;
+}
+}
 ?>

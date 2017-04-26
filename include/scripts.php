@@ -6,7 +6,7 @@
 <script type="text/javascript" src="assets/js/svgcheckbx.js"></script>
 <script type="text/javascript" src="assets/js/new.js"></script>
 <script type="text/javascript" src="assets/js/jqBootstrapValidation.js"></script>
-<script type="text/javascript" src="assets/js/contacto.js"></script>
+
 
 
 <script type="text/javascript">
