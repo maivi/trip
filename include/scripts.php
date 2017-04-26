@@ -1,6 +1,10 @@
 <script type="text/javascript" src="assets/js/jquery.js"></script>
 <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="assets/js/new.js"></script>
+<script type="text/javascript" src="assets/js/classie.js"></script>
+<script type="text/javascript" src="assets/js/selectFx.js"></script>
+<script type="text/javascript" src="assets/js/fullscreenForm.js"></script>
+<script type="text/javascript" src="assets/js/svgcheckbx.js"></script>
+<script type="text/javascript" type="text/javascript" src="assets/js/new.js"></script>
 
 
 <script type="text/javascript">

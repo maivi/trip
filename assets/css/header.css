@@ -120,20 +120,26 @@
   border-color: #00569C !important;
 }
 
-.submit1, .submit2{
+.submit1, .submit2, .salir-sesion, .usuario-ingresado{
   color: white !important;
   font-size: 13px;
   font-weight: 700;
   font-family: Open Sans
 }
 
-.submit1:hover, .submit2:hover{
+.usuario-ingresado{
+  padding: 20px 12px 0px 0px;
+}
+
+.submit1:hover, .submit2:hover, .salir-sesion:hover{
   color: #99BCD8 !important;
 }
 
 .submit2{
   font-weight: 400;
 }
+
+
 
 /* FIN HEADER */
 

@@ -41,30 +41,25 @@
 										<li><input id="r3" name="r1" type="radio"><label for="r3">1 febrero 1993</label></li><br>
 									</ul>
 									<div id="contenedor-boton">
-										<button class="btn btn-default" type="submit">Enviar</button>
-									</div>
+										<?php  
+											if ( ( isset( $_SESSION['newsession'] ) )  && ( $_SESSION['newsession']=='yes') ) { 
+										?>
+											<button class="btn btn-default" type="submit">Enviar</button>
+										<?php
+											}else{
+										?>
+											<p>Por favor, registrate para poder participar.</p>
+										<?php 
+											}
+										?>
+										</div>
 
-								</form>
-
-
-
-
+									</form>
+								</div>
 							</div>
 						</div>
-					</div>
-
-					<script src="assets/js/jquery-1.12.min.js"></script>
-					<script src="assets/js/classie.js"></script>
-					<script src="assets/js/selectFx.js"></script>
-					<script src="assets/js/fullscreenForm.js"></script>
-					<script src="assets/js/svgcheckbx.js"></script>
-
-
-
-
-
-				</h4>
+					</h4>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
