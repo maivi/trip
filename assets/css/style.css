@@ -152,15 +152,32 @@ body .login .texto-login *:-ms-input-placeholder {
   border-bottom: 1px solid #cccccc
 }
 
-.titulo1{
 
- text-align: center;
- font-size: 30px;
- font-weight: 800;
- padding-bottom: 50px;
- padding-top: 20px;
- margin-bottom: 50px;
- border-bottom: 1px solid #cdcdcd;
+.box input::-webkit-input-placeholder,.box select::-webkit-select-placeholder {
+  color: black!important;
+
+}
+.box input:-moz-placeholder,.box select:-moz-placeholder {
+  color: black!important; 
+}
+.box input:-ms-input-placeholder,.box select:-ms-select-placeholder { 
+  color: black!important; 
+}
+
+.box .form-control {
+
+    color: black!important;
+}
+
+.titulo1{
+  font-family: CPCompany Black;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 800;
+  padding-bottom: 50px;
+  padding-top: 20px;
+  margin-bottom: 50px;
+  border-bottom: 1px solid #cdcdcd;
 }
 
 .cerrar{
@@ -192,9 +209,9 @@ body .login .texto-login *:-ms-input-placeholder {
   padding-bottom: 40px;
 }
 .bases-y-condiciones a{
-color:black;
-text-decoration: underline;
-font-size: 13px;
+  color:black;
+  text-decoration: underline;
+  font-size: 13px;
 }
 
 .consigna{
@@ -202,9 +219,9 @@ font-size: 13px;
 
 }
 .question{
-    border-top: 1px solid #DBDBDB;
-    margin-top: 20px;
-    padding-top: 20px;
+  border-top: 1px solid #DBDBDB;
+  margin-top: 20px;
+  padding-top: 20px;
 }
 
 /*fin index*/
