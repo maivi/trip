@@ -5,6 +5,8 @@
 	<?php 
 		include "include/header.php";
 		include "include/cuerpo.php";
+
+
 		session_start();
 		$_SESSION['newsession']='no';
 		//$_SESSION['usuario'] = "Maximiliano Kadyszyn";
@@ -16,6 +18,7 @@
 		}
 
 		include "include/scripts.php";
+		include "include/footer.php";
 	?>
 </body>
 </html>
