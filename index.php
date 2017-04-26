@@ -7,7 +7,9 @@
 		include "include/header.php";
 		include "include/cuerpo.php";
 		if (isset($_SESSION['newsession'])) {
-			if ($_SESSION['newsession']=='no'){
+			if ($_SESSION['newsession']=='yes'){
+				include "include/perfil.php";
+			}else{
 				include "include/form.php";
 			}
 		}else{
