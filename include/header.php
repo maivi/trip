@@ -39,7 +39,11 @@
 					</div>
 					<button type="submit" class="btn btn-default send">ENTRAR</button>
 				</form>
-
+				<div class="mensaje-alerta">
+					<p>
+						Usuario o Password incorrecto	
+					</p>
+				</div>
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="#" class="submit1">REGISTRARSE</a></li>
 					<li><a href="#" class="submit2">Perdí mi acceso</a></li>
