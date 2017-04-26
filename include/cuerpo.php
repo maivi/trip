@@ -27,6 +27,7 @@
 					echo $arrayDias[date('w')]." ".date('d')." de ".$arrayMeses[date('m')-1]." de ".date('Y');
 					?>
 					
+					
 				</h4>
 			</div>
 		</div>
