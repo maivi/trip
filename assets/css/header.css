@@ -137,13 +137,29 @@
 
 /* FIN HEADER */
 
+.contenedor-cuerpo{
+  width: 100%;
+  overflow: hiiden;
+}
+
 .front{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.front .row{
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+.banner{
   padding-left: 0px;
   padding-right: 0px;
 }
 
 .banner img{
   width: 100%;
+
 }
 
 /* FOOTER */
@@ -153,6 +169,8 @@
   background-color: #022C3C;
   padding-top: 50px;
   padding-bottom: 30px;
+  position: absolute;
+  bottom: 0px;
 }
 
 .logo-contenedor{
