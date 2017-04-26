@@ -12,6 +12,14 @@
 		</div>
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
+		<?php 
+			if (isset($_SESSION['newsession'])) {
+				if ($_SESSION['newsession']=='yes'){
+		?>
+		<?php
+				}  
+			}else{
+		?>
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			
 			<form class="navbar-form navbar-left">
@@ -29,5 +37,8 @@
 				<li><a href="#" class="submit2">Perdí mi acceso</a></li>
 			</ul>
 		</div><!-- /.navbar-collapse -->
+		<?php  
+			}
+		?>
 	</div><!-- /.container-fluid -->
 </nav>
