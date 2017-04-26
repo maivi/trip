@@ -16,6 +16,8 @@
 			include "include/form.php";
 		}
 
+		include "include/footer.php";
+
 		include "include/scripts.php";
 	?>
 </body>
