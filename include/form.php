@@ -22,6 +22,7 @@
         <div class="col-lg-12">
           <input type="text" class="form-control" id="nombre"
           placeholder="Nombre">
+          <p class="help-block text-danger"></p>
         </div>
       </div>
     </div>
@@ -32,6 +33,7 @@
         <div class="col-lg-12">
           <input type="text" class="form-control" id="apellido"
           placeholder="Apellido">
+          <p class="help-block text-danger"></p>
         </div>
       </div>
     </div>
@@ -42,6 +44,7 @@
         <div class="col-lg-12">
           <input type="email" class="form-control" id="email"
           placeholder="Email">
+          <p class="help-block text-danger"></p>
         </div>
       </div>
     </div>
@@ -53,6 +56,7 @@
         <div class="col-lg-12">
           <input type="text" class="form-control" id="user"
           placeholder="Usuario">
+          <p class="help-block text-danger"></p>
         </div>
       </div>
     </div>
@@ -63,6 +67,7 @@
         <div class="col-lg-12">
           <input type="password" class="form-control" id="pw" 
           placeholder="Contraseña">
+          <p class="help-block text-danger"></p>
         </div>
       </div>
     </div>
@@ -73,6 +78,7 @@
         <div class="col-lg-12">
           <input type="number" class="form-control" id="dni" 
           placeholder="DNI">
+          <p class="help-block text-danger"></p>
         </div>
       </div>
     </div>
@@ -84,6 +90,7 @@
         <div class="col-lg-12">
           <input type="number" class="form-control" id="telefono" 
           placeholder="Teléfono">
+          <p class="help-block text-danger"></p>
         </div>
       </div>
     </div>
@@ -107,6 +114,8 @@
       </div>
     </div>
   </div>
+
+ <div id="success"></div>
 
 
   <div class="col-lg-12">          
