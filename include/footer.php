@@ -11,19 +11,19 @@
 				<div class="redes-contenedor">
 					<div class="redes">
 						<div class="red fb">
-							<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+							<a href="https://www.facebook.com/radionihuil/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
 						</div>
 
 						<div class="red tw">
-							<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+							<a href="https://twitter.com/radionihuil"><i class="fa fa-twitter" aria-hidden="true"></i></a>
 						</div>
 
 						<div class="red yt">
-							<a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+							<a href="https://www.youtube.com/user/radionihuil"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
 						</div>
 
 						<div class="red insta">
-							<a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+							<a href="https://www.instagram.com/radionihuil/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
 						</div>
 					</div>
 				</div>
