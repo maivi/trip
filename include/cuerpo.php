@@ -1,5 +1,18 @@
 <div class="contenedor-cuerpo">
 	<div class="perdi-cuenta">
+		<div class="reg perdi-cuenta-reg">
+ 			<div class="box">
+  				<div class="container-fluid full-reg">
+   					<div class="row">
+     					<div class="col-lg-12">
+
+      						<h1 class="titulo1">REGISTRO</h1><a class="cerrar" href="#"><img src="assets/images/cerrar.png"/></a>
+
+    					</div>
+  					</div>
+				</div> 
+			</div>
+		</div>       
 		<div class="col-lg-12">
 			<div class="form-group">
 				<input type="text" class="form-control" id="usuario-lost"
@@ -69,7 +82,7 @@
 											<?php
 										}else{
 											?>
-											<p>Por favor, registrate para poder participar.</p>
+											<p>Por favor, <a href="#" id="registrate2">registrate</a> para poder participar.</p>
 											<?php 
 										}
 										?>
