@@ -13,6 +13,7 @@ var hoy = new Date();
 var dia = hoy.getDate();
 var rellenar = $("#form").find("ul");
 
+
 $(document).ready(function(){
 
 	//Comprobamos que no exista los localstorage
@@ -375,10 +376,16 @@ function pulsar(e) {
 	console.log(tecla);
 }
 
+var target=$(".navbar-collapse");
+
 	$(".navbar-toggle").click(function(e){
 		e.preventDefault();
-		$(".in").css("display","none");
+		
 
+		if (target.hasClass(".in")){
+
+			target.removeClass(".in").height(0).css("overflow","hidden");
+}
 
 	});
 
