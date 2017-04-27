@@ -1283,6 +1283,8 @@ a img.alignright {
 @media only screen and (min-width: 401px) and (max-width: 1200px)  {
 
 
+
+
 .fs-fields > li label.fs-field-label {
     display: inline-block;
     padding: 0 5px 1em 0;
@@ -1355,8 +1357,37 @@ a img.alignright {
 }
 
 
+@media only screen and (min-width: 401px) and (max-width: 600px)  {
+
+.contpreg{
+
+padding-left: 0px!important;
+padding-right: 0px!important;
+
+}
+
+#form{
+padding: 0px;
+
+}
+}
+
+
 
 @media only screen and (max-width: 400px){
+
+.contpreg{
+
+padding-left: 0px!important;
+padding-right: 0px!important;
+
+}
+
+#form{
+padding: 0px;
+
+}
+
 
 .ac-custom h2 {
     

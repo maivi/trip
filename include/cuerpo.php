@@ -51,7 +51,7 @@
 					<div class="container question">
 
 						<div class="row">
-							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contpreg">
 								
 
 								<form id="form" class="ac-custom ac-radio ac-circle" autocomplete="off">
