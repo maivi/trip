@@ -1290,6 +1290,11 @@ a img.alignright {
     margin-bottom: 0px;
 }
 
+.box {
+    height: 800px!important;
+ 
+}
+
 .ac-circle input[type="checkbox"], .ac-circle input[type="radio"], .ac-circle label::before {
     width: 20px;
     height: 20px;
