@@ -257,7 +257,7 @@ $(document).ready(function(){
 			}).done(function(json){
 				console.log(json);
 				var objeto = $.parseJSON(json);
-				if(objeto["existe"]=="no"){
+				if(objeto[0]["existe"]=="no"){
 					$(".respuesta-mail").find("p").text("Usuario incorrecto.");
 				}else{
 					$(".respuesta-mail").find("p").text("Revisa tu correo para recuperar tu contraseña.");

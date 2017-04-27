@@ -55,7 +55,7 @@
 		$headers .= "From: Radio Nihuil <noresponder@radionihuil.com.ar>\r\n";
 
 		$headers .= "Reply-To: $email_address";	
-		//mail($to,$email_subject,$email_body,$headers);
+		mail($to,$email_subject,$email_body,$headers);
 
 		$json[0]["existe"]="si";
 	}else{

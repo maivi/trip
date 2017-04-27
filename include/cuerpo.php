@@ -38,10 +38,14 @@
 			<div class="col-lg-4 col-md-4 col-sm-4 hidden-xs"></div>
 		</div>
 		
+		<div class="clearfix"></div>
 
 		<div class="respuesta-mail">
-			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12"></div>
-			<p></p>
+			<div class="col-lg-4 col-md-4 col-sm-4 hidden-xs"></div>
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+				<p></p>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-4 hidden-xs"></div>
 		</div>
 	</div>
 </div>
