@@ -25,15 +25,31 @@ $conexion->query("SET NAMES 'UTF8'");
 			if($cantidad==1){ // Si existe el usuario en la DB	
 				session_start(); // Iniciamos la sesión
 				$_SESSION['newsession']='yes'; // Inicializamos las variables SESSION
-				while($usuario = $result->fetch_assoc()){
+				if($usuario = $result->fetch_assoc()){
 					$_SESSION['usuario'] = $usuario['nombre'] . " " . $usuario['apellido'];
 					// Creamos la variable SESSION usuario, que utilizaremos en el perfil
 					$_SESSION['id'] = $usuario['id_usuario'];
 					// Creo la variable SESSION ID para poder realizar consultas desde el perfil con esta variable.
+
+					$id_usuario = $usuario['id_usuario'];
+					$id_pregunta = $_POST['id_pregunta'];
+					$consulta = "SELECT * FROM respuestas_usuarios WHERE id_usuario = $id_usuario AND id_respuesta = $id_pregunta;";
+					$result2 = $conexion->query($consulta);
+					if($cants = $result2->fetch_assoc()){
+						$cantidad=1;
+					}else{
+						$cantidad=0;
+					}
+					$json["id"]=$id_usuario;
+					$json["consulta"]=$consulta;
+					$json["cantidad"]=$cantidad;
+					
 				}
 				$existe=1; // El usuario existe
 
-				}else{
+
+
+			}else{
 				$existe=0; // El usuario no existe
 			}
 			$json["existe"] = $existe; // Creamos el JSON que le va a indicar a JS el estado del usuario loggeado
@@ -109,16 +125,16 @@ $conexion->query("SET NAMES 'UTF8'");
 					mail($to,$email_subject,$email_body,$headers);
 
 
-				session_start();
-				$_SESSION['newsession']='yes';
-				$_SESSION['usuario'] = $nombre . " " . $apellido;
-				$_SESSION['id'] = ($cantidad+1);
-				$json["usuario"] = $_SESSION['usuario'];
-				$json["id"]=$_SESSION['id'];		
-			}
+					session_start();
+					$_SESSION['newsession']='yes';
+					$_SESSION['usuario'] = $nombre . " " . $apellido;
+					$_SESSION['id'] = ($cantidad+1);
+					$json["usuario"] = $_SESSION['usuario'];
+					$json["id"]=$_SESSION['id'];		
+				}
 
-			echo json_encode($json);
-			break;
+				echo json_encode($json);
+				break;
+			}
 		}
-	}
-	?>
+		?>

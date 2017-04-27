@@ -27,8 +27,8 @@ $(document).ready(function(){
 		$("#contenedor-boton").empty();
 	}
 
-	if ( ( (typeof localStorage["pregunta_1"])!="undefined") && ( (typeof localStorage["pregunta_2"])!="undefined" ) && ( (typeof localStorage["pregunta_3"])!="undefined" ) && (localStorage["ultimo_dia"] == dia) ){
-		if ((localStorage["respondida"]= "Si") && (localStorage["logged"] == "Si") ){
+	if ( ( (typeof localStorage["resp_1"])!="undefined") && ( (typeof localStorage["resp_2"])!="undefined" ) && ( (typeof localStorage["resp_3"])!="undefined" ) && (localStorage["ultimo_dia"] == dia) ){
+		if ((localStorage["respondida"]=="Si") && (localStorage["logged"] == "Si") ){
 			$("#form").find("ul").empty();
 			$("#form").find("h2").empty();
 			$("#form").find("h2").append("Gracias por participar. Volvé mañana por una nueva pregunta");
@@ -68,8 +68,8 @@ $(document).ready(function(){
 		}
 
 		//Checkeamos si estan creados los localstorages de las preguntas para cachearlos
-		if ( ( (typeof localStorage["pregunta_1"])==="undefined") && ( (typeof localStorage["pregunta_2"])==="undefined" ) && ( (typeof localStorage["pregunta_3"])==="undefined" ) ){
-
+		if ( ( (typeof localStorage["resp_1"])==="undefined") && ( (typeof localStorage["resp_2"])==="undefined" ) && ( (typeof localStorage["resp_3"])==="undefined" ) ){
+			console.log("Entro");
 			$.ajax({
 				url: "include/logica_respuestas.php",
 				data: {
@@ -121,6 +121,7 @@ $(document).ready(function(){
 					})
 					.done(function(json){
 						var objeto = $.parseJSON(json);
+						console.log(objeto);
 						localStorage["resp_1"] = objeto[0]["resp_1"];
 						localStorage["resp_2"] = objeto[0]["resp_2"];
 						localStorage["resp_3"] = objeto[0]["resp_3"];
@@ -169,9 +170,11 @@ $(document).ready(function(){
 			reemplazar = reemplazar.replace("r","");
 			reemplazar = parseInt(reemplazar);
 		});
+		console.log(reemplazar);
+		console.log(localStorage["ultimo_id"]);
 
 		$.ajax({
-			url: "include/logica_login.php",
+			url: "include/enviar_respuesta.php",
 			data: {
 				respuesta: reemplazar,
 				id_pregunta: localStorage["ultimo_id"]
@@ -179,6 +182,8 @@ $(document).ready(function(){
 			method: "POST"
 
 		}).done(function(json) {
+			var objeto = $.parseJSON(json);
+			console.log(objeto);
 			localStorage["respondida"] = "Si";
 			$("#form").find("ul").empty();
 			$("#form").find("h2").empty();
@@ -271,8 +276,6 @@ $(document).ready(function(){
 	$(".cerrar").click(function(e){
 		e.preventDefault();
 		$(".reg").css("top","-800px");
-
-
 	});
 
 
@@ -287,12 +290,18 @@ $(document).ready(function(){
 				data: {
 					pw:pw,
 					user:user,
+					id_pregunta: localStorage["ultimo_id"],
 					flag:0
 				},
 				method: "POST"
 
 			}).done(function(json) {
 				var obj = $.parseJSON(json);
+				if(obj["cantidad"]==1){
+					localStorage["respondida"] = "Si";
+				}else{
+					localStorage["respondida"] = "No";
+				}
 				if(obj["existe"]==0){
 					var eliminar = $(".mensaje-alerta").find("p");
 					eliminar.empty();
@@ -353,3 +362,9 @@ $(document).ready(function(){
 		});
 	});
 });
+
+function pulsar(e) {
+	tecla=(document.all) ? e.keyCode : e.which;
+	if(tecla==13) return false;
+	console.log(tecla);
+}

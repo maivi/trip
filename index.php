@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <?php include "include/head.php"; ?>
-<body>
+<body onkeypress="return pulsar(event)">
 	<?php 
 		session_start();
 		include "include/header.php";
