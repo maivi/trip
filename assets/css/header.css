@@ -54,6 +54,20 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Open Sans Bold';
+  src: url('../fonts/OpenSans-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans Regular';
+  src: url('../fonts/OpenSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* HEADER */
 
 .navbar{
@@ -89,7 +103,7 @@
 .navbar input:-webkit-autofill, .navbar textarea:-webkit-autofill, .navbar select:-webkit-autofill, .navbar .form-control {
   background-color: #3378B0 !important;
   color: #99BCD8 !important;
-  font-family: Open Sans;
+  font-family: Open Sans Regular;
   font-size: 15px;
 }
 
@@ -111,7 +125,7 @@
   border-color: white;
   font-size: 13px;
   font-weight: 700;
-  font-family: Open Sans
+  font-family: Open Sans Bold
 }
 
 .btn-default:hover{
@@ -124,7 +138,7 @@
   color: white !important;
   font-size: 13px;
   font-weight: 700;
-  font-family: Open Sans
+  font-family: Open Sans Bold
 }
 
 .usuario-ingresado{
@@ -145,7 +159,7 @@
 
 .mensaje-alerta p{
   padding-top: 20px;
-  font-family: Open Sans;
+  font-family: Open Sans Bold;
   font-size: 13px;
   color: white;
   font-weight: bold;
@@ -193,7 +207,7 @@
 }
 
 .ac-custom.ac-radio.ac-circle ul li label{
-  font-family: Open Sans;
+  font-family: Open Sans Regular;
   font-size: 25px;
   font-weight: 400;
 }
@@ -255,7 +269,7 @@
 }
 
 .derechos-reservados p {
-  font-family: Open Sans;
+  font-family: Open Sans Regular;
   font-size: 15px;
 }
 

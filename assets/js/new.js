@@ -281,16 +281,13 @@ $(document).ready(function(){
 				user:user,
 				flag:1
 			},
-			method: "POST",
-			error: function(xhr, status, error) {
-				console.log(xhr);
-				console.log(status);
-				console.log(error);
-			}
+			method: "POST"
 
 		}).done(function(json) {
 			var obj2 = $.parseJSON(json);
 			console.log(obj2);
+			window.location="index.php";
+
 		})
 		.fail(function(xhr, status, error){
 			console.log(xhr);
@@ -298,19 +295,5 @@ $(document).ready(function(){
 			console.log(error);
 			console.log("FAIL");
 		});
-	});
-
-
-	$(".click-historial").click(function(e){
-		e.preventDefault();
-		var preguntas = localStorage["ultimo_id"];
-		if (preguntas>1){
-			/*$.ajax({
-				url: "include/logica.php",
-				method: "POST"
-			})*/
-		}else{
-			console.log("No hay preguntas");
-		}
 	});
 });
