@@ -78,7 +78,6 @@ $(document).ready(function(){
 				method: "POST"
 			})
 			.done(function(test){
-				console.log(test);
 				var objeto = $.parseJSON(test);
 				localStorage["resp_1"] = objeto[0]["resp_1"];
 				localStorage["resp_2"] = objeto[0]["resp_2"];
@@ -121,7 +120,6 @@ $(document).ready(function(){
 						method: "POST"
 					})
 					.done(function(json){
-						console.log(json);
 						var objeto = $.parseJSON(json);
 						localStorage["resp_1"] = objeto[0]["resp_1"];
 						localStorage["resp_2"] = objeto[0]["resp_2"];
@@ -170,7 +168,6 @@ $(document).ready(function(){
 			reemplazar=$(this)[0].id;
 			reemplazar = reemplazar.replace("r","");
 			reemplazar = parseInt(reemplazar);
-			console.log(reemplazar);
 		});
 
 		$.ajax({
@@ -198,12 +195,12 @@ $(document).ready(function(){
 
 	$(".salir-sesion").click(function(e){
 		e.preventDefault();
-		console.log("Salir");
 		$.ajax({
 			url: "include/salir.php",
 			method: "POST"
 
 		}).done(function(){
+			localStorage["logged"] == "No";
 			window.location="index.php";
 			
 		}).fail(function(xhr, status, error){
@@ -218,7 +215,6 @@ $(document).ready(function(){
 
 	$(".submit1").click(function(e){
 		e.preventDefault();
-		console.log("CLICK");
 		$(".reg").css("top","60px");
 
 
@@ -226,7 +222,6 @@ $(document).ready(function(){
 
 	$(".cerrar").click(function(e){
 		e.preventDefault();
-		console.log("CLICK");
 		$(".reg").css("top","-800px");
 
 
@@ -249,7 +244,6 @@ $(document).ready(function(){
 				method: "POST"
 
 			}).done(function(json) {
-				console.log(json);
 				var obj = $.parseJSON(json);
 				if(obj["existe"]==0){
 					var eliminar = $(".mensaje-alerta").find("p");
@@ -259,7 +253,6 @@ $(document).ready(function(){
 					localStorage["logged"] = "Si";
 					window.location="index.php";
 				}
-				console.log(obj["existe"]);
 			})
 			.fail(function(xhr, status, error){
 				console.log(xhr);
@@ -283,7 +276,6 @@ $(document).ready(function(){
 		user = $("#user").val();
 		sexo = $("#sexo").val();
 		e.preventDefault();
-		console.log("CLICK");
 		$.ajax({
 			url: "include/logica_login.php",
 			data: {
@@ -302,7 +294,6 @@ $(document).ready(function(){
 
 		}).done(function(json) {
 			var obj2 = $.parseJSON(json);
-			console.log(obj2);
 			window.location="index.php";
 
 		})
