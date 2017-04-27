@@ -1269,6 +1269,17 @@ a img.alignright {
 }
 
 
+@media only screen and (min-width: 845px) and (max-width: 1155px)  {
+
+.navbar-right {
+    float:left!important;
+    margin-right: -15px;
+}
+}
+
+
+
+
 @media only screen and (min-width: 401px) and (max-width: 1200px)  {
 
 
