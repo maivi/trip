@@ -32,34 +32,7 @@ $conexion->query("SET NAMES 'UTF8'");
 					// Creo la variable SESSION ID para poder realizar consultas desde el perfil con esta variable.
 				}
 				$existe=1; // El usuario existe
-				$name = $usuario['nombre'];
-				$email_address = $usuario['email'];
-				$to = $email_address;
-				$email_subject = "Concurso #DeciNihuil";
-				$email_body = '<!DOCTYPE html>
-				<html lang="es">
-				<head>
-					<meta charset="utf-8">
-					<meta http-equiv="X-UA-Compatible" content="IE=edge">
-					<meta name="viewport" content="width=device-width, initial-scale=1">
-					<title>Deci Nihuil</title>
-				</head>  
-				<body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;margin: 0;padding: 0;background-color: #E9E8E6;width: 100% !important;line-height: 100% !important;">
-					<center> 
 
-						<p>
-							Gracias por participar '.$name.'. Escuchanos todos los días para tener mas posibilidades de ganar<br>DECI NIHUIL
-						</p>
-
-					</body>
-					</html>';
-
-					$headers = "MIME-Version: 1.0\n";
-					$headers .= "Content-type: text/html; charset=utf-8\n";
-					$headers .= "From: Radio Nihuil <noresponder@radionihuil.com.ar>\r\n";
-
-					$headers .= "Reply-To: $email_address";	
-					mail($to,$email_subject,$email_body,$headers);
 				}else{
 				$existe=0; // El usuario no existe
 			}
@@ -102,7 +75,38 @@ $conexion->query("SET NAMES 'UTF8'");
 				$conexion->query($consulta2);
 
 
+				$json["nombre_mail"]=$nombre;
+				$json["mail_mail"] = $email;
+				$name = $nombre;
+				$email_address = $email;
+				$to = $email_address;
+				$email_subject = "Concurso #DeciNihuil";
+				$email_body = '<!DOCTYPE html>
+				<html lang="es">
+				<head>
+					<meta charset="utf-8">
+					<meta http-equiv="X-UA-Compatible" content="IE=edge">
+					<meta name="viewport" content="width=device-width, initial-scale=1">
+					<title>Deci Nihuil</title>
+				</head>  
+				<body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;margin: 0;padding: 0;width: 100% !important;line-height: 100% !important;">
+					<center> 
 
+						<p>
+							Gracias por participar '.$name.'. Escuchanos todos los días para tener mas posibilidades de ganar<br><br>DECI NIHUIL
+						</p>
+
+					</body>
+					</html>';
+					$json["body"]=$email_body;
+
+					$headers = "MIME-Version: 1.0\n";
+					$headers .= "Content-type: text/html; charset=utf-8\n";
+					$headers .= "From: Radio Nihuil <noresponder@radionihuil.com.ar>\r\n";
+
+					$headers .= "Reply-To: $email_address";	
+					$json["headers"]=$headers;
+					mail($to,$email_subject,$email_body,$headers);
 
 
 				session_start();
