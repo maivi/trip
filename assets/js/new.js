@@ -321,6 +321,12 @@ $(document).ready(function(){
 		
 	})
 
+	$(".perdi-cuenta").find(".cerrar").click(function(){
+		$(".perdi-cuenta").animate({
+			top: "-100%"
+		})
+	});
+
 
 	$("#register").click(function(e){
 		nombre = $("#nombre").val();

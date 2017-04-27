@@ -177,7 +177,8 @@
   border-bottom: 1px solid #ccc;
   border-right: 1px solid #ccc;
   border-left: 1px solid #ccc;
-  top: -50%;
+  top: -100%;
+  height: calc( 100vh - 60px );
 }
 
 .perdi-cuenta .form-control{
@@ -210,7 +211,10 @@
 
 .contenedor-cuerpo{
   width: 100%;
-  padding-bottom: 50px;
+}
+
+.padre-usuario-lost{
+  padding-top: 160px;
 }
 
 .front{
