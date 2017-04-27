@@ -192,7 +192,15 @@ $(document).ready(function(){
 	});
 
 
+	$("#registrate2").click(function(e){
+		e.preventDefault();
 
+		$('body, html').animate({
+			scrollTop: '0px'
+		}, 300);
+		
+		$(".submit1").click();
+	});
 	
 
 	$(".salir-sesion").click(function(e){
@@ -203,6 +211,7 @@ $(document).ready(function(){
 
 		}).done(function(){
 			localStorage["logged"] = "No";
+			localStorage["respondida"] = "No";
 			window.location="index.php";
 			
 		}).fail(function(xhr, status, error){

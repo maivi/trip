@@ -75,6 +75,7 @@
   position: relative;
   z-index: 1000;
   margin-bottom: 0px;
+  border-radius: 0px;
 }
 
 .navbar-default{
@@ -163,6 +164,45 @@
   font-size: 13px;
   color: white;
   font-weight: bold;
+}
+
+.perdi-cuenta{
+  padding-bottom: 25px;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  background-color: white;
+  z-index: 999;
+  border-radius: 0 0 6px 6px;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  top: -50%;
+}
+
+.perdi-cuenta .form-control{
+  border: 1px solid #ccc;
+}
+
+.perdi-cuenta .box{
+  height: 0px;
+}
+
+.perdi-cuenta .titulo1{
+  margin-bottom: 0px;
+}
+
+.perdi-cuenta .cerrar{
+  top: -108px;
+}
+
+.has-error .form-control{
+  border-color: #c82826 !important;
+}
+
+.perdi-cuenta-reg{
+  position: relative !important;
+  top: 0px !important;
 }
 
 
@@ -277,25 +317,3 @@
   margin-top: -2px;
 }
 
-.perdi-cuenta{
-  padding-top: 40px;
-  padding-bottom: 25px;
-  width: 100%;
-  position: absolute;
-  right: 0;
-  background-color: white;
-  z-index: 999;
-  border-radius: 0 0 6px 6px;
-  border-bottom: 1px solid #ccc;
-  border-right: 1px solid #ccc;
-  border-left: 1px solid #ccc;
-  top: -50%;
-}
-
-.perdi-cuenta .form-control{
-  border: 1px solid #ccc;
-}
-
-.has-error .form-control{
-  border-color: #c82826 !important;
-}
