@@ -1,4 +1,25 @@
 <div class="contenedor-cuerpo">
+	<div class="perdi-cuenta">
+		<div class="col-lg-12">
+			<div class="form-group">
+				<input type="text" class="form-control" id="usuario-lost"
+				placeholder="Nombre de Usuario">
+				<p class="help-block text-danger"></p>
+			</div>	
+		</div>
+		<div class="col-lg-12">          
+			<div class="form-group">
+				<button  id="perdi-password" type="submit" class="btn btn-default">ENVIAR</button>
+			</div>
+		</div>
+
+		<div class="respuesta-mail">
+			<div class="col-lg-12">
+				<p></p>
+			</div>
+		</div>
+	</div>
+
 	<div class="container-fluid front">
 		<div class="row">
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 banner">
@@ -42,24 +63,24 @@
 									</ul>
 									<div id="contenedor-boton">
 										<?php  
-											if ( ( isset( $_SESSION['newsession'] ) )  && ( $_SESSION['newsession']=='yes') ) { 
-										?>
+										if ( ( isset( $_SESSION['newsession'] ) )  && ( $_SESSION['newsession']=='yes') ) { 
+											?>
 											<button class="btn btn-default enviar-respuesta" type="submit">Enviar</button>
-										<?php
-											}else{
-										?>
+											<?php
+										}else{
+											?>
 											<p>Por favor, registrate para poder participar.</p>
-										<?php 
-											}
+											<?php 
+										}
 										?>
-										</div>
+									</div>
 
-									</form>
-								</div>
+								</form>
 							</div>
 						</div>
-					</h4>
-				</div>
+					</div>
+				</h4>
 			</div>
 		</div>
 	</div>
+</div>

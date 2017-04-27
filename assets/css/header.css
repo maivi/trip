@@ -276,3 +276,26 @@
 .derechos-reservados p img{
   margin-top: -2px;
 }
+
+.perdi-cuenta{
+  padding-top: 40px;
+  padding-bottom: 25px;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  background-color: white;
+  z-index: 999;
+  border-radius: 0 0 6px 6px;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  top: -50%;
+}
+
+.perdi-cuenta .form-control{
+  border: 1px solid #ccc;
+}
+
+.has-error .form-control{
+  border-color: #c82826 !important;
+}

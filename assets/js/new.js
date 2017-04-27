@@ -145,12 +145,12 @@ $(document).ready(function(){
 			}
 		}
 	})
-.fail(function(xhr, status, error){
-	console.log(xhr);
-	console.log(status);
-	console.log(error);
-	console.log("FAIL");
-});
+	.fail(function(xhr, status, error){
+		console.log(xhr);
+		console.log(status);
+		console.log(error);
+		console.log("FAIL");
+	});
 
 
 
@@ -183,6 +183,8 @@ $(document).ready(function(){
 			$("#form").find("ul").empty();
 			$("#form").find("h2").empty();
 			$("#form").find("h2").append("Gracias por participar. Volvé mañana por una nueva pregunta");
+			$("#contenedor-boton").empty();
+
 		})
 		.fail(function(xhr, status, error){
 
@@ -200,7 +202,7 @@ $(document).ready(function(){
 			method: "POST"
 
 		}).done(function(){
-			localStorage["logged"] == "No";
+			localStorage["logged"] = "No";
 			window.location="index.php";
 			
 		}).fail(function(xhr, status, error){
@@ -218,6 +220,43 @@ $(document).ready(function(){
 		$(".reg").css("top","60px");
 
 
+	});
+
+	$(".submit2").click(function(e){
+		e.preventDefault();
+		$(".perdi-cuenta").animate({
+			top: 60
+		},1500);
+	});
+
+	$("#perdi-password").click(function(e){
+		e.preventDefault();
+		var usuario = $("#usuario-lost").val();
+		console.log(usuario);
+		if(usuario!=""){
+			$.ajax({
+				url: "include/perdi_pass.php",
+				method: "POST",
+				data: {
+					usuario: usuario
+				}
+			}).done(function(json){
+				console.log(json);
+				var objeto = $.parseJSON(json);
+				if(objeto["existe"]=="no"){
+					$(".respuesta-mail").find("p").text("Usuario incorrecto.");
+				}else{
+					$(".respuesta-mail").find("p").text("Revisa tu correo para recuperar tu contraseña.");
+				}
+			}).fail(function(xhr, status, error){
+				console.log(xhr);
+				console.log(status);
+				console.log(error);
+				console.log("FAIL");
+			});
+		}else{
+			$("#usuario-lost").parent().addClass("has-error");
+		}
 	});
 
 	$(".cerrar").click(function(e){
