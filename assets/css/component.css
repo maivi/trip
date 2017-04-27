@@ -1500,9 +1500,18 @@ a img.alignright {
 }
 
 .navbar-default .navbar-toggle:hover .icon-bar,.navbar-default .navbar-toggle:focus .icon-bar{
-    background-color: #99BCD8!important;
+    background-color: #3378B0 !important;
 }
 
 .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
     background-color:white!important;
+}
+
+.navbar-toggle {
+    margin-top: 13px!important;
+}
+
+.navbar .form-control:focus {
+    background-color: white !important;
+    color:#3378B0!important;
 }
