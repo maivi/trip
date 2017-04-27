@@ -374,3 +374,13 @@ function pulsar(e) {
 	if(tecla==13) return false;
 	console.log(tecla);
 }
+
+	$(".navbar-toggle").click(function(e){
+		e.preventDefault();
+		$(".in").css("display","none");
+
+
+	});
+
+
+
