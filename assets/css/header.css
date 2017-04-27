@@ -321,3 +321,112 @@
   margin-top: -2px;
 }
 
+@media only screen and (max-width: 1200px) and (min-width: 401px){
+  .perdi-cuenta-reg .box{
+    height: 0px !important;
+  }
+}
+
+@media only screen and (max-width: 1051px) and (min-width: 985px){
+  .submit1, .submit2, .salir-sesion, .usuario-ingresado{
+    font-size: 12px;
+  }
+
+  .btn-default{
+    font-size: 11px;
+  }
+
+  .navbar input:-webkit-autofill, .navbar textarea:-webkit-autofill, .navbar select:-webkit-autofill, .navbar .form-control{
+    font-size: 13px;
+  }
+
+  .form-control{
+    height: 29px;
+  }
+
+  .navbar-form{
+    margin-top: 14px;
+  }
+}
+
+@media only screen and (max-width: 984px) and (min-width: 836px){
+  .submit1, .submit2, .salir-sesion, .usuario-ingresado{
+    font-size: 12px;
+  }
+
+  .btn-default{
+    font-size: 11px;
+    padding: 7px 25px;
+  }
+
+  .navbar input:-webkit-autofill, .navbar textarea:-webkit-autofill, .navbar select:-webkit-autofill, .navbar .form-control{
+    font-size: 13px;
+  }
+
+  .form-control{
+    height: 29px;
+  }
+
+  .navbar-form{
+    margin-top: 14px;
+  }
+
+  .navbar .form-control{
+    width: 120px;
+  }
+}
+
+@media only screen and (max-width: 835px) and (min-width: 768px){
+  .submit1, .submit2, .salir-sesion, .usuario-ingresado{
+    font-size: 12px;
+  }
+
+  .btn-default{
+    font-size: 11px;
+    padding: 7px 25px;
+  }
+
+  .navbar input:-webkit-autofill, .navbar textarea:-webkit-autofill, .navbar select:-webkit-autofill, .navbar .form-control{
+    font-size: 13px;
+  }
+
+  .form-control{
+    height: 29px;
+  }
+
+  .navbar-form{
+    margin-top: 14px;
+  }
+
+  .navbar .form-control{
+    width: 120px;
+  }
+
+  .navbar-nav>li>a{
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  .navbar-form.navbar-left{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+@media (max-width: 767px){
+  .navbar-form .form-group{
+    margin-bottom: 15px;
+  }
+
+  .navbar-form .form-group:nth-child(2){
+    margin-bottom: 30px;
+  }
+
+  .navbar-form.navbar-left{
+    text-align: center;
+  }
+
+  .nav.navbar-nav.navbar-right{
+    text-align: center;
+  }
+}

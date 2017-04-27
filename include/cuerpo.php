@@ -5,7 +5,6 @@
 				<div class="container-fluid full-reg">
 					<div class="row">
 						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-
 							<h1 class="titulo1">PERDÍ MI ACCESO</h1><a class="cerrar" href="#"><img src="assets/images/cerrar.png"/></a>
 
 						</div>
