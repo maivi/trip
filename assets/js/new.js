@@ -413,30 +413,43 @@ $(document).ready(function(){
 					user:user
 				},
 				method: "POST"
-			});
-			$.ajax({
-				url: "include/logica_login.php",
-				data: {
-					nombre: nombre, 
-					apellido: apellido,
-					email: email,
-					dni: dni,
-					telefono: telefono,
-					localidad: localidad,
-					pw:pw,
-					sexo:sexo,
-					user:user,
-					captcha:cap,
-					flag:1
-				},
-				method: "POST"
+			}).done(function(json){
+				var obj2 = $.parseJSON(json);
+				console.log(obj2);
+				if(obj2["usuario"]==1){
+					var user = $("#user");
+					user.parent().parent().addClass("has-error");
+				}else{
+					$.ajax({
+						url: "include/logica_login.php",
+						data: {
+							nombre: nombre, 
+							apellido: apellido,
+							email: email,
+							dni: dni,
+							telefono: telefono,
+							localidad: localidad,
+							pw:pw,
+							sexo:sexo,
+							user:user,
+							captcha:cap,
+							flag:1
+						},
+						method: "POST"
 
-			}).done(function(json) {
-				//var obj2 = $.parseJSON(json);
-				window.location="index.php";
+					}).done(function(json) {
+						window.location="index.php";
 
-			})
-			.fail(function(xhr, status, error){
+					})
+					.fail(function(xhr, status, error){
+						console.log(xhr);
+						console.log(status);
+						console.log(error);
+						console.log("FAIL");
+					});
+				}
+
+			}).fail(function(xhr, status, error){
 				console.log(xhr);
 				console.log(status);
 				console.log(error);
