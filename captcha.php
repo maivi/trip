@@ -1,11 +1,4 @@
 <?php
-/*
-
-  Written By Gaston Borysiuk
-  contact at gaston.borysiuk@gmail.com
-  27/04/2017 16:33:51 - 
-
-*/
 
 
 class Captcha 
@@ -23,7 +16,7 @@ class Captcha
   var $puntos = 100; // Define la cantidad de puntos aleatorios de diferentes colores que se agregan a la img
 
   // Constructor de la Clase
-  function __construct($lenght=6, $height=60, $width=120, $color="#111111", $bgcolor="#3378B0", $text="") 
+  function __construct($lenght=4, $height=30, $width=120, $color="#111111", $bgcolor="#3378B0", $text="") 
   {
 	 $this->Estado = true;
 
@@ -62,7 +55,7 @@ class Captcha
   // funcion para generar el texto aleatorio
   private function GenerarTexto()
   {
-	 $caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+	 $caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 	 
 	 $this->text = "";
 	 for ($i=0; $i < $this->lenght; $i++) 

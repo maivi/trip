@@ -1,7 +1,7 @@
 <?php  
 
 include "conexion.php";
-/*
+
 $conexion = new mysqli($host,$user,$pw,$db);
 
 if ($conexion->connect_errno) {
@@ -10,7 +10,7 @@ if ($conexion->connect_errno) {
 
 $conexion->set_charset('utf8');
 $conexion->query("SET NAMES 'UTF8'");
-*/
+
 	$comprobar = $_POST["flag"]; // Esto me va a decir si es Login o Registro
 	$existe = 0; //La variable que me dice si el usuario existe en la DB
 	$json["flag"] = $comprobar;
@@ -61,7 +61,6 @@ $conexion->query("SET NAMES 'UTF8'");
 			session_start();
 
 			if ($_SESSION["pepita"]==$_POST["captcha"]) {
-				# code...
 
 				$nombre = $_POST["nombre"];
 				$apellido = $_POST["apellido"];
