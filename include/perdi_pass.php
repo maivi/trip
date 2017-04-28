@@ -1,15 +1,9 @@
 <?php 
 
 	include "conexion.php";
-	$conexion = new mysqli($host,$user,$pw,$db);
-
-	if ($conexion->connect_errno) {
-		echo "Falló la conexión con MySQL: (" . $conexion->connect_errno . ") " . $conexion->connect_error;
-	}
-
+	
 	$json[0]["existe"]="no";
-	$conexion->set_charset('utf8');
-	$conexion->query("SET NAMES 'UTF8'"); 
+	
 	$usuario = (string)$_POST["usuario"];
 
 	$consulta = "SELECT * FROM usuarios WHERE user = '$usuario';";

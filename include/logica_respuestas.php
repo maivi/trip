@@ -2,15 +2,6 @@
 
 	include "conexion.php";
 
-	$conexion = new mysqli($host,$user,$pw,$db);
-
-	if ($conexion->connect_errno) {
-		echo "Falló la conexión con MySQL: (" . $conexion->connect_errno . ") " . $conexion->connect_error;
-	}
-
-	$conexion->set_charset('utf8');
-	$conexion->query("SET NAMES 'UTF8'");
-
 	$id = $_POST["id"];
 	$json["id_new"]=$id;
 
