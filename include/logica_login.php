@@ -57,60 +57,64 @@ $conexion->query("SET NAMES 'UTF8'");
 			$conexion->close();
 			break;
 		}
-		case 1:{
-			$nombre = $_POST["nombre"];
-			$apellido = $_POST["apellido"];
-			$email = $_POST["email"];
-			$dni = $_POST["dni"];
-			$telefono = $_POST["telefono"];
-			$localidad = $_POST["localidad"];
-			$pw = $_POST["pw"];
-			$user = $_POST["user"];
-			$sexo = $_POST["sexo"];
+		case 1:{ 
+			session_start();
 
-			$consulta = "SELECT * FROM usuarios;";
-			$result = $conexion->query($consulta);
-			$cantidad = $result->num_rows;
+			if ($_SESSION["pepita"]==$_POST["captcha"]) {
 
-			$encontro = 0;
+				$nombre = $_POST["nombre"];
+				$apellido = $_POST["apellido"];
+				$email = $_POST["email"];
+				$dni = $_POST["dni"];
+				$telefono = $_POST["telefono"];
+				$localidad = $_POST["localidad"];
+				$pw = $_POST["pw"];
+				$user = $_POST["user"];
+				$sexo = $_POST["sexo"];
 
-			while ( ($usuario = $result->fetch_assoc()) && ($encontro==0) ) {
-				if($usuario["user"]==$user){
-					$encontro=1;
+				$consulta = "SELECT * FROM usuarios;";
+				$result = $conexion->query($consulta);
+				$cantidad = $result->num_rows;
+
+				$encontro = 0;
+
+				while ( ($usuario = $result->fetch_assoc()) && ($encontro==0) ) {
+					if($usuario["user"]==$user){
+						$encontro=1;
+					}
 				}
-			}
 
-			$json["encontro"]=$encontro;
+				$json["encontro"]=$encontro;
 
-			if($encontro==0){
+				if($encontro==0){
 
-				$consulta2 = "INSERT INTO usuarios(nombre, apellido, email, dni, telefono, localidad, pw, user, sexo) VALUES ('$nombre','$apellido','$email','$dni','$telefono',$localidad,'$pw','$user',$sexo);";
-				$json["consulta"]=$consulta2;
-
-
-				$conexion->query($consulta2);
+					$consulta2 = "INSERT INTO usuarios(nombre, apellido, email, dni, telefono, localidad, pw, user, sexo) VALUES ('$nombre','$apellido','$email','$dni','$telefono',$localidad,'$pw','$user',$sexo);";
+					$json["consulta"]=$consulta2;
 
 
-				$json["nombre_mail"]=$nombre;
-				$json["mail_mail"] = $email;
-				$name = $nombre;
-				$email_address = $email;
-				$to = $email_address;
-				$email_subject = "Concurso #DeciNihuil";
-				$email_body = '<!DOCTYPE html>
-				<html lang="es">
-				<head>
+					$conexion->query($consulta2);
+
+
+					$json["nombre_mail"]=$nombre;
+					$json["mail_mail"] = $email;
+					$name = $nombre;
+					$email_address = $email;
+					$to = $email_address;
+					$email_subject = "Concurso #DeciNihuil";
+					$email_body = '<!DOCTYPE html>
+					<html lang="es">
+					<head>
 					<meta charset="utf-8">
 					<meta http-equiv="X-UA-Compatible" content="IE=edge">
 					<meta name="viewport" content="width=device-width, initial-scale=1">
 					<title>Deci Nihuil</title>
-				</head>  
-				<body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;margin: 0;padding: 0;width: 100% !important;line-height: 100% !important;">
+					</head>  
+					<body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;margin: 0;padding: 0;width: 100% !important;line-height: 100% !important;">
 					<center> 
 
-						<p>
-							Gracias por participar '.$name.'. Escuchanos todos los días para tener mas posibilidades de ganar<br><br>DECI NIHUIL
-						</p>
+					<p>
+					Gracias por participar '.$name.'. Escuchanos todos los días para tener mas posibilidades de ganar<br><br>DECI NIHUIL
+					</p>
 
 					</body>
 					</html>';
@@ -123,7 +127,7 @@ $conexion->query("SET NAMES 'UTF8'");
 					$headers .= "Reply-To: $email_address";	
 					$json["headers"]=$headers;
 					mail($to,$email_subject,$email_body,$headers);
-
+					session_destroy();
 
 					session_start();
 					$_SESSION['newsession']='yes';
@@ -136,5 +140,11 @@ $conexion->query("SET NAMES 'UTF8'");
 				echo json_encode($json);
 				break;
 			}
+
+			else{
+			session_destroy();	
+			echo "error";	
+			}
 		}
-		?>
+	}
+	?>

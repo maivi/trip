@@ -13,6 +13,7 @@ var hoy = new Date();
 var dia = hoy.getDate();
 var rellenar = $("#form").find("ul");
 
+
 $(document).ready(function(){
 
 	//Comprobamos que no exista los localstorage
@@ -23,6 +24,7 @@ $(document).ready(function(){
 	if ((localStorage["respondida"] == "Si") && (localStorage["logged"] == "Si")) {
 		$("#form").find("ul").empty();
 		$("#form").find("h2").empty();
+		$("#form").find("p").empty();
 		$("#form").find("h2").append("Gracias por participar. Volvé mañana por una nueva pregunta");
 		$("#contenedor-boton").empty();
 	}
@@ -338,6 +340,7 @@ $(document).ready(function(){
 		pw = $("#pw").val();
 		user = $("#user").val();
 		sexo = $("#sexo").val();
+		cap = $("#captcha").val();
 		e.preventDefault();
 		$.ajax({
 			url: "include/logica_login.php",
@@ -351,6 +354,7 @@ $(document).ready(function(){
 				pw:pw,
 				sexo:sexo,
 				user:user,
+				captcha:cap,
 				flag:1
 			},
 			method: "POST"
@@ -375,10 +379,16 @@ function pulsar(e) {
 	console.log(tecla);
 }
 
+var target=$(".navbar-collapse");
+
 	$(".navbar-toggle").click(function(e){
 		e.preventDefault();
-		$(".in").css("display","none");
+		
 
+		if (target.hasClass(".in")){
+
+			target.removeClass(".in").height(0).css("overflow","hidden");
+}
 
 	});
 
