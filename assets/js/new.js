@@ -167,7 +167,6 @@ $(document).ready(function(){
 				})
 				.done(function(json){
 					var objeto = $.parseJSON(json);
-					console.log(objeto);
 					localStorage["resp_1"] = objeto[0]["resp_1"];
 					localStorage["resp_2"] = objeto[0]["resp_2"];
 					localStorage["resp_3"] = objeto[0]["resp_3"];
@@ -213,8 +212,6 @@ $(document).ready(function(){
 			reemplazar = reemplazar.replace("r","");
 			reemplazar = parseInt(reemplazar);
 		});
-		console.log(reemplazar);
-		console.log(localStorage["ultimo_id"]);
 
 		$.ajax({
 			url: "include/enviar_respuesta.php",
@@ -226,7 +223,6 @@ $(document).ready(function(){
 
 		}).done(function(json) {
 			var objeto = $.parseJSON(json);
-			console.log(objeto);
 			localStorage["respondida"] = "Si";
 			$("#form").find("ul").empty();
 			$("#form").find("h2").empty();
@@ -293,7 +289,6 @@ $(document).ready(function(){
 
 	$(".submit2").click(function(e){ //PERDI ACCESO
 		e.preventDefault();
-		console.log(screen.width);
 		
 		$(".cuerpo-padding+.reg").find(".box").css("height","0px");
 		$(".navbar-toggle").click();
@@ -311,7 +306,6 @@ $(document).ready(function(){
 	$("#perdi-password").click(function(e){
 		e.preventDefault();
 		var usuario = $("#usuario-lost").val();
-		console.log(usuario);
 		if(usuario!=""){
 			$.ajax({
 				url: "include/perdi_pass.php",
@@ -320,7 +314,6 @@ $(document).ready(function(){
 					usuario: usuario
 				}
 			}).done(function(json){
-				console.log(json);
 				var objeto = $.parseJSON(json);
 				if(objeto[0]["existe"]=="no"){
 					$(".respuesta-mail").find("p").text("Usuario incorrecto.");
@@ -340,14 +333,12 @@ $(document).ready(function(){
 
 	$(".cerrar").click(function(e){
 		e.preventDefault();
-		console.log("Click");
 		$(".perdi-cuenta-reg").css("top","-800px");		
 		$(".cuerpo-padding+.reg").css("display","block");
 	});
 
 	$(".cuerpo-padding+.reg").find(".cerrar").click(function(e){
 		e.preventDefault();
-		console.log("Click");
 		$(".cuerpo-padding+.reg").css("top","-800px");
 		
 		$(".perdi-cuenta").css("display","block");
@@ -445,7 +436,6 @@ $(document).ready(function(){
 				console.log("FAIL");
 			});
 		}else{
-			console.log("ELSE DEL CONTROL");
 			nombre=$("#nombre");
 			if(nombre.val()==""){
 				if(!( nombre.parent().parent().hasClass("has-error") ) ){
@@ -528,7 +518,6 @@ $(document).ready(function(){
 
 
 		if (target.hasClass("in")){
-			console.log("if");
 			target.removeClass("in");
 			clicks=1;
 
@@ -537,7 +526,6 @@ $(document).ready(function(){
 
 				target.addClass("in");
 			}
-			console.log("else");
 
 
 		}
@@ -549,7 +537,6 @@ $(document).ready(function(){
 function pulsar(e) {
 	tecla=(document.all) ? e.keyCode : e.which;
 	if(tecla==13) return false;
-	console.log(tecla);
 }
 
 
