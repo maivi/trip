@@ -251,7 +251,9 @@
 }
 
 .cuerpo-padding{
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+  height: auto;
+  clear: both;
 }
 
 .ac-custom.ac-radio.ac-circle ul li label{

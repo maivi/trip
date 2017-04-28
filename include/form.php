@@ -155,7 +155,7 @@
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
          <div class="form-group">
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 imgcap">
-            <img src="http://radionihuil.com.ar/decinihuil/pepe/<?=$datos->captcha?>">
+            <img src="pepe/<?=$datos->captcha?>">
           </div>
         </div>
       </div>

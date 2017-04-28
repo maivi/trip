@@ -277,10 +277,14 @@ $(document).ready(function(){
 	$(".submit1").click(function(e){ //REGISTRATE
 		e.preventDefault();
 		$(".navbar-toggle").click();
-		$(".cuerpo-padding+.reg").find(".box").css("height","850px");
+		if(screen.width<768){
+			$(".cuerpo-padding+.reg").find(".box").css("height","850px");
+		}else{
+			$(".cuerpo-padding+.reg").find(".box").css("height","650px");
+		}
 		$(".cuerpo-padding+.reg").animate({
 			top: 60
-		},1500);
+		},500);
 		
 		$(".perdi-cuenta").css("display","none");
 		$(".cuerpo-padding+.reg").css("display","block");
@@ -296,7 +300,7 @@ $(document).ready(function(){
 		
 		$(".perdi-cuenta").animate({
 			top: 60
-		},100);
+		},500);
 		$(".cuerpo-padding+.reg").css("display","none");
 		$(".perdi-cuenta").css("display","block");
 		
@@ -400,6 +404,7 @@ $(document).ready(function(){
 
 
 	$("#register").click(function(e){
+		e.preventDefault();
 		nombre = $("#nombre").val();
 		apellido = $("#apellido").val();
 		email = $("#email").val();
@@ -410,35 +415,108 @@ $(document).ready(function(){
 		user = $("#user").val();
 		sexo = $("#sexo").val();
 		cap = $("#captcha").val();
-		e.preventDefault();
-		$.ajax({
-			url: "include/logica_login.php",
-			data: {
-				nombre: nombre, 
-				apellido: apellido,
-				email: email,
-				dni: dni,
-				telefono: telefono,
-				localidad: localidad,
-				pw:pw,
-				sexo:sexo,
-				user:user,
-				captcha:cap,
-				flag:1
-			},
-			method: "POST"
+		if ( (nombre!="") && (apellido!="") && (email!="") && (dni!="") && (telefono!="") && (pw!="") && (user!="") ){
+			$.ajax({
+				url: "include/logica_login.php",
+				data: {
+					nombre: nombre, 
+					apellido: apellido,
+					email: email,
+					dni: dni,
+					telefono: telefono,
+					localidad: localidad,
+					pw:pw,
+					sexo:sexo,
+					user:user,
+					captcha:cap,
+					flag:1
+				},
+				method: "POST"
 
-		}).done(function(json) {
-			//var obj2 = $.parseJSON(json);
-			window.location="index.php";
+			}).done(function(json) {
+				//var obj2 = $.parseJSON(json);
+				window.location="index.php";
 
-		})
-		.fail(function(xhr, status, error){
-			console.log(xhr);
-			console.log(status);
-			console.log(error);
-			console.log("FAIL");
-		});
+			})
+			.fail(function(xhr, status, error){
+				console.log(xhr);
+				console.log(status);
+				console.log(error);
+				console.log("FAIL");
+			});
+		}else{
+			console.log("ELSE DEL CONTROL");
+			nombre=$("#nombre");
+			if(nombre.val()==""){
+				if(!( nombre.parent().parent().hasClass("has-error") ) ){
+					nombre.parent().parent().addClass("has-error");
+				}
+			}else{
+				nombre.parent().parent().removeClass("has-error");
+			}
+
+			apellido=$("#apellido");
+			if(apellido.val()==""){
+				if(!( apellido.parent().parent().hasClass("has-error") ) ){
+					apellido.parent().parent().addClass("has-error");
+				}
+			}else{
+				apellido.parent().parent().removeClass("has-error");
+			}
+
+			email=$("#email");
+			if(email.val()==""){
+				if(!( email.parent().parent().hasClass("has-error") ) ){
+					email.parent().parent().addClass("has-error");
+				}
+			}else{
+				email.parent().parent().removeClass("has-error");
+			}
+
+
+			dni=$("#dni");
+			if(dni.val()==""){
+				if(!( dni.parent().parent().hasClass("has-error") ) ){
+					dni.parent().parent().addClass("has-error");
+				}
+			}else{
+				dni.parent().parent().removeClass("has-error");
+			}
+
+
+			telefono=$("#telefono");
+			if(telefono.val()==""){
+				if(!( telefono.parent().parent().hasClass("has-error") ) ){
+					telefono.parent().parent().addClass("has-error");
+				}
+			}else{
+				telefono.parent().parent().removeClass("has-error");
+			}
+
+
+			pw=$("#pw");
+			if(pw.val()==""){
+				if(!( pw.parent().parent().hasClass("has-error") ) ){
+					pw.parent().parent().addClass("has-error");
+				}
+			}else{
+				pw.parent().parent().removeClass("has-error");
+			}
+
+
+			user=$("#user");
+			if(user.val()==""){
+				if(!( user.parent().parent().hasClass("has-error") ) ){
+					user.parent().parent().addClass("has-error");
+				}
+			}else{
+				user.parent().parent().removeClass("has-error");
+			}
+
+
+		}
+		
+		
 	});
 
 
