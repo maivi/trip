@@ -12,6 +12,7 @@ var json2;
 var hoy = new Date();
 var dia = hoy.getDate();
 var rellenar = $("#form").find("ul");
+var clicks=0;
 
 
 $(document).ready(function(){
@@ -270,19 +271,17 @@ $(document).ready(function(){
 
 	$(".submit1").click(function(e){
 		e.preventDefault();
-		if(screen.width>767){
-			$(".reg").css("top","60px");
-		}else{
-			$(".reg").css("top","380px");
-		}
-
+		$(".navbar-toggle").click();
+		
+		$(".reg").css("top","60px");
 
 	});
 
 	$(".submit2").click(function(e){
 		e.preventDefault();
 		console.log(screen.width);
-		if(screen.width>767){
+		$(".navbar-toggle").click();
+		/*if(screen.width>767){
 			$(".perdi-cuenta").animate({
 				top: 60
 			},1500);
@@ -290,7 +289,10 @@ $(document).ready(function(){
 			$(".perdi-cuenta").animate({
 				top: 380
 			},1500);
-		}
+		}*/
+		$(".perdi-cuenta").animate({
+			top: 60
+		},1500);
 	});
 
 	$("#perdi-password").click(function(e){
@@ -431,23 +433,23 @@ var target=$(".navbar-collapse");
 
 
 $(".navbar-toggle").click(function(e){
-    e.preventDefault();
+	e.preventDefault();
 
 
-    if (target.hasClass("in")){
-        console.log("if");
-        target.removeClass("in");
-        clicks=1;
+	if (target.hasClass("in")){
+		console.log("if");
+		target.removeClass("in");
+		clicks=1;
 
-    }else{
-        if(clicks==1){
+	}else{
+		if(clicks==1){
 
-            target.addClass("in");
-        }
-        console.log("else");
+			target.addClass("in");
+		}
+		console.log("else");
 
 
-    }
+	}
 
 });
 

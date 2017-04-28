@@ -143,7 +143,9 @@ $conexion->query("SET NAMES 'UTF8'");
 
 			else{
 				session_destroy();	
-				echo "error";	
+				$json["captcha"]="Captcha Incorrecto";
+				echo json_encode($json);
+
 			}
 		}
 	}
