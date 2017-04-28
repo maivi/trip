@@ -1,3 +1,16 @@
+    <?php
+
+      include "captcha.php";
+
+      $captcha = new Captcha();
+
+      $datos = $captcha->GenerarCaptcha();
+      $_SESSION["pepita"]=$datos->texto;
+    ?>
+
+
+
+
 
 <div class="reg">
  <div class="box">
@@ -136,6 +149,12 @@
     </div>
   </div>
 
+  <div>
+    <input type="text"   id="captcha" value="">
+
+
+  </div>
+
   <div id="success"></div>
 
 
@@ -146,6 +165,8 @@
   </div>
 
 </form>
+
+<img src="http://localhost/caribe2/pepe/<?=$datos->captcha?>">
 
 
 </div><!--fin row -->

@@ -339,6 +339,7 @@ $(document).ready(function(){
 		pw = $("#pw").val();
 		user = $("#user").val();
 		sexo = $("#sexo").val();
+		cap = $("#captcha").val();
 		e.preventDefault();
 		$.ajax({
 			url: "include/logica_login.php",
@@ -352,6 +353,7 @@ $(document).ready(function(){
 				pw:pw,
 				sexo:sexo,
 				user:user,
+				captcha:cap,
 				flag:1
 			},
 			method: "POST"
