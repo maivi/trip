@@ -24,6 +24,7 @@ $(document).ready(function(){
 	if ((localStorage["respondida"] == "Si") && (localStorage["logged"] == "Si")) {
 		$("#form").find("ul").empty();
 		$("#form").find("h2").empty();
+		$("#form").find("p").empty();
 		$("#form").find("h2").append("Gracias por participar. Volvé mañana por una nueva pregunta");
 		$("#contenedor-boton").empty();
 	}
