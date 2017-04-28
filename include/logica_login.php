@@ -100,20 +100,20 @@ $conexion->query("SET NAMES 'UTF8'");
 					$name = $nombre;
 					$email_address = $email;
 					$to = $email_address;
-					$email_subject = "Concurso #DeciNihuil";
+					$email_subject = "Concurso #DecíNihuil";
 					$email_body = '<!DOCTYPE html>
 					<html lang="es">
 					<head>
 					<meta charset="utf-8">
 					<meta http-equiv="X-UA-Compatible" content="IE=edge">
 					<meta name="viewport" content="width=device-width, initial-scale=1">
-					<title>Deci Nihuil</title>
+					<title>Decí Nihuil</title>
 					</head>  
 					<body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;margin: 0;padding: 0;width: 100% !important;line-height: 100% !important;">
 					<center> 
 
 					<p>
-					Gracias por participar '.$name.'. Escuchanos todos los días para tener mas posibilidades de ganar<br><br>DECI NIHUIL
+					Gracias por participar '.$name.'. Escuchanos todos los días para tener mas posibilidades de ganar<br><br>DECÍ NIHUIL
 					</p>
 
 					</body>
