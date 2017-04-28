@@ -8,10 +8,6 @@
     $_SESSION["pepita"]=$datos->texto;
     ?>
 
-
-
-
-
     <div class="reg">
      <div class="box">
       <div class="container-fluid full-reg">

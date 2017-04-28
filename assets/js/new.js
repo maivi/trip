@@ -274,17 +274,20 @@ $(document).ready(function(){
 
 
 
-	$(".submit1").click(function(e){
+	$(".submit1").click(function(e){ //REGISTRATE
 		e.preventDefault();
 		$(".navbar-toggle").click();
 		$(".cuerpo-padding+.reg").find(".box").css("height","850px");
 		$(".cuerpo-padding+.reg").animate({
 			top: 60
 		},1500);
-
+		
+		$(".perdi-cuenta").css("display","none");
+		$(".cuerpo-padding+.reg").css("display","block");
+		$(".perdi-cuenta-reg").css("top","-800px");
 	});
 
-	$(".submit2").click(function(e){
+	$(".submit2").click(function(e){ //PERDI ACCESO
 		e.preventDefault();
 		console.log(screen.width);
 		
@@ -294,6 +297,11 @@ $(document).ready(function(){
 		$(".perdi-cuenta").animate({
 			top: 60
 		},100);
+		$(".cuerpo-padding+.reg").css("display","none");
+		$(".perdi-cuenta").css("display","block");
+		
+		$(".cuerpo-padding+.reg").css("top","-800px");
+
 	});
 
 	$("#perdi-password").click(function(e){
@@ -329,13 +337,16 @@ $(document).ready(function(){
 	$(".cerrar").click(function(e){
 		e.preventDefault();
 		console.log("Click");
-		$(".perdi-cuenta-reg").css("top","-800px");
+		$(".perdi-cuenta-reg").css("top","-800px");		
+		$(".cuerpo-padding+.reg").css("display","block");
 	});
 
 	$(".cuerpo-padding+.reg").find(".cerrar").click(function(e){
 		e.preventDefault();
 		console.log("Click");
 		$(".cuerpo-padding+.reg").css("top","-800px");
+		
+		$(".perdi-cuenta").css("display","block");
 	})
 
 
@@ -429,6 +440,32 @@ $(document).ready(function(){
 			console.log("FAIL");
 		});
 	});
+
+
+	var target=$(".navbar-collapse");
+
+
+	$(".navbar-toggle").click(function(e){
+		e.preventDefault();
+
+
+		if (target.hasClass("in")){
+			console.log("if");
+			target.removeClass("in");
+			clicks=1;
+
+		}else{
+			if(clicks==1){
+
+				target.addClass("in");
+			}
+			console.log("else");
+
+
+		}
+
+	});
+
 });
 
 function pulsar(e) {
@@ -436,30 +473,6 @@ function pulsar(e) {
 	if(tecla==13) return false;
 	console.log(tecla);
 }
-
-var target=$(".navbar-collapse");
-
-
-$(".navbar-toggle").click(function(e){
-	e.preventDefault();
-
-
-	if (target.hasClass("in")){
-		console.log("if");
-		target.removeClass("in");
-		clicks=1;
-
-	}else{
-		if(clicks==1){
-
-			target.addClass("in");
-		}
-		console.log("else");
-
-
-	}
-
-});
 
 
 
