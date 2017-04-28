@@ -11,7 +11,7 @@
 		<link rel="stylesheet" type="text/css" href="assets/css/cs-select.css" />
 		<link rel="stylesheet" type="text/css" href="assets/css/cs-skin-boxes.css" />
 		<script src="assets/js/modernizr.custom.js"></script>
-	<title>DECI NIHUIL</title>
+	<title>DecíNihuil</title>
 	<?php 
 	include "include/styles.php";
 	?>
