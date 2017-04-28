@@ -407,6 +407,13 @@ $(document).ready(function(){
 		sexo = $("#sexo").val();
 		cap = $("#captcha").val();
 		if ( (nombre!="") && (apellido!="") && (email!="") && (dni!="") && (telefono!="") && (pw!="") && (user!="") ){
+			$.ajax({ 
+				url: "include/control_usuario.php",
+				data: {
+					user:user
+				},
+				method: "POST"
+			});
 			$.ajax({
 				url: "include/logica_login.php",
 				data: {
