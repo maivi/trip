@@ -16,6 +16,17 @@ var rellenar = $("#form").find("ul");
 
 $(document).ready(function(){
 
+	
+	$.ajax({
+		url: "include/id_pregunta.php",
+		method: "POST"
+	}).done(function(json){
+		var objeto = $.parseJSON(json);
+		localStorage["ultimo_id"]=objeto["id_pregunta"];
+		localStorage["respondida"]="No";
+	});
+
+
 	//Comprobamos que no exista los localstorage
 	if ( ( (typeof localStorage["respondida"])==="undefined") ){
 		localStorage["respondida"]= "No";
@@ -143,17 +154,43 @@ $(document).ready(function(){
 					localStorage["respondida"]="No";
 				});
 			}else{
-
+				$.ajax({
+					url: "include/logica_respuestas.php",
+					data: {
+						id:localStorage["ultimo_id"]
+					},
+					method: "POST"
+				})
+				.done(function(json){
+					var objeto = $.parseJSON(json);
+					console.log(objeto);
+					localStorage["resp_1"] = objeto[0]["resp_1"];
+					localStorage["resp_2"] = objeto[0]["resp_2"];
+					localStorage["resp_3"] = objeto[0]["resp_3"];
+					rellenar.find("li:nth-child(1)").find("label").empty();
+					rellenar.find("li:nth-child(1)").find("label").append(localStorage["resp_1"]);
+					rellenar.find("li:nth-child(2)").find("label").empty();
+					rellenar.find("li:nth-child(2)").find("label").append(localStorage["resp_2"]);
+					rellenar.find("li:nth-child(3)").find("label").empty();
+					rellenar.find("li:nth-child(3)").find("label").append(localStorage["resp_3"]);
+				})
+				.fail(function(xhr, status, error){
+					console.log(xhr);
+					console.log(status);
+					console.log(error);
+					console.log("FAIL");
+				});
+				localStorage["respondida"]="No";
 
 			}
 		}
 	})
-	.fail(function(xhr, status, error){
-		console.log(xhr);
-		console.log(status);
-		console.log(error);
-		console.log("FAIL");
-	});
+.fail(function(xhr, status, error){
+	console.log(xhr);
+	console.log(status);
+	console.log(error);
+	console.log("FAIL");
+});
 
 
 
@@ -233,16 +270,27 @@ $(document).ready(function(){
 
 	$(".submit1").click(function(e){
 		e.preventDefault();
-		$(".reg").css("top","60px");
+		if(screen.width>767){
+			$(".reg").css("top","60px");
+		}else{
+			$(".reg").css("top","380px");
+		}
 
 
 	});
 
 	$(".submit2").click(function(e){
 		e.preventDefault();
-		$(".perdi-cuenta").animate({
-			top: 60
-		},1500);
+		console.log(screen.width);
+		if(screen.width>767){
+			$(".perdi-cuenta").animate({
+				top: 60
+			},1500);
+		}else{
+			$(".perdi-cuenta").animate({
+				top: 380
+			},1500);
+		}
 	});
 
 	$("#perdi-password").click(function(e){
@@ -360,7 +408,7 @@ $(document).ready(function(){
 			method: "POST"
 
 		}).done(function(json) {
-			var obj2 = $.parseJSON(json);
+			//var obj2 = $.parseJSON(json);
 			window.location="index.php";
 
 		})
@@ -381,16 +429,16 @@ function pulsar(e) {
 
 var target=$(".navbar-collapse");
 
-	$(".navbar-toggle").click(function(e){
-		e.preventDefault();
-		
+$(".navbar-toggle").click(function(e){
+	e.preventDefault();
 
-		if (target.hasClass(".in")){
 
-			target.removeClass(".in").height(0).css("overflow","hidden");
-}
+	if (target.hasClass(".in")){
 
-	});
+		target.removeClass(".in").height(0).css("overflow","hidden");
+	}
+
+});
 
 
 

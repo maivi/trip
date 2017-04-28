@@ -250,10 +250,18 @@
   text-align: left;
 }
 
+.cuerpo-padding{
+  margin-bottom: 20px;
+}
+
 .ac-custom.ac-radio.ac-circle ul li label{
   font-family: Open Sans Regular;
   font-size: 25px;
   font-weight: 400;
+}
+
+#contenedor-boton p{
+  margin-top: 10px;
 }
 
 /* FOOTER */
@@ -321,7 +329,7 @@
   margin-top: -2px;
 }
 
-@media only screen and (max-width: 1200px) and (min-width: 401px){
+@media only screen and (max-width: 1200px) and (min-width: 320px){
   .perdi-cuenta-reg .box{
     height: 0px !important;
   }
@@ -428,5 +436,17 @@
 
   .nav.navbar-nav.navbar-right{
     text-align: center;
+  }
+}
+
+@media only screen and (max-width: 400px) and (min-width: 320px){
+  .cuerpo-padding{
+    height: 600px;
+  }
+}
+
+@media only screen and (max-width: 840px) and (min-width: 401px){
+  .cuerpo-padding{
+    height: 650px;
   }
 }

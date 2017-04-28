@@ -56,7 +56,7 @@
 		</div>
 	</div>
 </div>
-<div class="container">
+<div class="container cuerpo-padding">
 	<div class="row">
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bases-y-condiciones">
 			<a href="assets/file/BBCC_Sorteo_Viajes_Nihuil.pdf"  target="_blank" class="base-click"><span>Bases y Condiciones</span></a>
@@ -100,7 +100,8 @@
 										<?php
 									}else{
 										?>
-										<p><a href="#" id="registrate2">Registrate</a> ahora y participá por el viaje al Caribe para vos y un acompañante con todo pago!
+										<button type="submit" class="btn btn-default" id="registrate2">Registrate</button>
+										<p>Registrate ahora y participá por el viaje al Caribe para vos y un acompañante con todo pago!
 Si ya estás registrado, sólo ingresa tu USER y PASS.</p>
 										<?php 
 									}
