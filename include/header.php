@@ -8,7 +8,9 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="http://radionihuil.com.ar/">#DECÍNIHUIL</a>
+			<a class="navbar-brand" href="http://radionihuil.com.ar/">
+				<img src="assets/images/logo.png">
+			</a>
 		</div>
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
