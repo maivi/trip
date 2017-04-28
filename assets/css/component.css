@@ -1443,8 +1443,8 @@ a img.alignright {
 	}
 
 
-	.box {
-		height: 800px!important;
+	.cuerpo-padding+.reg .box {
+		height: 0px;
 
 	}
 

@@ -179,7 +179,7 @@
   <div id="success"></div>
 
 
-  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">          
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 boton-enviar-form">          
     <div class="form-group">
       <button  id="register" type="submit" class="btn btn-default">ENVIAR</button>
     </div>

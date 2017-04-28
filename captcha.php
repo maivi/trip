@@ -55,7 +55,7 @@ class Captcha
   // funcion para generar el texto aleatorio
   private function GenerarTexto()
   {
-	 $caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+	 $caracteres = "0123456789";
 	 
 	 $this->text = "";
 	 for ($i=0; $i < $this->lenght; $i++) 

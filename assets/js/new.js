@@ -23,8 +23,10 @@ $(document).ready(function(){
 		method: "POST"
 	}).done(function(json){
 		var objeto = $.parseJSON(json);
-		localStorage["ultimo_id"]=objeto["id_pregunta"];
-		localStorage["respondida"]="No";
+		if(localStorage["ultimo_id"]!=objeto["id_pregunta"]){
+			localStorage["ultimo_id"]=objeto["id_pregunta"];
+			localStorage["respondida"]="No";
+		}
 	});
 
 
@@ -39,6 +41,7 @@ $(document).ready(function(){
 		$("#form").find("p").empty();
 		$("#form").find("h2").append("Gracias por participar. Volvé mañana por una nueva pregunta");
 		$("#contenedor-boton").empty();
+		$(".cuerpo-padding").addClass("enviada");
 	}
 
 	if ( ( (typeof localStorage["resp_1"])!="undefined") && ( (typeof localStorage["resp_2"])!="undefined" ) && ( (typeof localStorage["resp_3"])!="undefined" ) && (localStorage["ultimo_dia"] == dia) ){
@@ -229,6 +232,8 @@ $(document).ready(function(){
 			$("#form").find("h2").empty();
 			$("#form").find("h2").append("Gracias por participar. Volvé mañana por una nueva pregunta");
 			$("#contenedor-boton").empty();
+			$(".ocultar").empty();
+			$(".cuerpo-padding").addClass("enviada");
 
 		})
 		.fail(function(xhr, status, error){
@@ -272,27 +277,23 @@ $(document).ready(function(){
 	$(".submit1").click(function(e){
 		e.preventDefault();
 		$(".navbar-toggle").click();
-		
-		$(".reg").css("top","60px");
+		$(".cuerpo-padding+.reg").find(".box").css("height","850px");
+		$(".cuerpo-padding+.reg").animate({
+			top: 60
+		},1500);
 
 	});
 
 	$(".submit2").click(function(e){
 		e.preventDefault();
 		console.log(screen.width);
+		
+		$(".cuerpo-padding+.reg").find(".box").css("height","0px");
 		$(".navbar-toggle").click();
-		/*if(screen.width>767){
-			$(".perdi-cuenta").animate({
-				top: 60
-			},1500);
-		}else{
-			$(".perdi-cuenta").animate({
-				top: 380
-			},1500);
-		}*/
+		
 		$(".perdi-cuenta").animate({
 			top: 60
-		},1500);
+		},100);
 	});
 
 	$("#perdi-password").click(function(e){
@@ -327,8 +328,15 @@ $(document).ready(function(){
 
 	$(".cerrar").click(function(e){
 		e.preventDefault();
-		$(".reg").css("top","-800px");
+		console.log("Click");
+		$(".perdi-cuenta-reg").css("top","-800px");
 	});
+
+	$(".cuerpo-padding+.reg").find(".cerrar").click(function(e){
+		e.preventDefault();
+		console.log("Click");
+		$(".cuerpo-padding+.reg").css("top","-800px");
+	})
 
 
 	//LOGIN

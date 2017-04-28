@@ -86,7 +86,7 @@
 
 							<form id="form" class="ac-custom ac-radio ac-circle" autocomplete="off">
 								<h2>Escuchá</h2>
-								<p>la programación de la radio para conocer la pregunta de hoy y elegí la opción de respuesta correcta entre…</p>
+								<p class="ocultar">la programación de la radio para conocer la pregunta de hoy y elegí la opción de respuesta correcta entre…</p>
 								<ul>
 									<li><input id="r1" name="r1" type="radio"><label for="r1">Respuesta 1</label></li>
 									<li><input id="r2" name="r1" type="radio"><label for="r2">Respuesta 2</label></li>
