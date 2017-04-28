@@ -21,6 +21,9 @@
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right">
 					<li>
+						<i class="fa fa-user" aria-hidden="true"></i>
+					</li>
+					<li>
 						<p class="usuario-ingresado"><?php echo $_SESSION['usuario']; ?></p>
 					</li>
 					<li><a href="#" class="salir-sesion">Salir</a></li>

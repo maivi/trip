@@ -101,6 +101,18 @@
   padding-bottom: 20px; 
 }
 
+.navbar-nav>li:nth-child(1){
+  height: 60px;
+  padding: 15px;
+}
+
+.navbar-nav>li:nth-child(1) i{
+  font-size: 30px;
+  color: #004075;
+}
+
+
+
 .navbar input:-webkit-autofill, .navbar textarea:-webkit-autofill, .navbar select:-webkit-autofill, .navbar .form-control {
   background-color: #3378B0 !important;
   color: #99BCD8 !important;
