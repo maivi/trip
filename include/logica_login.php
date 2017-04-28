@@ -142,8 +142,8 @@ $conexion->query("SET NAMES 'UTF8'");
 			}
 
 			else{
-			session_destroy();	
-			echo "error";	
+				session_destroy();	
+				echo "error";	
 			}
 		}
 	}

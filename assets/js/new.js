@@ -429,14 +429,25 @@ function pulsar(e) {
 
 var target=$(".navbar-collapse");
 
+
 $(".navbar-toggle").click(function(e){
-	e.preventDefault();
+    e.preventDefault();
 
 
-	if (target.hasClass(".in")){
+    if (target.hasClass("in")){
+        console.log("if");
+        target.removeClass("in");
+        clicks=1;
 
-		target.removeClass(".in").height(0).css("overflow","hidden");
-	}
+    }else{
+        if(clicks==1){
+
+            target.addClass("in");
+        }
+        console.log("else");
+
+
+    }
 
 });
 
