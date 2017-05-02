@@ -446,7 +446,7 @@ $(document).ready(function(){
 						if(obj3["captcha"]==1){
 							$(".captcha-message").append("<div class='clearfix'></div> <div class='col-lg-3 col-md-3 col-sm-4 col-xs-4'><p>Captcha Incorrecto</p></div>");
 						}else{
-							//window.location="index.php";
+							window.location="index.php";
 						}
 
 					})
