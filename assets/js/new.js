@@ -561,6 +561,27 @@ $(document).ready(function(){
 
 	});
 
+	$("#ingress-history").click(function(e){
+		var user_history = $("#nombre-history").val();
+		var pass_history = $("#password-usuario").val();
+		if ( (user_history!="") && (pass_history!="") ){
+			$.ajax({ 
+				url: "include/comprobacion.php",
+				data: {
+					user:user_history,
+					pass:pass_history
+				},
+				method: "POST"
+			}).done(function(json){
+				var obj = $.parseJSON(json);
+				console.log(obj);
+				if(obj["entro"]==1){
+					//window.location="history.php";
+				}
+			});
+		}
+	});
+
 });
 
 function pulsar(e) {
