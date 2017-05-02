@@ -2,6 +2,7 @@
 <div style="width: 320px;height: 100vh; margin: 0 auto;display: flex;justify-content: center;align-content: center;flex-direction: column;" class="contenedor-login">
 <div style="width: 100%" class="container-fluid">
 	<div class="row">
+			<p class="history-incorrecto" style="text-align: center; position: relative;color: red;font-size: 13px;font-family: Open Sans Regular;"></p>
 			<div class="form-group">
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 					<input type="text" class="form-control" id="nombre-history"

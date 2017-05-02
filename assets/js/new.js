@@ -574,13 +574,33 @@ $(document).ready(function(){
 				method: "POST"
 			}).done(function(json){
 				var obj = $.parseJSON(json);
-				console.log(obj);
 				if(obj["entro"]==1){
-					//window.location="history.php";
+					window.location="history.php";
+				}else{
+					$(".history-incorrecto").append("USUARIO INCORRECTO");
 				}
 			});
 		}
 	});
+
+
+	$(".salir-sesion-history").click(function(e){
+		e.preventDefault();
+		$.ajax({
+			url: "include/salir.php",
+			method: "POST"
+
+		}).done(function(){
+			window.location="history.php";
+			
+		}).fail(function(xhr, status, error){
+			console.log(xhr);
+			console.log(status);
+			console.log(error);
+			console.log("FAIL");
+		});
+	});
+
 
 });
 
