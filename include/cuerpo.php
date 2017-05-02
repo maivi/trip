@@ -51,8 +51,11 @@
 
 <div class="container-fluid front">
 	<div class="row">
-		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 banner">
+		<div class="col-lg-12 col-md-12 col-sm-12 hidden-xs banner">
 			<img src="assets/images/banner-nihuil.jpg" alt="">
+		</div>
+		<div class="hidden-lg hidden-md hidden-sm col-xs-12 banner">
+			<img src="assets/images/deci-nihuil-mobile.jpg" alt="">
 		</div>
 	</div>
 </div>
