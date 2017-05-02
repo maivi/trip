@@ -50,7 +50,7 @@
 		}
 		case 1:{ 
 			session_start();
-
+			$json["numero_captcha"]=$_SESSION["pepita"];
 			if ($_SESSION["pepita"]==$_POST["captcha"]) {
 
 				$nombre = $_POST["nombre"];
@@ -134,7 +134,7 @@
 			}
 
 			else{
-				session_destroy();	
+				//session_destroy();	
 				$json["captcha"]=1;
 				echo json_encode($json);
 

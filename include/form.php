@@ -5,6 +5,7 @@
     $captcha = new Captcha();
 
     $datos = $captcha->GenerarCaptcha();
+
     $_SESSION["pepita"]=$datos->texto;
     ?>
 
@@ -155,7 +156,7 @@
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
          <div class="form-group">
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 imgcap">
-            <img src="pepe/<?=$datos->captcha?>">
+            <img id="<?php echo $datos->texto; ?>" src="pepe/<?=$datos->captcha?>">
           </div>
         </div>
       </div>

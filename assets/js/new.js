@@ -418,6 +418,7 @@ $(document).ready(function(){
 			}).done(function(json){
 				var obj2 = $.parseJSON(json);
 				console.log(obj2);
+				user = $("#user").val();
 				if(obj2["usuario"]==1){
 					var user = $("#user");
 					user.parent().parent().addClass("has-error");
