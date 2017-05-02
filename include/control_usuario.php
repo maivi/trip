@@ -13,5 +13,5 @@
 	}
 
 	echo json_encode($json);
-
+	$conexion->close();
 ?>
