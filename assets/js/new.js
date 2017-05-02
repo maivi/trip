@@ -271,6 +271,7 @@ $(document).ready(function(){
 
 
 	$(".submit1").click(function(e){ //REGISTRATE
+		localStorage["logged"] = "No";
 		e.preventDefault();
 		$(".navbar-toggle").click();
 		if(screen.width<768){
@@ -406,6 +407,7 @@ $(document).ready(function(){
 		user = $("#user").val();
 		sexo = $("#sexo").val();
 		cap = $("#captcha").val();
+		localStorage["logged"] = "No";
 		if ( (nombre!="") && (apellido!="") && (email!="") && (dni!="") && (telefono!="") && (pw!="") && (user!="") ){
 			$.ajax({ 
 				url: "include/control_usuario.php",
@@ -438,7 +440,13 @@ $(document).ready(function(){
 						method: "POST"
 
 					}).done(function(json) {
-						window.location="index.php";
+						var obj3 = $.parseJSON(json);
+						console.log(obj3);
+						if(obj3["captcha"]==1){
+							$(".captcha-message").append("<div class='clearfix'></div> <div class='col-lg-3 col-md-3 col-sm-4 col-xs-4'><p>Captcha Incorrecto</p></div>");
+						}else{
+							//window.location="index.php";
+						}
 
 					})
 					.fail(function(xhr, status, error){

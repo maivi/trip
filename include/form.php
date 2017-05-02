@@ -162,7 +162,7 @@
 
 
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-       <div class="form-group">
+       <div class="form-group captcha-message">
         <div class="col-lg-3 col-md-3 col-sm-4 col-xs-4">
           <input type="text" class="form-control"  id="captcha" value="">
         </div>

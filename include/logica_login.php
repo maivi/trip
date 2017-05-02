@@ -125,7 +125,8 @@
 					$_SESSION['usuario'] = $nombre . " " . $apellido;
 					$_SESSION['id'] = ($cantidad+1);
 					$json["usuario"] = $_SESSION['usuario'];
-					$json["id"]=$_SESSION['id'];		
+					$json["id"]=$_SESSION['id'];
+					$json["captcha"]=0;		
 				}
 
 				echo json_encode($json);
@@ -134,7 +135,7 @@
 
 			else{
 				session_destroy();	
-				$json["captcha"]="Captcha Incorrecto";
+				$json["captcha"]=1;
 				echo json_encode($json);
 
 			}
