@@ -116,22 +116,22 @@
           <select class="form-control" name="localidad" id="localidad" placeholder="Ciudad">
             <option value='1'>Ciudad</option>
             <option value='2'>General Alvear</option>
-            <option value='1'>Godoy Cruz</option>
-            <option value='2'>Guaymallén</option>
-            <option value='1'>Junín</option>
-            <option value='2'>La paz</option>
-            <option value='1'>Las Heras</option>
-            <option value='2'>Lavalle</option>
-            <option value='1'>Luján de Cuyo</option>
-            <option value='2'>Maipú</option>
-            <option value='1'>Malargüe</option>
-            <option value='2'>Rivadavia</option>
-            <option value='1'>San Carlos</option>
-            <option value='2'>San Martín</option>
-            <option value='1'>San Rafael</option>
-            <option value='2'>Santa Rosa</option>
-            <option value='1'>Tunuyán</option>
-            <option value='2'>Tupungato</option>
+            <option value='3'>Godoy Cruz</option>
+            <option value='4'>Guaymallén</option>
+            <option value='5'>Junín</option>
+            <option value='6'>La paz</option>
+            <option value='7'>Las Heras</option>
+            <option value='8'>Lavalle</option>
+            <option value='9'>Luján de Cuyo</option>
+            <option value='10'>Maipú</option>
+            <option value='11'>Malargüe</option>
+            <option value='12'>Rivadavia</option>
+            <option value='13'>San Carlos</option>
+            <option value='14'>San Martín</option>
+            <option value='15'>San Rafael</option>
+            <option value='16'>Santa Rosa</option>
+            <option value='17'>Tunuyán</option>
+            <option value='18'>Tupungato</option>
           </select>
         </div>
       </div>
