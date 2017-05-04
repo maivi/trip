@@ -569,19 +569,60 @@ $(document).ready(function(){
 				url: "include/comprobacion.php",
 				data: {
 					user:user_history,
-					pass:pass_history
+					pass:pass_history,
+					flag: 0
 				},
 				method: "POST"
 			}).done(function(json){
 				var obj = $.parseJSON(json);
 				if(obj["entro"]==1){
-					window.location="history.php";
+					window.location="history";
 				}else{
+					$(".history-incorrecto").empty();
 					$(".history-incorrecto").append("USUARIO INCORRECTO");
 				}
 			});
 		}
 	});
+
+	$("#ingress-up").click(function(e){
+		var user_history = $("#nombre-up").val();
+		var pass_history = $("#password-up").val();
+		if ( (user_history!="") && (pass_history!="") ){
+			$.ajax({ 
+				url: "include/comprobacion.php",
+				data: {
+					user:user_history,
+					pass:pass_history,
+					flag: 1
+				},
+				method: "POST"
+			}).done(function(json){
+				var obj = $.parseJSON(json);
+				if(obj["entro"]==1){
+					window.location="up";
+				}else{
+					$(".history-incorrecto").empty();
+					$(".history-incorrecto").append("USUARIO INCORRECTO");
+				}
+			});
+		}
+	});
+
+	$("#incrementar").click(function(e){
+		$.ajax({ 
+			url: "include/incrementar.php",
+			method: "POST"
+		}).done(function(json){
+			var obj = $.parseJSON(json);
+			console.log(obj);
+			$(".up-mensaje").empty();
+			$(".up-mensaje").append("El ID anterior era: "+obj["id_antes"]);
+			$(".up-mensaje").append(". Fue incrementado a: "+obj["id_despues"]);
+			
+		})
+	})
+
 
 
 	$(".salir-sesion-history").click(function(e){
@@ -591,7 +632,7 @@ $(document).ready(function(){
 			method: "POST"
 
 		}).done(function(){
-			window.location="history.php";
+			window.location="history";
 			
 		}).fail(function(xhr, status, error){
 			console.log(xhr);
@@ -600,6 +641,25 @@ $(document).ready(function(){
 			console.log("FAIL");
 		});
 	});
+
+	$(".salir-sesion-up").click(function(e){
+		e.preventDefault();
+		$.ajax({
+			url: "include/salir.php",
+			method: "POST"
+
+		}).done(function(){
+			window.location="up";
+			
+		}).fail(function(xhr, status, error){
+			console.log(xhr);
+			console.log(status);
+			console.log(error);
+			console.log("FAIL");
+		});
+	});
+
+	
 
 
 });

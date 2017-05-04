@@ -93,3 +93,9 @@ echo "<td><center>". ( (int)($result->num_rows) - (int)($cant_hombres) )."</cent
 
 $conexion->close();
 ?>
+
+<footer>
+	<div style="width: 100%; text-align: center; padding-bottom: 30px" class="contenedor-footer-back">
+		<p style="font-size: 13px;font-family: 'Open Sans Regular'; color: #ccc">Desarrollado por <a style="color: #ccc" target="_blank" href="http://koiron.com">koiron</a></p>
+	</div>
+</footer>
