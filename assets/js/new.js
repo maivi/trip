@@ -642,7 +642,7 @@ $(document).ready(function(){
 		});
 	});
 
-	$(".salir-sesion-up").click(function(e){
+	$(".salir-sesion-up").click(function(e){ 
 		e.preventDefault();
 		$.ajax({
 			url: "include/salir.php",
