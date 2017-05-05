@@ -96,7 +96,7 @@ echo "</tbody></table><br><br><br>";
 
 
 
-echo '<br><br><table class="table table-bordered table-hover table-responsive"><tbody>';
+echo '<br><br><div class="tabla_estadisticas"><div class="grafico"></div><div class="tabla_hijo"><table class="table table-bordered table-hover table-responsive"><tbody>';
 echo "<tr><th>Localidad</th><th><center>Cantidad</center></th></tr>";
 echo "<tr id='localidad0'><td>Ciudad</td><td><center>".$cant_loc[0]."</center></td></tr>";
 echo "<tr id='localidad1'><td>General Alvear</td><td><center>".$cant_loc[1]."</center></td></tr>";
@@ -117,7 +117,7 @@ echo "<tr id='localidad15'><td>Santa Rosa</td><td><center>".$cant_loc[15]."</cen
 echo "<tr id='localidad16'><td>Tunuyán</td><td><center>".$cant_loc[16]."</center></td></tr>";
 echo "<tr id='localidad17'><td>Tupungato</td><td><center>".$cant_loc[17]."</center></td></tr>";
 
-echo "</tbody></table><br><br><br>";
+echo "</tbody></table></div></div><br><br><br>";
 
 $conexion->close();
 ?>
