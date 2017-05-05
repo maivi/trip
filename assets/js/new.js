@@ -821,24 +821,24 @@ $(document).ready(function(){
 	$(".grafico").append(grafico);
 
 	//CHART
-	var localidad1=parseInt($("#localidad0").find("td")[1].innerText);
-	var localidad2=parseInt($("#localidad1").find("td")[1].innerText);
-	var localidad3=parseInt($("#localidad2").find("td")[1].innerText);
-	var localidad4=parseInt($("#localidad3").find("td")[1].innerText);
-	var localidad5=parseInt($("#localidad4").find("td")[1].innerText);
-	var localidad6=parseInt($("#localidad5").find("td")[1].innerText);
-	var localidad7=parseInt($("#localidad6").find("td")[1].innerText);
-	var localidad8=parseInt($("#localidad7").find("td")[1].innerText);
-	var localidad9=parseInt($("#localidad8").find("td")[1].innerText);
-	var localidad10=parseInt($("#localidad9").find("td")[1].innerText);
-	var localidad11=parseInt($("#localidad10").find("td")[1].innerText);
-	var localidad12=parseInt($("#localidad11").find("td")[1].innerText);
-	var localidad13=parseInt($("#localidad12").find("td")[1].innerText);
-	var localidad14=parseInt($("#localidad13").find("td")[1].innerText);
-	var localidad15=parseInt($("#localidad14").find("td")[1].innerText);
-	var localidad16=parseInt($("#localidad15").find("td")[1].innerText);
-	var localidad17=parseInt($("#localidad16").find("td")[1].innerText);
-	var localidad18=parseInt($("#localidad17").find("td")[1].innerText);
+	var localidad1=parseInt($("#localidad0").find("td")[2].innerText);
+	var localidad2=parseInt($("#localidad1").find("td")[2].innerText);
+	var localidad3=parseInt($("#localidad2").find("td")[2].innerText);
+	var localidad4=parseInt($("#localidad3").find("td")[2].innerText);
+	var localidad5=parseInt($("#localidad4").find("td")[2].innerText);
+	var localidad6=parseInt($("#localidad5").find("td")[2].innerText);
+	var localidad7=parseInt($("#localidad6").find("td")[2].innerText);
+	var localidad8=parseInt($("#localidad7").find("td")[2].innerText);
+	var localidad9=parseInt($("#localidad8").find("td")[2].innerText);
+	var localidad10=parseInt($("#localidad9").find("td")[2].innerText);
+	var localidad11=parseInt($("#localidad10").find("td")[2].innerText);
+	var localidad12=parseInt($("#localidad11").find("td")[2].innerText);
+	var localidad13=parseInt($("#localidad12").find("td")[2].innerText);
+	var localidad14=parseInt($("#localidad13").find("td")[2].innerText);
+	var localidad15=parseInt($("#localidad14").find("td")[2].innerText);
+	var localidad16=parseInt($("#localidad15").find("td")[2].innerText);
+	var localidad17=parseInt($("#localidad16").find("td")[2].innerText);
+	var localidad18=parseInt($("#localidad17").find("td")[2].innerText);
 
 	var doughnutData = [
 	{

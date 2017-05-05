@@ -1532,96 +1532,96 @@ a img.alignright {
 
 /**************************colores de la tabla para el chart******************************/
 
-#localidad0{
+#localidad0 td:nth-child(1){
 
 	background-color: #F7464A;
 }
 
 
-#localidad1{
+#localidad1 td:nth-child(1){
 
 	background-color: #46BFBD;
 }
 
 
-#localidad2{
+#localidad2 td:nth-child(1){
 
 	background-color: #FDB45C;
 }
 
 
-#localidad3{
+#localidad3 td:nth-child(1){
 
 	background-color: #949FB1;
 }
 
 
-#localidad4{
+#localidad4 td:nth-child(1){
 
 	background-color: #2ecc71;
 }
 
-#localidad5{
+#localidad5 td:nth-child(1){
 
 	background-color: #3498db;
 }
 
-#localidad6{
+#localidad6 td:nth-child(1){
 
 	background-color: #9b59b6;
 }
 
-#localidad7{
+#localidad7 td:nth-child(1){
 
 	background-color: #34495e;
 }
 
-#localidad8{
+#localidad8 td:nth-child(1){
 
 	background-color: #f1c40f;
 }
 
-#localidad9{
+#localidad9 td:nth-child(1){
 
 	background-color: #e67e22;
 }
 
-#localidad10{
+#localidad10 td:nth-child(1){
 
 	background-color: #e74c3c;
 }
 
-#localidad11{
+#localidad11 td:nth-child(1){
 
 	background-color: #ecf0f1;
 }
 
-#localidad12{
+#localidad12 td:nth-child(1){
 
 	background-color: #95a5a6;
 }
 
-#localidad13{
+#localidad13 td:nth-child(1){
 
 	background-color: #f39c12;
 }
 
-#localidad14{
+#localidad14 td:nth-child(1){
 
 	background-color: #d35400;
 }
 
-#localidad15{
+#localidad15 td:nth-child(1){
 
 	background-color: #c0392b;
 }
 
-#localidad16{
+#localidad16 td:nth-child(1){
 
 	background-color: #4D5360;
 }
 
-#localidad17{
+#localidad17 td:nth-child(1){
 
 	background-color: #CCC;
 }

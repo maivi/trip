@@ -97,25 +97,25 @@ echo "</tbody></table><br><br><br>";
 
 
 echo '<br><br><div class="tabla_estadisticas"><div class="grafico"></div><div class="tabla_hijo"><table class="table table-bordered table-hover table-responsive"><tbody>';
-echo "<tr><th>Localidad</th><th><center>Cantidad</center></th></tr>";
-echo "<tr id='localidad0'><td>Ciudad</td><td><center>".$cant_loc[0]."</center></td></tr>";
-echo "<tr id='localidad1'><td>General Alvear</td><td><center>".$cant_loc[1]."</center></td></tr>";
-echo "<tr id='localidad2'><td>Godoy Cruz</td><td><center>".$cant_loc[2]."</center></td></tr>";
-echo "<tr id='localidad3'><td>Guaymallén</td><td><center>".$cant_loc[3]."</center></td></tr>";
-echo "<tr id='localidad4'><td>Junín</td><td><center>".$cant_loc[4]."</center></td></tr>";
-echo "<tr id='localidad5'><td>La Paz</td><td><center>".$cant_loc[5]."</center></td></tr>";
-echo "<tr id='localidad6'><td>Las Heras</td><td><center>".$cant_loc[6]."</center></td></tr>";
-echo "<tr id='localidad7'><td>Lavalle</td><td><center>".$cant_loc[7]."</center></td></tr>";
-echo "<tr id='localidad8'><td>Luján de Cuyo</td><td><center>".$cant_loc[8]."</center></td></tr>";
-echo "<tr id='localidad9'><td>Maipú</td><td><center>".$cant_loc[9]."</center></td></tr>";
-echo "<tr id='localidad10'><td>Malargüe</td><td><center>".$cant_loc[10]."</center></td></tr>";
-echo "<tr id='localidad11'><td>Rivadavia</td><td><center>".$cant_loc[11]."</center></td></tr>";
-echo "<tr id='localidad12'><td>San Carlos</td><td><center>".$cant_loc[12]."</center></td></tr>";
-echo "<tr id='localidad13'><td>San martín</td><td><center>".$cant_loc[13]."</center></td></tr>";
-echo "<tr id='localidad14'><td>San Rafael</td><td><center>".$cant_loc[14]."</center></td></tr>";
-echo "<tr id='localidad15'><td>Santa Rosa</td><td><center>".$cant_loc[15]."</center></td></tr>";
-echo "<tr id='localidad16'><td>Tunuyán</td><td><center>".$cant_loc[16]."</center></td></tr>";
-echo "<tr id='localidad17'><td>Tupungato</td><td><center>".$cant_loc[17]."</center></td></tr>";
+echo "<tr><th>Identificador</th><th>Localidad</th><th><center>Cantidad</center></th></tr>";
+echo "<tr id='localidad0'><td></td><td>Ciudad</td><td><center>".$cant_loc[0]."</center></td></tr>";
+echo "<tr id='localidad1'><td></td><td>General Alvear</td><td><center>".$cant_loc[1]."</center></td></tr>";
+echo "<tr id='localidad2'><td></td><td>Godoy Cruz</td><td><center>".$cant_loc[2]."</center></td></tr>";
+echo "<tr id='localidad3'><td></td><td>Guaymallén</td><td><center>".$cant_loc[3]."</center></td></tr>";
+echo "<tr id='localidad4'><td></td><td>Junín</td><td><center>".$cant_loc[4]."</center></td></tr>";
+echo "<tr id='localidad5'><td></td><td>La Paz</td><td><center>".$cant_loc[5]."</center></td></tr>";
+echo "<tr id='localidad6'><td></td><td>Las Heras</td><td><center>".$cant_loc[6]."</center></td></tr>";
+echo "<tr id='localidad7'><td></td><td>Lavalle</td><td><center>".$cant_loc[7]."</center></td></tr>";
+echo "<tr id='localidad8'><td></td><td>Luján de Cuyo</td><td><center>".$cant_loc[8]."</center></td></tr>";
+echo "<tr id='localidad9'><td></td><td>Maipú</td><td><center>".$cant_loc[9]."</center></td></tr>";
+echo "<tr id='localidad10'><td></td><td>Malargüe</td><td><center>".$cant_loc[10]."</center></td></tr>";
+echo "<tr id='localidad11'><td></td><td>Rivadavia</td><td><center>".$cant_loc[11]."</center></td></tr>";
+echo "<tr id='localidad12'><td></td><td>San Carlos</td><td><center>".$cant_loc[12]."</center></td></tr>";
+echo "<tr id='localidad13'><td></td><td>San martín</td><td><center>".$cant_loc[13]."</center></td></tr>";
+echo "<tr id='localidad14'><td></td><td>San Rafael</td><td><center>".$cant_loc[14]."</center></td></tr>";
+echo "<tr id='localidad15'><td></td><td>Santa Rosa</td><td><center>".$cant_loc[15]."</center></td></tr>";
+echo "<tr id='localidad16'><td></td><td>Tunuyán</td><td><center>".$cant_loc[16]."</center></td></tr>";
+echo "<tr id='localidad17'><td></td><td>Tupungato</td><td><center>".$cant_loc[17]."</center></td></tr>";
 
 echo "</tbody></table></div></div><br><br><br>";
 
