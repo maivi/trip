@@ -920,6 +920,10 @@ $(document).ready(function(){
 	{
 		value : localidad17,
 		color : "#4D5360"
+	},
+	{
+		value : localidad18,
+		color : "#CCC"
 	}
 
 	];
