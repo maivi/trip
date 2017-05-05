@@ -816,7 +816,9 @@ $(document).ready(function(){
 	});
 
 
-
+	var grafico = $("#canvas").clone();
+	$("#canvas").remove();
+	$(".grafico").append(grafico);
 
 	//CHART
 	var localidad1=parseInt($("#localidad0").find("td")[1].innerText);
@@ -929,6 +931,8 @@ $(document).ready(function(){
 	];
 
 	var myDoughnut = new Chart(document.getElementById("canvas").getContext("2d")).Doughnut(doughnutData);
+
+
 
 });
 
