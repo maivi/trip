@@ -1532,96 +1532,96 @@ a img.alignright {
 
 /**************************colores de la tabla para el chart******************************/
 
-#localidad0 td{
+#localidad0 tr{
 
 	background-color: #F7464A;
 }
 
 
-#localidad1 td{
+#localidad1 tr{
 
 	background-color: #46BFBD;
 }
 
 
-#localidad2 td{
+#localidad2 tr{
 
 	background-color: #FDB45C;
 }
 
 
-#localidad3 td{
+#localidad3 tr{
 
 	background-color: #949FB1;
 }
 
 
-#localidad4 td{
+#localidad4 tr{
 
 	background-color: #2ecc71;
 }
 
-#localidad5 td{
+#localidad5 tr{
 
 	background-color: #3498db;
 }
 
-#localidad6 td{
+#localidad6 tr{
 
 	background-color: #9b59b6;
 }
 
-#localidad7 td{
+#localidad7 tr{
 
 	background-color: #34495e;
 }
 
-#localidad8 td{
+#localidad8 tr{
 
 	background-color: #f1c40f;
 }
 
-#localidad9 td{
+#localidad9 tr{
 
 	background-color: #e67e22;
 }
 
-#localidad10 td{
+#localidad10 tr{
 
 	background-color: #e74c3c;
 }
 
-#localidad11 td{
+#localidad11 tr{
 
 	background-color: #ecf0f1;
 }
 
-#localidad12 td{
+#localidad12 tr{
 
 	background-color: #95a5a6;
 }
 
-#localidad13 td{
+#localidad13 tr{
 
 	background-color: #f39c12;
 }
 
-#localidad14 td{
+#localidad14 tr{
 
 	background-color: #d35400;
 }
 
-#localidad15 td{
+#localidad15 tr{
 
 	background-color: #c0392b;
 }
 
-#localidad16 td{
+#localidad16 tr{
 
 	background-color: #4D5360;
 }
 
-#localidad17 td{
+#localidad17 tr{
 
 	background-color: #CCC;
 }
