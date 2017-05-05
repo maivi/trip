@@ -815,6 +815,117 @@ $(document).ready(function(){
 		},500)
 	});
 
+
+
+
+	//CHART
+	var localidad1=parseInt($("#localidad0").find("td")[1].innerText);
+	var localidad2=parseInt($("#localidad1").find("td")[1].innerText);
+	var localidad3=parseInt($("#localidad2").find("td")[1].innerText);
+	var localidad4=parseInt($("#localidad3").find("td")[1].innerText);
+	var localidad5=parseInt($("#localidad4").find("td")[1].innerText);
+	var localidad6=parseInt($("#localidad5").find("td")[1].innerText);
+	var localidad7=parseInt($("#localidad6").find("td")[1].innerText);
+	var localidad8=parseInt($("#localidad7").find("td")[1].innerText);
+	var localidad9=parseInt($("#localidad8").find("td")[1].innerText);
+	var localidad10=parseInt($("#localidad9").find("td")[1].innerText);
+	var localidad11=parseInt($("#localidad10").find("td")[1].innerText);
+	var localidad12=parseInt($("#localidad11").find("td")[1].innerText);
+	var localidad13=parseInt($("#localidad12").find("td")[1].innerText);
+	var localidad14=parseInt($("#localidad13").find("td")[1].innerText);
+	var localidad15=parseInt($("#localidad14").find("td")[1].innerText);
+	var localidad16=parseInt($("#localidad15").find("td")[1].innerText);
+	var localidad17=parseInt($("#localidad16").find("td")[1].innerText);
+	var localidad18=parseInt($("#localidad17").find("td")[1].innerText);
+
+	var doughnutData = [
+	{
+		value: localidad1,
+		color:"#F7464A"
+	},
+	{
+		value : localidad2,
+		color : "#46BFBD"
+	},
+	{
+		value : localidad3,
+		color : "#FDB45C"
+	},
+	{
+		value : localidad4,
+		color : "#949FB1"
+	},
+
+	{
+		value : localidad5,
+		color : "#2ecc71"
+	},
+
+	{
+		value : localidad6,
+		color : "#3498db"
+	},
+
+	{
+		value : localidad7,
+		color : "#9b59b6"
+	},
+
+	{
+		value : localidad8,
+		color : "#34495e"
+	},
+
+	{
+		value : localidad9,
+		color : "#f1c40f"
+	},
+
+	{
+		value : localidad10,
+		color : "#e67e22"
+	},
+
+	{
+		value : localidad11,
+		color : "#e74c3c"
+	},
+
+	{
+		value : localidad12,
+		color : "#ecf0f1"
+	},
+
+	{
+		value : localidad13,
+		color : "#95a5a6"
+	},
+
+	{
+		value : localidad14,
+		color : "#f39c12"
+	},
+
+	{
+		value : localidad15,
+		color : "#d35400"
+	},
+
+	{
+		value : localidad16,
+		color : "#c0392b"
+	},
+
+
+	{
+		value : localidad17,
+		color : "#4D5360"
+	}
+
+	];
+
+	var myDoughnut = new Chart(document.getElementById("canvas").getContext("2d")).Doughnut(doughnutData);
+
 });
 
 function pulsar(e) {
