@@ -98,29 +98,33 @@ echo "</tbody></table><br><br><br>";
 
 echo '<br><br><table class="table table-bordered table-hover table-responsive"><tbody>';
 echo "<tr><th>Localidad</th><th><center>Cantidad</center></th></tr>";
-echo "<tr><th>Ciudad</th><th><center>".$cant_loc[0]."</center></th></tr>";
-echo "<tr><th>General Alvear</th><th><center>".$cant_loc[1]."</center></th></tr>";
-echo "<tr><th>Godoy Cruz</th><th><center>".$cant_loc[2]."</center></th></tr>";
-echo "<tr><th>Guaymallén</th><th><center>".$cant_loc[3]."</center></th></tr>";
-echo "<tr><th>Junín</th><th><center>".$cant_loc[4]."</center></th></tr>";
-echo "<tr><th>La Paz</th><th><center>".$cant_loc[5]."</center></th></tr>";
-echo "<tr><th>Las Heras</th><th><center>".$cant_loc[6]."</center></th></tr>";
-echo "<tr><th>Lavalle</th><th><center>".$cant_loc[7]."</center></th></tr>";
-echo "<tr><th>Luján de Cuyo</th><th><center>".$cant_loc[8]."</center></th></tr>";
-echo "<tr><th>Maipú</th><th><center>".$cant_loc[9]."</center></th></tr>";
-echo "<tr><th>Malargüe</th><th><center>".$cant_loc[10]."</center></th></tr>";
-echo "<tr><th>Rivadavia</th><th><center>".$cant_loc[11]."</center></th></tr>";
-echo "<tr><th>San Carlos</th><th><center>".$cant_loc[12]."</center></th></tr>";
-echo "<tr><th>San martín</th><th><center>".$cant_loc[13]."</center></th></tr>";
-echo "<tr><th>San Rafael</th><th><center>".$cant_loc[14]."</center></th></tr>";
-echo "<tr><th>Santa Rosa</th><th><center>".$cant_loc[15]."</center></th></tr>";
-echo "<tr><th>Tunuyán</th><th><center>".$cant_loc[16]."</center></th></tr>";
-echo "<tr><th>Tupungato</th><th><center>".$cant_loc[17]."</center></th></tr>";
+echo "<tr id='localidad0'><td>Ciudad</td><td><center>".$cant_loc[0]."</center></td></tr>";
+echo "<tr id='localidad1'><td>General Alvear</td><td><center>".$cant_loc[1]."</center></td></tr>";
+echo "<tr id='localidad2'><td>Godoy Cruz</td><td><center>".$cant_loc[2]."</center></td></tr>";
+echo "<tr id='localidad3'><td>Guaymallén</td><td><center>".$cant_loc[3]."</center></td></tr>";
+echo "<tr id='localidad4'><td>Junín</td><td><center>".$cant_loc[4]."</center></td></tr>";
+echo "<tr id='localidad5'><td>La Paz</td><td><center>".$cant_loc[5]."</center></td></tr>";
+echo "<tr id='localidad6'><td>Las Heras</td><td><center>".$cant_loc[6]."</center></td></tr>";
+echo "<tr id='localidad7'><td>Lavalle</td><td><center>".$cant_loc[7]."</center></td></tr>";
+echo "<tr id='localidad8'><td>Luján de Cuyo</td><td><center>".$cant_loc[8]."</center></td></tr>";
+echo "<tr id='localidad9'><td>Maipú</td><td><center>".$cant_loc[9]."</center></td></tr>";
+echo "<tr id='localidad10'><td>Malargüe</td><td><center>".$cant_loc[10]."</center></td></tr>";
+echo "<tr id='localidad11'><td>Rivadavia</td><td><center>".$cant_loc[11]."</center></td></tr>";
+echo "<tr id='localidad12'><td>San Carlos</td><td><center>".$cant_loc[12]."</center></td></tr>";
+echo "<tr id='localidad13'><td>San martín</td><td><center>".$cant_loc[13]."</center></td></tr>";
+echo "<tr id='localidad14'><td>San Rafael</td><td><center>".$cant_loc[14]."</center></td></tr>";
+echo "<tr id='localidad15'><td>Santa Rosa</td><td><center>".$cant_loc[15]."</center></td></tr>";
+echo "<tr id='localidad16'><td>Tunuyán</td><td><center>".$cant_loc[16]."</center></td></tr>";
+echo "<tr id='localidad17'><td>Tupungato</td><td><center>".$cant_loc[17]."</center></td></tr>";
 
 echo "</tbody></table><br><br><br>";
 
 $conexion->close();
 ?>
+
+
+<canvas id="canvas" height="450" width="450"></canvas>
+
 
 <footer>
 	<div style="width: 100%; text-align: center; padding-bottom: 30px" class="contenedor-footer-back">
