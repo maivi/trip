@@ -147,7 +147,7 @@
   border-color: #00569C !important;
 }
 
-.submit1, .submit2, .salir-sesion, .usuario-ingresado, .salir-sesion-history, .salir-sesion-up{
+.submit1, .submit2, .salir-sesion, .usuario-ingresado, .salir-sesion-history, .salir-sesion-up, .editar-perfil{
   color: white !important;
   font-size: 13px;
   font-weight: 700;
@@ -162,7 +162,7 @@
   padding: 20px 12px 0px 0px;
 }
 
-.submit1:hover, .submit2:hover, .salir-sesion:hover{
+.submit1:hover, .submit2:hover, .salir-sesion:hover, .editar-perfil:hover{
   color: #99BCD8 !important;
 }
 
@@ -220,6 +220,17 @@
 .perdi-cuenta-reg{
   position: relative !important;
   top: 0px !important;
+}
+
+
+.contenedor-editar{
+  position: absolute;
+  width: 100%;
+  padding-bottom: 10px;
+  background-color: white;
+  z-index: 999;
+  border-bottom: 1px solid #ccc;
+  top: -100%;
 }
 
 

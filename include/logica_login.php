@@ -34,6 +34,7 @@
 					$json["id"]=$id_usuario;
 					$json["consulta"]=$consulta;
 					$json["cantidad"]=$cantidad;
+					$json["nombre_usuario"]=$_SESSION["usuario"];
 					
 				}
 				$existe=1; // El usuario existe

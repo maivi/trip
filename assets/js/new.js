@@ -35,6 +35,12 @@ $(document).ready(function(){
 		localStorage["respondida"]= "No";
 	}
 
+	if(localStorage["logged"] == "Si"){
+		$(".usuario-ingresado").empty();
+		$(".usuario-ingresado").text(localStorage["usuario"]);
+	}
+	
+
 	if ((localStorage["respondida"] == "Si") && (localStorage["logged"] == "Si")) {
 		$("#form").find("ul").empty();
 		$("#form").find("h2").empty();
@@ -375,8 +381,10 @@ $(document).ready(function(){
 					eliminar.append("Usuario o Password incorrecto");	
 				}else{
 					localStorage["logged"] = "Si";
+					localStorage["usuario"] = obj["nombre_usuario"];
 					window.location="index.php";
 				}
+				localStorage["remember"]=obj["id"];
 			})
 			.fail(function(xhr, status, error){
 				console.log(xhr);
@@ -446,6 +454,8 @@ $(document).ready(function(){
 						if(obj3["captcha"]==1){
 							$(".captcha-message").append("<div class='clearfix'></div> <div class='col-lg-3 col-md-3 col-sm-4 col-xs-4'><p>Captcha Incorrecto</p></div>");
 						}else{
+							localStorage["logged"] = "Si";
+							localStorage["usuario"] = obj["nombre_usuario"];
 							window.location="index.php";
 						}
 
@@ -615,7 +625,6 @@ $(document).ready(function(){
 			method: "POST"
 		}).done(function(json){
 			var obj = $.parseJSON(json);
-			console.log(obj);
 			$(".up-mensaje").empty();
 			$(".up-mensaje").append("El ID anterior era: "+obj["id_antes"]);
 			$(".up-mensaje").append(". Fue incrementado a: "+obj["id_despues"]);
@@ -660,7 +669,151 @@ $(document).ready(function(){
 	});
 
 	
+	$(".editar-perfil").click(function(e){
+		e.preventDefault();
+		$(".contenedor-editar").animate({
+			top: "60px"
+		},500);
+		$.ajax({
+			url: "include/info_user.php",
+			method: "POST",
+			data: {
+				id:localStorage["remember"]
+			}
 
+		}).done(function(json){
+			var obj = $.parseJSON(json);
+			console.log(obj);
+			$("#nombre").val(obj["nombre"]);
+			$("#apellido").val(obj["apellido"]);
+			$("#email").val(obj["email"]);
+			$("#dni").val(obj["dni"]);
+			$("#telefono").val(obj["telefono"]);
+			$("#localidad").val(obj["localidad"]);
+			$("#pw").val("");
+			$("#user").val(obj["user"]);
+			$("#sexo").val(obj["sexo"]);
+			
+		})
+	})
+
+	$("#change-info").click(function(e){
+		e.preventDefault();
+		nombre = $("#nombre").val();
+		apellido = $("#apellido").val();
+		email = $("#email").val();
+		dni = $("#dni").val();
+		telefono = $("#telefono").val();
+		localidad = $("#localidad").val();
+		pw = $("#pw").val();
+		sexo = $("#sexo").val();
+
+		if ( (nombre!="") && (apellido!="") && (email!="") && (dni!="") && (telefono!="") && (pw!="") && (user!="") ){
+			$.ajax({ 
+				url: "include/actualizar_user.php",
+				data: {
+					nombre: nombre,
+					apellido: apellido,
+					email: email,
+					dni: dni,
+					telefono: telefono,
+					localidad: localidad,
+					pw: pw,
+					sexo: sexo,
+					id: localStorage["remember"]
+				},
+				method: "POST"
+			}).done(function(json){
+				var obj = $.parseJSON(json);
+				$(".usuario-ingresado").empty();
+				$(".usuario-ingresado").append(obj["nombre"]);
+				localStorage["usuario"]=obj["nombre"];
+				$("#cerrar-editar").click();				
+			}).fail(function(xhr, status, error){
+				console.log(xhr);
+				console.log(status);
+				console.log(error);
+				console.log("FAIL");
+			});
+		}else{
+			nombre=$("#nombre");
+			if(nombre.val()==""){
+				if(!( nombre.parent().parent().hasClass("has-error") ) ){
+					nombre.parent().parent().addClass("has-error");
+				}
+			}else{
+				nombre.parent().parent().removeClass("has-error");
+			}
+
+			apellido=$("#apellido");
+			if(apellido.val()==""){
+				if(!( apellido.parent().parent().hasClass("has-error") ) ){
+					apellido.parent().parent().addClass("has-error");
+				}
+			}else{
+				apellido.parent().parent().removeClass("has-error");
+			}
+
+			email=$("#email");
+			if(email.val()==""){
+				if(!( email.parent().parent().hasClass("has-error") ) ){
+					email.parent().parent().addClass("has-error");
+				}
+			}else{
+				email.parent().parent().removeClass("has-error");
+			}
+
+
+			dni=$("#dni");
+			if(dni.val()==""){
+				if(!( dni.parent().parent().hasClass("has-error") ) ){
+					dni.parent().parent().addClass("has-error");
+				}
+			}else{
+				dni.parent().parent().removeClass("has-error");
+			}
+
+
+			telefono=$("#telefono");
+			if(telefono.val()==""){
+				if(!( telefono.parent().parent().hasClass("has-error") ) ){
+					telefono.parent().parent().addClass("has-error");
+				}
+			}else{
+				telefono.parent().parent().removeClass("has-error");
+			}
+
+
+			pw=$("#pw");
+			if(pw.val()==""){
+				if(!( pw.parent().parent().hasClass("has-error") ) ){
+					pw.parent().parent().addClass("has-error");
+				}
+			}else{
+				pw.parent().parent().removeClass("has-error");
+			}
+
+
+			user=$("#user");
+			if(user.val()==""){
+				if(!( user.parent().parent().hasClass("has-error") ) ){
+					user.parent().parent().addClass("has-error");
+				}
+			}else{
+				user.parent().parent().removeClass("has-error");
+			}
+
+
+		}
+	});
+
+
+	$("#cerrar-editar").click(function(e){
+		e.preventDefault();
+		$(".contenedor-editar").animate({
+			top: "-100%"
+		},500)
+	});
 
 });
 
