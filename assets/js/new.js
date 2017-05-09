@@ -819,20 +819,20 @@ $(document).ready(function(){
 	var grafico = $("#canvas").clone();
 	$("#canvas").remove();
 	$(".grafico").append(grafico);
-	var header = $(".navbar.navbar-default").clone();
-	$(".navbar.navbar-default").remove();
+	var header = $(".statistics").find(".navbar.navbar-default").clone();
+	$(".statistics").find(".navbar.navbar-default").remove();
 	var estadisticas = $(".tabla_estadisticas").clone();
 	$(".tabla_estadisticas").remove();
 	var tabla_sexos = $(".table-sexos").clone();
 	$(".table-sexos").remove();
-	$("body").prepend("<div class='container estadisticas-tabla' style='height: auto;clear:both;'></div>");
-	$("body").find(".estadisticas-tabla").prepend(estadisticas);
+	$(".statistics").prepend("<div class='container estadisticas-tabla' style='height: auto;clear:both;'></div>");
+	$(".statistics").find(".estadisticas-tabla").prepend(estadisticas);
 	
-	$("body").prepend("<div class='container sexos-tabla' style='height: auto;clear:both;'></div>");
-	$("body").find(".sexos-tabla").prepend(tabla_sexos);
+	$(".statistics").prepend("<div class='container sexos-tabla' style='height: auto;clear:both;'></div>");
+	$(".statistics").find(".sexos-tabla").prepend(tabla_sexos);
 
-	$("body").prepend("<br><div class='container' style='height: auto;clear:both;'><h1>Estadísticas</h1></div><br>");
-	$("body").prepend(header);
+	$(".statistics").prepend("<br><div class='container' style='height: auto;clear:both;'><h1>Estadísticas</h1></div><br>");
+	$(".statistics").prepend(header);
 
 	//CHART
 	var localidad1=parseInt($("#localidad0").find("td")[2].innerText);

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php include "include/head.php"; ?>
-<body style="overflow:visible">
+<body class="statistics" style="overflow:visible">
 
 	
 	<?php  
