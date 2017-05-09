@@ -370,7 +370,7 @@
 }
 
 .grafico{
-  width: 450px;
+  width: 50%;
   clear: both;
   float: left;
   display: flex;
@@ -379,8 +379,12 @@
     flex-direction: column;
 }
 
+.grafico #canvas{
+  margin: 0 auto;
+}
+
 .tabla_hijo{
-  width: calc(100% - 450px);
+  width: 50%;
   clear: both;
   float: left;
   text-align: center;

@@ -87,16 +87,16 @@ while($cantidad = $result->fetch_assoc()){
 
 echo "</tbody></table>";
 
-echo '<br><br><table class="table table-bordered table-hover table-responsive"><tbody>';
+echo '<table class="table table-bordered table-hover table-responsive table-sexos"><tbody>';
 echo "<tr><th><center>Cantidad de Registrados</center></th><th><center>Cantidad de Hombres</center></th><th><center>Cantidad de Mujeres</center></th></tr>";
 echo "<tr><td><center>".$result->num_rows."</center></td>";
 echo "<td><center>".$cant_hombres."</center></td>";
 echo "<td><center>". ( (int)($result->num_rows) - (int)($cant_hombres) )."</center></td>";
-echo "</tbody></table><br><br><br>";
+echo "</tbody></table>";
 
 
 
-echo '<br><br><div class="tabla_estadisticas"><div class="grafico"></div><div class="tabla_hijo"><table class="table table-bordered table-hover table-responsive"><tbody>';
+echo '<div class="tabla_estadisticas"><div class="grafico"></div><div class="tabla_hijo"><table class="table table-bordered table-hover table-responsive"><tbody>';
 echo "<tr><th>Identificador</th><th>Localidad</th><th><center>Cantidad</center></th></tr>";
 echo "<tr id='localidad0'><td></td><td>Ciudad</td><td><center>".$cant_loc[0]."</center></td></tr>";
 echo "<tr id='localidad1'><td></td><td>General Alvear</td><td><center>".$cant_loc[1]."</center></td></tr>";
@@ -117,7 +117,7 @@ echo "<tr id='localidad15'><td></td><td>Santa Rosa</td><td><center>".$cant_loc[1
 echo "<tr id='localidad16'><td></td><td>Tunuyán</td><td><center>".$cant_loc[16]."</center></td></tr>";
 echo "<tr id='localidad17'><td></td><td>Tupungato</td><td><center>".$cant_loc[17]."</center></td></tr>";
 
-echo "</tbody></table></div></div><br><br><br>";
+echo "</tbody></table></div></div>";
 
 $conexion->close();
 ?>
