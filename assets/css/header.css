@@ -194,7 +194,7 @@
   border-right: 1px solid #ccc;
   border-left: 1px solid #ccc;
   top: -100%;
-  height: calc( 100vh - 60px );
+  height: auto;
 }
 
 .perdi-cuenta .form-control{
@@ -265,7 +265,17 @@
 
 .ac-custom.ac-radio.ac-circle h2{
   font-family: CPCompany Black;
-  font-size: 60px;
+  font-size: 50px;
+  line-height: 48px;
+  padding-bottom: 50px;
+}
+
+#form h2+ul{
+  padding-bottom: 40px;
+}
+
+#contenedor-boton button+p{
+  padding-top: 20px;
 }
 
 .ac-custom li{
@@ -426,7 +436,7 @@
   }
 }
 
-@media only screen and (max-width: 984px) and (min-width: 836px){
+@media only screen and (max-width: 984px) and (min-width: 846px){
   .submit1, .submit2, .salir-sesion, .usuario-ingresado{
     font-size: 12px;
   }
@@ -453,7 +463,7 @@
   }
 }
 
-@media only screen and (max-width: 835px) and (min-width: 768px){
+@media only screen and (max-width: 845px) and (min-width: 768px){
   .submit1, .submit2, .salir-sesion, .usuario-ingresado{
     font-size: 12px;
   }
@@ -480,8 +490,8 @@
   }
 
   .navbar-nav>li>a{
-    padding-left: 4px;
-    padding-right: 4px;
+    padding-left: 2px;
+    padding-right: 2px;
   }
 
   .navbar-form.navbar-left{
@@ -506,6 +516,12 @@
   .nav.navbar-nav.navbar-right{
     text-align: center;
   }
+
+  .ac-custom h2{
+    line-height: 36px !important;
+    font-size: 30px !important;
+  }
+  
 }
 
 @media only screen and (max-width: 400px) and (min-width: 320px){
@@ -519,7 +535,7 @@
 
 @media only screen and (max-width: 840px) and (min-width: 401px){
   .cuerpo-padding{
-    height: 650px;
+    height: auto;
   }
   .perdi-cuenta .cerrar{
     left: -25px;

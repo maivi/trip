@@ -26,7 +26,6 @@
 
 .ac-custom {
 	padding: 0 3em;
-	max-width: 900px;
 	margin: 0 auto;
 }
 
@@ -1277,16 +1276,7 @@ a img.alignright {
 	}
 }
 
-
-
-
-
-
-
 @media only screen and (min-width: 401px) and (max-width: 1200px)  {
-
-
-
 
 	.fs-fields > li label.fs-field-label {
 		display: inline-block;
@@ -1298,8 +1288,6 @@ a img.alignright {
 	}
 
 	.ac-custom h2 {
-
-
 		font-size: 35px!important;
 		font-weight: 300;
 		padding: 0 0 0.5em;
@@ -1307,7 +1295,7 @@ a img.alignright {
 	}
 
 	.box {
-		height: 800px!important;
+		height: auto!important;
 
 	}
 

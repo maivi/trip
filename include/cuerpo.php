@@ -88,12 +88,12 @@
 
 
 							<form id="form" class="ac-custom ac-radio ac-circle" autocomplete="off">
-								<h2>Escuchá</h2>
-								<p class="ocultar">la programación de la radio para conocer la pregunta de hoy y elegí la opción de respuesta correcta entre…</p>
+								<h2>Escuchá en la radio la pregunta del día de hoy y elegí la opción de respuesta correcta entre...</h2>
+								
 								<ul>
 									<li><input id="r1" name="r1" type="radio"><label for="r1">Respuesta 1</label></li>
 									<li><input id="r2" name="r1" type="radio"><label for="r2">Respuesta 2</label></li>
-									<li><input id="r3" name="r1" type="radio"><label for="r3">Respuesta 3</label></li><br>
+									<li><input id="r3" name="r1" type="radio"><label for="r3">Respuesta 3</label></li>
 								</ul>
 								<div id="contenedor-boton">
 									<?php  
@@ -103,9 +103,9 @@
 										<?php
 									}else{
 										?>
-										<button type="submit" class="btn btn-default" id="registrate2">Registrate</button>
-										<p>Registrate ahora y participá por el viaje al Caribe para vos y un acompañante con todo pago!
-Si ya estás registrado, sólo ingresa tu USER y PASS.</p>
+										<button type="submit" class="btn btn-default" id="registrate2">REGISTRATE</button>
+										<p>Es importante que recuerdes tu <strong>Usuario</strong> y <strong>Contraseña</strong> ya que te servirán para ingresar diariamente y responder las preguntas que quieras durante el concurso. Así, mientras más respuestas correctas acumules, más chances de ganar el viaje tenés!</p>
+										<p>Si ya estas registrado ingresá sólo con tu <strong>Usuario</strong> y <strong>Contraseña</strong> </p>
 										<?php 
 									}
 									?>
