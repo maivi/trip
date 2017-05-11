@@ -521,12 +521,20 @@
     line-height: 36px !important;
     font-size: 30px !important;
   }
+
+  .ac-custom.ac-radio.ac-circle h2{
+    padding-bottom: 25px !important;
+  }
+
+  #form h2+ul{
+    padding-top: 20px !important;
+  }
   
 }
 
 @media only screen and (max-width: 400px) and (min-width: 320px){
   .cuerpo-padding{
-    height: 600px;
+    height: auto;
   }
   .perdi-cuenta .cerrar{
     left: -25px;
