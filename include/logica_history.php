@@ -53,6 +53,64 @@ $consulta = "SELECT * FROM usuarios ;";
 
 $result = $conexion->query($consulta);
 
+$cantidad_usuarios = $result->num_rows;
+
+$consulta2 = "SELECT * FROM respuestas_usuarios ;";
+
+$result2 = $conexion->query($consulta2);
+
+$cantidad_respuestas = $result2->num_rows;
+
+$consulta3 = "SELECT * FROM ultima_pregunta;";
+$result3 = $conexion->query($consulta3);
+
+if($cantidad2 = $result3->fetch_assoc()){
+	$cantidad_preguntas = $cantidad2["ultima_pregunta"];
+}
+
+$cantidad_respuestas = 4200;
+$cantidad_usuarios = 1100;
+$cantidad_preguntas = 11;
+
+$promedio = $cantidad_respuestas / $cantidad_usuarios;
+$calculo = $cantidad_preguntas * ($promedio/10);
+
+echo "<div class='container coeficientes'>";
+
+echo "<div class='contenedor-estadisticas'>";
+
+
+echo "<div class='padre-bloque-estadisticas'><div class='bloque-estadisticas'>";
+echo "<div class='texto-estadistica'>Cantidad de Usuarios</div> <div class='resultado-estadistica'>" . $cantidad_usuarios . "</div>";
+echo "</div></div>";
+
+
+echo "<div class='padre-bloque-estadisticas'><div class='bloque-estadisticas'>";
+echo "<div class='texto-estadistica'>Cantidad de Respuestas</div> <div class='resultado-estadistica'>" . $cantidad_respuestas . "</div>";
+echo "</div></div>";
+
+
+echo "<div class='padre-bloque-estadisticas'><div class='bloque-estadisticas'>";
+echo "<div class='texto-estadistica'>Cantidad de Preguntas</div> <div class='resultado-estadistica'>" . $cantidad_preguntas . "</div>";
+echo "</div></div>";
+
+
+echo "<div class='padre-bloque-estadisticas'><div class='bloque-estadisticas'>";
+echo "<div class='texto-estadistica'><p>Cantidad de Respuestas</p> <div class='separacion'></div> <p>Cantidad de Usuarios</p> </div><div class='resultado-estadistica'>" . $promedio . "</div>";
+echo "</div></div>";
+
+
+echo "<div class='padre-bloque-estadisticas'><div class='bloque-estadisticas'>";
+echo "<div class='texto-estadistica'>Respuestas por Usuarios aproximada</div> <div class='resultado-estadistica'>" . $calculo . "</div>";
+echo "</div></div>";
+
+
+echo "</div>";
+echo "</div>";
+
+echo "<br><br>";
+
+
 echo '<table class="table table-bordered table-hover table-responsive"><tbody>';
 echo '<tr><th>Nombre</th><th>Apellido</th><th>E-Mail</th><th>DNI</th><th>Teléfono</th><th>Localidad</th><th>Usuario</th><th>Sexo</th><th>Fecha de Ingreso</th>';
 
