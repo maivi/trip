@@ -68,12 +68,10 @@ if($cantidad2 = $result3->fetch_assoc()){
 	$cantidad_preguntas = $cantidad2["ultima_pregunta"];
 }
 
-$cantidad_respuestas = 4200;
-$cantidad_usuarios = 1100;
-$cantidad_preguntas = 11;
-
 $promedio = $cantidad_respuestas / $cantidad_usuarios;
+$promedio = number_format($promedio, 2, '.', '');
 $calculo = $cantidad_preguntas * ($promedio/10);
+$calculo = number_format($calculo, 2, '.', '');
 
 echo "<div class='container coeficientes'>";
 
