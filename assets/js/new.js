@@ -619,6 +619,7 @@ $(document).ready(function(){
 		}
 	});
 
+	
 	$("#incrementar").click(function(e){
 		$.ajax({ 
 			url: "include/incrementar.php",
@@ -629,13 +630,13 @@ $(document).ready(function(){
 			$(".up-mensaje").append("El ID anterior era: "+obj["id_antes"]);
 			$(".up-mensaje").append(". Fue incrementado a: "+obj["id_despues"]);
 			
-		})
-	})
+		});
+	});
 
-
-
-	$(".salir-sesion-history").click(function(e){
-		e.preventDefault();
+	$(".salir-sesion-history").click(function(f){
+		console.log("CLICK");
+		f.preventDefault();
+		
 		$.ajax({
 			url: "include/salir.php",
 			method: "POST"
@@ -650,6 +651,7 @@ $(document).ready(function(){
 			console.log("FAIL");
 		});
 	});
+
 
 	$(".salir-sesion-up").click(function(e){ 
 		e.preventDefault();
@@ -821,6 +823,8 @@ $(document).ready(function(){
 	$(".grafico").append(grafico);
 	var header = $(".statistics").find(".navbar.navbar-default").clone();
 	$(".statistics").find(".navbar.navbar-default").remove();
+	var titulo = $(".titulo_estadisticas").clone();
+	$(".titulo_estadisticas").remove();
 	var estadisticas = $(".tabla_estadisticas").clone();
 	$(".tabla_estadisticas").remove();
 	var tabla_sexos = $(".table-sexos").clone();
@@ -831,7 +835,7 @@ $(document).ready(function(){
 	$(".statistics").prepend("<div class='container sexos-tabla' style='height: auto;clear:both;'></div>");
 	$(".statistics").find(".sexos-tabla").prepend(tabla_sexos);
 
-	$(".statistics").prepend("<br><div class='container' style='height: auto;clear:both;'><h1>Estadísticas</h1></div><br>");
+	$(".statistics").prepend(titulo);
 	$(".statistics").prepend(header);
 
 	//CHART

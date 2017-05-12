@@ -17,12 +17,14 @@
 		
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#" class="salir-sesion-history">Salir</a></li>
+					<li><a href="#" id="testeando" class="salir-sesion-history">Salir</a></li>
 				</ul>
 			</div>
 
 	</div><!-- /.container-fluid -->
 </nav>
+
+<div class='container titulo_estadisticas' style='height: auto;clear:both;'><br><h1>Estadísticas</h1><br></div>
 
 <?php  
 
