@@ -1,3 +1,7 @@
+<div class="backnihuil"><a href="http://radionihuil.com.ar/radio/" target="_blank">
+<img src="assets/images/backnihuil.png" alt="">
+</div></a>	
+
 <nav class="navbar navbar-default">
 	<div class="container-fluid">
 		<!-- Brand and toggle get grouped for better mobile display -->
@@ -27,9 +31,9 @@
 						<p class="usuario-ingresado"><!--?php echo $_SESSION['usuario']; ?--></p>
 					</li>
 					<li>
-						<a href="#" class="editar-perfil">Mi perfil</a>
+						<a href="#" class="editar-perfil">MI PERFIL</a>
 					</li>
-					<li><a href="#" class="salir-sesion">Salir</a></li>
+					<li><a href="#" class="salir-sesion">SALIR</a></li>
 				</ul>
 			</div>
 			<?php
@@ -54,7 +58,7 @@
 				</div>
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="#" class="submit1">REGISTRARSE</a></li>
-					<li><a href="#" class="submit2">Perdí mi acceso</a></li>
+					<li><a href="#" class="submit2">PERDÍ MI ACCESO</a></li>
 				</ul>
 			</div><!-- /.navbar-collapse -->
 			<?php  

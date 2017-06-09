@@ -462,6 +462,43 @@
 }
 
 
+.fecha{
+
+  top:-30px;
+
+}
+
+.volver{
+
+  top: -40px;
+  float: right;
+  text-align: right;
+
+}
+
+.back {
+    border: 1px solid #00569C !important ;
+    color:#00569C!important;
+    background-color: white!important;
+}
+
+
+.back:hover{
+  background-color:#00569C!important;
+  color:white!important;
+  border: 1px solid #00569C!important;
+
+}
+
+.backnihuil{
+height: 49px;
+background-color: #022C3C;
+position: relative;
+z-index: 9999999999;
+
+}
+
+
 
 @media only screen and (max-width: 1200px) and (min-width: 320px){
   .perdi-cuenta-reg .box{
@@ -492,6 +529,14 @@
 }
 
 @media only screen and (max-width: 984px) and (min-width: 846px){
+
+
+  .volver {
+    top: 0px;
+    float:none;
+    text-align: center!important;
+  }
+
   .submit1, .submit2, .salir-sesion, .usuario-ingresado{
     font-size: 12px;
   }
@@ -519,6 +564,11 @@
 }
 
 @media only screen and (max-width: 845px) and (min-width: 768px){
+  .volver {
+    top: 0px;
+    float:none;
+    text-align: center!important;
+  }
   .submit1, .submit2, .salir-sesion, .usuario-ingresado{
     font-size: 12px;
   }
@@ -556,6 +606,14 @@
 }
 
 @media (max-width: 767px){
+
+  .volver {
+    top: 0px;
+    float: none;
+    text-align: center!important;
+  }
+
+
   .navbar-form .form-group{
     margin-bottom: 15px;
   }

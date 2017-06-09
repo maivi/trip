@@ -281,17 +281,17 @@ $(document).ready(function(){
 		e.preventDefault();
 		$(".navbar-toggle").click();
 		if(screen.width<768){
-			$(".cuerpo-padding+.reg").find(".box").css("height","850px");
+			$(".cuerpo-padding+.reg").find(".box").css("height","900px");
 		}else{
-			$(".cuerpo-padding+.reg").find(".box").css("height","650px");
+			$(".cuerpo-padding+.reg").find(".box").css("height","700px");
 		}
 		$(".cuerpo-padding+.reg").animate({
-			top: 60
+			top: 100
 		},500);
 		
 		$(".perdi-cuenta").css("display","none");
 		$(".cuerpo-padding+.reg").css("display","block");
-		$(".perdi-cuenta-reg").css("top","-800px");
+		$(".perdi-cuenta-reg").css("top","-850px");
 	});
 
 	$(".submit2").click(function(e){ //PERDI ACCESO
@@ -301,12 +301,12 @@ $(document).ready(function(){
 		$(".navbar-toggle").click();
 		
 		$(".perdi-cuenta").animate({
-			top: 60
+			top: 100
 		},500);
 		$(".cuerpo-padding+.reg").css("display","none");
 		$(".perdi-cuenta").css("display","block");
 		
-		$(".cuerpo-padding+.reg").css("top","-800px");
+		$(".cuerpo-padding+.reg").css("top","-850px");
 
 	});
 
@@ -340,13 +340,13 @@ $(document).ready(function(){
 
 	$(".cerrar").click(function(e){
 		e.preventDefault();
-		$(".perdi-cuenta-reg").css("top","-800px");		
+		$(".perdi-cuenta-reg").css("top","-850px");		
 		$(".cuerpo-padding+.reg").css("display","block");
 	});
 
 	$(".cuerpo-padding+.reg").find(".cerrar").click(function(e){
 		e.preventDefault();
-		$(".cuerpo-padding+.reg").css("top","-800px");
+		$(".cuerpo-padding+.reg").css("top","-850px");
 		
 		$(".perdi-cuenta").css("display","block");
 	})

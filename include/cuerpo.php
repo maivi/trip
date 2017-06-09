@@ -69,6 +69,7 @@
 	<div class="row">
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pregunta">
 			<h4 class="consigna">
+				<div class="fecha col-lg-6 col-md-6 col-sm-12 col-xs-12">
 				<?php
 
 				$arrayMeses = array('Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
@@ -80,6 +81,13 @@
 				//echo $arrayDias[date('w')]." ".date('d')." de ".$arrayMeses[date('m')-1]." de ".date('Y');
 				echo $arrayDias[date('w')]." ".date('d')." de ".$arrayMeses[date('m')-1];
 				?>
+				</div>
+
+				<div class="volver col-lg-6 col-md-6 col-sm-12 col-xs-12">
+					<a class="btn btn-default back" href="http://radionihuil.com.ar/radio/" target="_blank">VOLVER A RADIO NIHUIL</a>
+				</div>
+
+				<div class="clearfix"></div>
 
 				<div class="container question">
 

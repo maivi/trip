@@ -113,8 +113,9 @@
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
       <div class="form-group">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-          <select class="form-control" name="localidad" id="localidad" placeholder="Ciudad">
-            <option value='1'>Ciudad</option>
+          <select class="form-control" name="localidad" id="localidad" placeholder="Elegí tu localidad">
+            <option value='0'>Elegí tu localidad</option>
+            <option value='1'>Capital</option>
             <option value='2'>General Alvear</option>
             <option value='3'>Godoy Cruz</option>
             <option value='4'>Guaymallén</option>
