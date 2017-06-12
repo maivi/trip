@@ -125,7 +125,7 @@
 					$_SESSION['newsession']='yes';
 					$_SESSION['usuario'] = $nombre . " " . $apellido;
 					$_SESSION['id'] = ($cantidad+1);
-					$json["usuario"] = $_SESSION['usuario'];
+					$json["nombre_usuario"] = $_SESSION['usuario'];
 					$json["id"]=$_SESSION['id'];
 					$json["captcha"]=0;		
 				}

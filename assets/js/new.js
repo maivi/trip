@@ -455,7 +455,7 @@ $(document).ready(function(){
 							$(".captcha-message").append("<div class='clearfix'></div> <div class='col-lg-3 col-md-3 col-sm-4 col-xs-4'><p>Captcha Incorrecto</p></div>");
 						}else{
 							localStorage["logged"] = "Si";
-							localStorage["usuario"] = obj["nombre_usuario"];
+							localStorage["usuario"] = obj3["nombre_usuario"];
 							window.location="index.php";
 						}
 
