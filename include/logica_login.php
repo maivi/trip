@@ -8,9 +8,9 @@
 
 	switch ($comprobar){
 		case 0:{
-			$user = $_POST["user"];
+			$user = $_POST["email"];
 			$pw = $_POST["pw"];
-			$consulta = "SELECT * FROM usuarios WHERE user = '$user' AND pw = '$pw';";
+			$consulta = "SELECT * FROM usuarios WHERE email = '$user' AND pw = '$pw';";
 			$result = $conexion->query($consulta);
 			$cantidad = $result->num_rows;
 			if($cantidad==1){ // Si existe el usuario en la DB	
@@ -51,8 +51,9 @@
 		}
 		case 1:{ 
 			session_start();
-			$json["numero_captcha"]=$_SESSION["pepita"];
-			if ($_SESSION["pepita"]==$_POST["captcha"]) {
+			$recaptcha = $_POST['cap'];
+	
+			if ($recaptcha !=''){		
 
 				$nombre = $_POST["nombre"];
 				$apellido = $_POST["apellido"];
@@ -61,7 +62,6 @@
 				$telefono = $_POST["telefono"];
 				$localidad = $_POST["localidad"];
 				$pw = $_POST["pw"];
-				$user = $_POST["user"];
 				$sexo = $_POST["sexo"];
 
 				$consulta = "SELECT * FROM usuarios;";
@@ -71,7 +71,7 @@
 				$encontro = 0;
 
 				while ( ($usuario = $result->fetch_assoc()) && ($encontro==0) ) {
-					if($usuario["user"]==$user){
+					if($usuario["email"]==$email){
 						$encontro=1;
 					}
 				}
@@ -80,7 +80,7 @@
 
 				if($encontro==0){
 
-					$consulta2 = "INSERT INTO usuarios(nombre, apellido, email, dni, telefono, localidad, pw, user, sexo) VALUES ('$nombre','$apellido','$email','$dni','$telefono',$localidad,'$pw','$user',$sexo);";
+					$consulta2 = "INSERT INTO usuarios(nombre, apellido, email, dni, telefono, localidad, pw, sexo) VALUES ('$nombre','$apellido','$email','$dni','$telefono',$localidad,'$pw', $sexo);";
 					$json["consulta"]=$consulta2;
 
 
@@ -124,10 +124,13 @@
 					session_start();
 					$_SESSION['newsession']='yes';
 					$_SESSION['usuario'] = $nombre . " " . $apellido;
-					$_SESSION['id'] = ($cantidad+1);
+					$consulta2 = "SELECT * FROM usuarios WHERE email='$email';";
+					$result = $conexion->query($consulta2);
+					$ides = $result->fetch_assoc();
+					$_SESSION['id'] = $ides["id_usuario"];
 					$json["nombre_usuario"] = $_SESSION['usuario'];
-					$json["id"]=$_SESSION['id'];
-					$json["captcha"]=0;		
+					$json["id"]=$ides["id_usuario"];
+					$json["cap"]=0;				
 				}
 
 				echo json_encode($json);
@@ -136,7 +139,7 @@
 
 			else{
 				//session_destroy();	
-				$json["captcha"]=1;
+				$json["cap"]=1;
 				echo json_encode($json);
 
 			}

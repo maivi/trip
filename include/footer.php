@@ -4,7 +4,7 @@
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 footer">
 				<div class="logo-contenedor">
 					<div class="logo">
-						<a href="#"><img src="assets/images/logo-nihuil.png" alt=""></a>
+						<a href="http://radionihuil.com.ar/radio/"><img src="assets/images/logo-nihuil.png" alt=""></a>
 					</div>
 				</div>
 

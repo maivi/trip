@@ -4,9 +4,9 @@
 	
 	$json[0]["existe"]="no";
 	
-	$usuario = (string)$_POST["usuario"];
+	$usuario = (string)$_POST["email"];
 
-	$consulta = "SELECT * FROM usuarios WHERE user = '$usuario';";
+	$consulta = "SELECT * FROM usuarios WHERE email = '$usuario';";
 
 	$result = $conexion->query($consulta);
 

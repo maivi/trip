@@ -18,7 +18,7 @@
 			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 				<div class="form-group">
 					<input type="text" class="form-control" id="usuario-lost"
-					placeholder="Nombre de Usuario">
+					placeholder="E-Mail">
 					<p class="help-block text-danger"></p>
 				</div>	
 			</div>
@@ -69,6 +69,7 @@
 	<div class="row">
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pregunta">
 			<h4 class="consigna">
+				<div class="fecha col-lg-6 col-md-6 col-sm-12 col-xs-12">
 				<?php
 
 				$arrayMeses = array('Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
@@ -80,6 +81,13 @@
 				//echo $arrayDias[date('w')]." ".date('d')." de ".$arrayMeses[date('m')-1]." de ".date('Y');
 				echo $arrayDias[date('w')]." ".date('d')." de ".$arrayMeses[date('m')-1];
 				?>
+				</div>
+
+				<div class="volver col-lg-6 col-md-6 col-sm-12 col-xs-12">
+					<a class="btn btn-default back" href="http://radionihuil.com.ar/radio/">VOLVER A RADIO NIHUIL</a>
+				</div>
+
+				<div class="clearfix"></div>
 
 				<div class="container question">
 
@@ -88,7 +96,7 @@
 
 
 							<form id="form" class="ac-custom ac-radio ac-circle" autocomplete="off">
-								<h2>Escuchá en la radio la pregunta del día de hoy y elegí la opción de respuesta correcta entre...</h2>
+								<h2>Escuchá en la radio la pregunta de hoy y elegí la opción de respuesta correcta entre...</h2>
 								
 								<ul>
 									<li><input id="r1" name="r1" type="radio"><label for="r1">Respuesta 1</label></li>

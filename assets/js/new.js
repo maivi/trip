@@ -13,11 +13,13 @@ var hoy = new Date();
 var dia = hoy.getDate();
 var rellenar = $("#form").find("ul");
 var clicks=0;
+var captcha_google="";
 
+function correctCaptcha(response) {
+	captcha_google = response;
+};
 
 $(document).ready(function(){
-
-	
 	$.ajax({
 		url: "include/id_pregunta.php",
 		method: "POST"
@@ -115,8 +117,8 @@ $(document).ready(function(){
 				rellenar.find("li:nth-child(3)").find("label").empty();
 				rellenar.find("li:nth-child(3)").find("label").append(localStorage["resp_3"]);
 
-					//Aca cambiamos las preguntas con las ya cacheadas
-				})
+				//Aca cambiamos las preguntas con las ya cacheadas
+			})
 			.fail(function(xhr, status, error){
 				console.log(xhr);
 				console.log(status);
@@ -281,17 +283,17 @@ $(document).ready(function(){
 		e.preventDefault();
 		$(".navbar-toggle").click();
 		if(screen.width<768){
-			$(".cuerpo-padding+.reg").find(".box").css("height","850px");
+			$(".cuerpo-padding+.reg").find(".box").css("height","900px");
 		}else{
-			$(".cuerpo-padding+.reg").find(".box").css("height","650px");
+			$(".cuerpo-padding+.reg").find(".box").css("height","700px");
 		}
 		$(".cuerpo-padding+.reg").animate({
-			top: 60
+			top: 100
 		},500);
 		
 		$(".perdi-cuenta").css("display","none");
 		$(".cuerpo-padding+.reg").css("display","block");
-		$(".perdi-cuenta-reg").css("top","-800px");
+		$(".perdi-cuenta-reg").css("top","-850px");
 	});
 
 	$(".submit2").click(function(e){ //PERDI ACCESO
@@ -301,29 +303,29 @@ $(document).ready(function(){
 		$(".navbar-toggle").click();
 		
 		$(".perdi-cuenta").animate({
-			top: 60
+			top: 100
 		},500);
 		$(".cuerpo-padding+.reg").css("display","none");
 		$(".perdi-cuenta").css("display","block");
 		
-		$(".cuerpo-padding+.reg").css("top","-800px");
+		$(".cuerpo-padding+.reg").css("top","-850px");
 
 	});
 
 	$("#perdi-password").click(function(e){
 		e.preventDefault();
-		var usuario = $("#usuario-lost").val();
-		if(usuario!=""){
+		email = $("#usuario-lost").val();
+		if(email!=""){
 			$.ajax({
 				url: "include/perdi_pass.php",
 				method: "POST",
 				data: {
-					usuario: usuario
+					email: email
 				}
 			}).done(function(json){
 				var objeto = $.parseJSON(json);
 				if(objeto[0]["existe"]=="no"){
-					$(".respuesta-mail").find("p").text("Usuario incorrecto.");
+					$(".respuesta-mail").find("p").text("Email Inexistente.");
 				}else{
 					$(".respuesta-mail").find("p").text("Revisa tu correo para recuperar tu contraseña.");
 				}
@@ -340,13 +342,13 @@ $(document).ready(function(){
 
 	$(".cerrar").click(function(e){
 		e.preventDefault();
-		$(".perdi-cuenta-reg").css("top","-800px");		
+		$(".perdi-cuenta-reg").css("top","-850px");		
 		$(".cuerpo-padding+.reg").css("display","block");
 	});
 
 	$(".cuerpo-padding+.reg").find(".cerrar").click(function(e){
 		e.preventDefault();
-		$(".cuerpo-padding+.reg").css("top","-800px");
+		$(".cuerpo-padding+.reg").css("top","-850px");
 		
 		$(".perdi-cuenta").css("display","block");
 	})
@@ -355,14 +357,14 @@ $(document).ready(function(){
 	//LOGIN
 	$(".send").click(function(e){
 		e.preventDefault();
-		user = $("#user-login").val();
+		email = $("#user-login").val();
 		pw = $("#pw-login").val();
-		if ( (user != "") && (pw != "") ){
+		if ( (email != "") && (pw != "") ){
 			$.ajax({
 				url: "include/logica_login.php",
 				data: {
 					pw:pw,
-					user:user,
+					email:email,
 					id_pregunta: localStorage["ultimo_id"],
 					flag:0
 				},
@@ -412,23 +414,27 @@ $(document).ready(function(){
 		telefono = $("#telefono").val();
 		localidad = $("#localidad").val();
 		pw = $("#pw").val();
-		user = $("#user").val();
 		sexo = $("#sexo").val();
-		cap = $("#captcha").val();
 		localStorage["logged"] = "No";
-		if ( (nombre!="") && (apellido!="") && (email!="") && (dni!="") && (telefono!="") && (pw!="") && (user!="") ){
+		console.log(localidad);
+		console.log(captcha_google);
+		if (captcha_google==""){
+			$("#success").empty();
+			$("#success").append("<p>Captcha Incorrecto</p>");
+		}
+		if ( (nombre!="") && (apellido!="") && (email!="") && (dni!="") && (telefono!="") && (pw!="") && (localidad!==null) && (captcha_google!="") ){
 			$.ajax({ 
 				url: "include/control_usuario.php",
 				data: {
-					user:user
+					email:email
 				},
 				method: "POST"
 			}).done(function(json){
 				var obj2 = $.parseJSON(json);
 				console.log(obj2);
-				user = $("#user").val();
+				user = $("#email").val();
 				if(obj2["usuario"]==1){
-					var user = $("#user");
+					var user = $("#email");
 					user.parent().parent().addClass("has-error");
 				}else{
 					$.ajax({
@@ -442,8 +448,7 @@ $(document).ready(function(){
 							localidad: localidad,
 							pw:pw,
 							sexo:sexo,
-							user:user,
-							captcha:cap,
+							cap:captcha_google,
 							flag:1
 						},
 						method: "POST"
@@ -451,13 +456,12 @@ $(document).ready(function(){
 					}).done(function(json) {
 						var obj3 = $.parseJSON(json);
 						console.log(obj3);
-						if(obj3["captcha"]==1){
-							$(".captcha-message").append("<div class='clearfix'></div> <div class='col-lg-3 col-md-3 col-sm-4 col-xs-4'><p>Captcha Incorrecto</p></div>");
-						}else{
-							localStorage["logged"] = "Si";
-							localStorage["usuario"] = obj3["nombre_usuario"];
-							window.location="index.php";
-						}
+						console.log(obj3["cap"]);
+						
+						localStorage["logged"] = "Si";
+						localStorage["usuario"] = obj3["nombre_usuario"];
+						localStorage["remember"] = obj3["id"];
+						window.location="index.php";
 
 					})
 					.fail(function(xhr, status, error){
@@ -475,6 +479,7 @@ $(document).ready(function(){
 				console.log("FAIL");
 			});
 		}else{
+			console.log("ENTRO SIN CAPTCHA");
 			nombre=$("#nombre");
 			if(nombre.val()==""){
 				if(!( nombre.parent().parent().hasClass("has-error") ) ){
@@ -542,31 +547,31 @@ $(document).ready(function(){
 				user.parent().parent().removeClass("has-error");
 			}
 
+			localidad=$("#localidad");
+			if(localidad.val()===null){
+				if(!( localidad.parent().parent().hasClass("has-error") ) ){
+					localidad.parent().parent().addClass("has-error");
+				}
+			}else{
+				localidad.parent().parent().removeClass("has-error");
+			}
 
 		}
 		
 		
 	});
 
-
 	var target=$(".navbar-collapse");
-
 
 	$(".navbar-toggle").click(function(e){
 		e.preventDefault();
-
-
 		if (target.hasClass("in")){
 			target.removeClass("in");
 			clicks=1;
-
 		}else{
 			if(clicks==1){
-
 				target.addClass("in");
 			}
-
-
 		}
 
 	});
@@ -630,6 +635,25 @@ $(document).ready(function(){
 			$(".up-mensaje").append("El ID anterior era: "+obj["id_antes"]);
 			$(".up-mensaje").append(". Fue incrementado a: "+obj["id_despues"]);
 			
+		});
+	});
+
+	$("#testeando").click(function(e){
+		console.log("CLICK");
+		e.preventDefault();
+		
+		$.ajax({
+			url: "include/salir.php",
+			method: "POST"
+
+		}).done(function(){
+			window.location="history";
+			
+		}).fail(function(xhr, status, error){
+			console.log(xhr);
+			console.log(status);
+			console.log(error);
+			console.log("FAIL");
 		});
 	});
 
@@ -710,7 +734,7 @@ $(document).ready(function(){
 		pw = $("#pw").val();
 		sexo = $("#sexo").val();
 
-		if ( (nombre!="") && (apellido!="") && (email!="") && (dni!="") && (telefono!="") && (pw!="") && (user!="") ){
+		if ( (nombre!="") && (apellido!="") && (email!="") && (dni!="") && (telefono!="") && (pw!="")){
 			$.ajax({ 
 				url: "include/actualizar_user.php",
 				data: {
@@ -794,17 +818,6 @@ $(document).ready(function(){
 			}else{
 				pw.parent().parent().removeClass("has-error");
 			}
-
-
-			user=$("#user");
-			if(user.val()==""){
-				if(!( user.parent().parent().hasClass("has-error") ) ){
-					user.parent().parent().addClass("has-error");
-				}
-			}else{
-				user.parent().parent().removeClass("has-error");
-			}
-
 
 		}
 	});
