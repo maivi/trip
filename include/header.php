@@ -1,6 +1,6 @@
 <div class="backnihuil"><a href="http://radionihuil.com.ar/radio/">
-<img src="assets/images/backnihuil.png" alt="">
-</div></a>	
+<img src="assets/images/backnihuil.png" alt="" />
+</a></div>	
 
 <nav class="navbar navbar-default">
 	<div class="container-fluid">
